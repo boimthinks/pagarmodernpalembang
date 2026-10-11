@@ -1,0 +1,135 @@
+---
+import { MATERIALS, WORKSHOP_MACHINES } from '../data/materials';
+---
+
+<div class="my-10 space-y-8">
+  <!-- 3 Kartu Spesialisasi Mesin Workshop -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+    {WORKSHOP_MACHINES.map((machine) => (
+      <div class="group p-5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between overflow-hidden shadow-lg">
+        <div class="space-y-3">
+          <a href={machine.articleUrl} class="block relative aspect-[16/10] rounded-xl overflow-hidden bg-slate-950 border border-slate-800/80 group/img">
+            <img
+              src={machine.image}
+              alt={machine.name}
+              class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
+            <span class={`absolute bottom-2.5 left-2.5 text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border backdrop-blur-md shadow-sm ${machine.badgeColor}`}>
+              {machine.shortName}
+            </span>
+            <span class="absolute top-2.5 right-2.5 text-[10px] text-slate-300 bg-slate-900/80 border border-slate-700/80 px-2 py-0.5 rounded-md backdrop-blur-sm">
+              Talang Jambe
+            </span>
+          </a>
+          <h4 class="text-base font-bold text-white">
+            <a href={machine.articleUrl} class="hover:text-emerald-400 transition-colors inline-flex items-center gap-1.5">
+              <span>{machine.name}</span>
+              <span class="material-symbols-outlined text-[16px] text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all">arrow_forward</span>
+            </a>
+          </h4>
+          <p class="text-xs text-slate-300 leading-relaxed">{machine.specialty}</p>
+        </div>
+        <div class="pt-4 mt-3 border-t border-slate-800/80 space-y-3">
+          <div>
+            <div class="text-[11px] text-slate-400 font-semibold mb-1.5">Bahan yang Dikerjakan:</div>
+            <ul class="space-y-1 text-xs text-slate-300">
+              {machine.materials.map((m) => (
+                <li class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-emerald-400 text-[14px] leading-none">check</span>
+                  <span>{m}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <a
+            href={machine.articleUrl}
+            class="inline-flex items-center justify-center gap-1.5 w-full py-2 px-3 text-xs font-semibold text-emerald-400 bg-emerald-950/30 hover:bg-emerald-900/50 border border-emerald-800/50 hover:border-emerald-700 rounded-xl transition-all"
+          >
+            <span>Baca Ulasan Lengkap Mesin</span>
+            <span class="material-symbols-outlined text-[14px] leading-none">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Tabel Rincian Material & Ketebalan Potong -->
+  <div class="rounded-2xl border border-slate-800 bg-slate-900/50 overflow-hidden shadow-xl">
+    <div class="p-6 bg-slate-900 border-b border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div>
+        <h3 class="text-xl font-bold text-white">Tabel Spesifikasi Bahan & Kapasitas Ketebalan</h3>
+        <p class="text-xs text-slate-400 mt-1">
+          Disesuaikan dengan jenis mesin pemotong: Laser Fiber (Logam), CNC Router (Kayu/ACP/PVC), dan Laser CO2 (Akrilik).
+        </p>
+      </div>
+      <span class="inline-flex items-center px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/30">
+        Presisi Toleransi 0.1mm
+      </span>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-sm text-slate-300">
+        <thead class="bg-slate-950 text-xs uppercase tracking-wider text-slate-400 border-b border-slate-800">
+          <tr>
+            <th class="px-6 py-4">Jenis Material</th>
+            <th class="px-6 py-4">Mesin Pemotong</th>
+            <th class="px-6 py-4">Rentang Ketebalan Tersedia</th>
+            <th class="px-6 py-4">Aplikasi Arsitektural</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800/80">
+          {MATERIALS.map((mat) => {
+            const machineBadge = mat.machineId === 'laser-fiber'
+              ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/20'
+              : mat.machineId === 'cnc-router'
+                ? 'bg-amber-500/10 text-amber-400 border-amber-500/30 hover:bg-amber-500/20'
+                : 'bg-cyan-500/10 text-cyan-400 border-cyan-500/30 hover:bg-cyan-500/20';
+
+            const machineUrl = WORKSHOP_MACHINES.find((m) => m.id === mat.machineId)?.articleUrl || '#';
+
+            return (
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="px-6 py-4 font-semibold text-white whitespace-nowrap">
+                  {mat.name}
+                  {mat.recommendedForFence && (
+                    <span class="ml-2 text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                      Utama Pagar
+                    </span>
+                  )}
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <a
+                    href={machineUrl}
+                    class={`inline-block text-xs font-semibold px-2.5 py-1 rounded-lg border hover:underline underline-offset-2 transition-all ${machineBadge}`}
+                    title={`Baca ulasan lengkap ${mat.machine}`}
+                  >
+                    {mat.machine}
+                  </a>
+                </td>
+                <td class="px-6 py-4 text-xs">
+                  <div class="flex flex-wrap gap-1.5">
+                    {mat.thicknesses.map((th) => (
+                      <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700/60 text-slate-200">
+                        {th}
+                      </span>
+                    ))}
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-xs text-slate-400 leading-relaxed">
+                  {mat.application}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="p-4 bg-slate-950/80 border-t border-slate-800 text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-amber-400 text-[16px]">lightbulb</span> Butuh jasa potong mentah tanpa instalasi pagar? Kunjungi website jasa kami di <a href="https://laserindopalembang.com/" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline font-semibold">Laserindo Palembang</a>.</span>
+      <a href="https://wa.me/6285215111125" class="text-emerald-400 hover:underline font-medium">Tanya Ketersediaan Stok Material Plat →</a>
+    </div>
+  </div>
+</div>

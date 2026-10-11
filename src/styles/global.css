@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-brand-primary: #059669;
+  --color-brand-primary-light: #10b981;
+  --color-brand-primary-dark: #047857;
+  --color-brand-accent: #d97706;
+  --color-brand-accent-light: #f59e0b;
+  --color-brand-dark: #070d17;
+  --color-brand-surface: #0a111e;
+  --color-brand-surface-card: #101c2e;
+  --color-brand-surface-alt: #16253c;
+  --color-brand-border: #1e324e;
+  --font-family-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-family-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-family-body);
+    background-color: var(--color-brand-surface);
+    color: #e2e8f0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-display);
+    font-weight: 700;
+    color: #ffffff;
+  }
+  a {
+    color: var(--color-brand-primary-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  a:hover {
+    color: var(--color-brand-accent-light);
+  }
+  ::selection {
+    background-color: rgba(5, 150, 105, 0.35);
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+  }
+  .prose-blog {
+    @apply prose prose-invert prose-lg max-w-none;
+    @apply prose-headings:text-white prose-headings:font-bold prose-headings:mt-10 prose-headings:mb-4;
+    @apply prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:border-b prose-h2:border-slate-800 prose-h2:pb-3;
+    @apply prose-p:text-base prose-p:text-slate-300 prose-p:leading-relaxed prose-p:mb-5;
+    @apply prose-strong:text-emerald-400;
+    @apply prose-a:text-emerald-400 hover:prose-a:text-amber-400 prose-a:no-underline;
+    @apply prose-ul:space-y-2 prose-li:text-base prose-li:text-slate-300;
+    @apply prose-table:border prose-table:border-slate-800 prose-th:bg-slate-900 prose-th:text-emerald-400 prose-td:border-slate-800;
+    @apply prose-img:max-w-full prose-img:h-auto prose-img:rounded-xl prose-img:border prose-img:border-slate-800;
+    @apply prose-blockquote:border-l-emerald-500 prose-blockquote:text-slate-300 prose-blockquote:bg-emerald-950/20 prose-blockquote:p-5 prose-blockquote:rounded-r-xl;
+    min-width: 0;
+  }
+  .prose-blog .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .prose-blog .table-scroll table {
+    @apply min-w-full;
+  }
+}

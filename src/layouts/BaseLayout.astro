@@ -1,0 +1,64 @@
+---
+import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
+import SEOHead from '../components/SEOHead.astro';
+import Schema from '../components/Schema.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  noindex?: boolean;
+  schemaType?: 'LocalBusiness' | 'WebSite' | 'FAQPage' | 'BreadcrumbList' | 'Article' | 'Product';
+  schemaData?: Record<string, any>;
+  breadcrumbs?: Array<{ name: string; url: string }>;
+  showLocalBusiness?: boolean;
+}
+
+const {
+  title,
+  description,
+  ogImage,
+  noindex,
+  schemaType,
+  schemaData,
+  breadcrumbs,
+  showLocalBusiness = true,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="geo.region" content="ID-SS" />
+    <meta name="geo.placename" content="Palembang" />
+    <meta name="geo.position" content="-2.8988;104.7088" />
+    <meta name="ICBM" content="-2.8988, 104.7088" />
+
+    <SEOHead title={title} description={description} ogImage={ogImage} noindex={noindex} />
+    <ClientRouter />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+
+    <Schema type="WebSite" />
+    <Schema type="Organization" />
+    {showLocalBusiness && <Schema type="LocalBusiness" />}
+    {schemaType && <Schema type={schemaType} data={schemaData} />}
+    {breadcrumbs && <Schema type="BreadcrumbList" data={{ items: breadcrumbs }} />}
+  </head>
+  <body class="bg-[#0a111e] text-slate-200 min-h-[100dvh] flex flex-col antialiased selection:bg-emerald-500/30 selection:text-white">
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

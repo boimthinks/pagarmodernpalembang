@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CtaWhatsapp from '../../components/CtaWhatsapp.astro';
+import MotifCard from '../../components/MotifCard.astro';
+import { getCollection } from 'astro:content';
+
+const motifs = await getCollection('blog', ({ data }) => data.published && data.tipe === 'motif');
+---
+
+<BaseLayout
+  title="Motif Pagar Laser Cutting Palembang | Daun, Bunga, Songket, Batik & Wayang"
+  description="Katalog motif laser cutting untuk pagar, pintu gerbang, dan balkon di Palembang. Motif daun tropis, songket Palembang, wayang, batik minimalis, dan ornamen custom."
+  breadcrumbs={[
+    { name: 'Motif Laser Cutting', url: '/motif-laser-cutting' }
+  ]}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <Breadcrumb items={[{ name: 'Motif Laser Cutting', url: '/motif-laser-cutting' }]} />
+
+    <header class="max-w-4xl space-y-4 mb-14">
+      <span class="inline-flex items-center px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider border border-emerald-500/20">
+        Katalog Desain Motif
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+        Katalog Inspirasi Motif Pagar & Gerbang Laser Cutting Palembang
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+        Kelebihan utama teknologi mesin fiber laser di workshop Sriwijaya Grafika adalah kemampuannya memotong lekukan rumit dengan presisi 0.1 mm tanpa batasan desain. Anda bisa memilih dari ratusan koleksi motif kami atau membawa file desain Anda sendiri (AutoCAD DWG, DXF, AI, PDF).
+      </p>
+    </header>
+
+    {motifs.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {motifs.map((m) => (
+          <MotifCard
+            title={m.data.title}
+            excerpt={m.data.excerpt}
+            slug={m.id}
+            kategori={m.data.label_produk}
+            topik={m.data.topik}
+            imgurl={m.data.imgurl}
+            imgalt={m.data.imgalt}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="mb-16 p-8 rounded-3xl bg-slate-900/40 border border-slate-800 text-center space-y-4">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">palette</span>
+        </div>
+        <h2 class="text-xl font-bold text-white">Katalog Desain Motif Segera Hadir</h2>
+        <p class="text-sm text-slate-400 max-w-lg mx-auto leading-relaxed">
+          Kami sedang menyusun galeri motif potong laser interaktif. Anda tetap bisa langsung berkonsultasi atau mengirim referensi gambar custom melalui WhatsApp kami.
+        </p>
+      </div>
+    )}
+
+    <CtaWhatsapp
+      title="Punya Referensi Desain Pagar Sendiri?"
+      subtitle="Kirimkan gambar dari Pinterest, Instagram, atau sketsa tangan Anda ke WhatsApp kami. Tim desainer kami siap membuatkan pola potong CAD secara gratis."
+    />
+  </div>
+</BaseLayout>

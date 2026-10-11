@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CtaWhatsapp from '../../components/CtaWhatsapp.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import BlogSidebarCta from '../../components/BlogSidebarCta.astro';
+import { getCollection, render } from 'astro:content';
+import { PRODUCT_CATEGORIES } from '../../data/silo';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('blog');
+  return articles.map((article) => ({
+    params: {
+      kategori: article.data.label_produk,
+      id: article.id,
+    },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content, headings } = await render(article);
+
+const isBlogGeneral = article.data.label_produk === 'blog';
+const categoryObj = PRODUCT_CATEGORIES.find((c) => c.slug === article.data.label_produk);
+const categoryName = categoryObj ? categoryObj.fullName : (isBlogGeneral ? 'Blog & Panduan' : article.data.label_produk);
+const categoryUrl = isBlogGeneral ? '/blog' : `/${article.data.label_produk}`;
+
+const hasFaq = article.data.faq && article.data.faq.length > 0;
+const currentUrl = `/${article.data.label_produk}/${article.id}`;
+---
+
+<BaseLayout
+  title={article.data.titleSeo}
+  description={article.data.excerpt}
+  schemaType="Article"
+  schemaData={{
+    headline: article.data.titleSeo,
+    description: article.data.excerpt,
+    datePublished: article.data.date,
+    image: article.data.imgurl,
+  }}
+  breadcrumbs={[
+    { name: categoryName, url: categoryUrl },
+    { name: article.data.title, url: currentUrl }
+  ]}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+    <Breadcrumb items={[
+      { name: categoryName, url: categoryUrl },
+      { name: article.data.title, url: currentUrl }
+    ]} />
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mt-6">
+      <!-- Kolom Konten Utama Artikel -->
+      <article class="lg:col-span-8 min-w-0">
+        <header class="space-y-6 mb-10 pb-8 border-b border-slate-800">
+          <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400">
+            <a
+              href={categoryUrl}
+              class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 font-semibold uppercase tracking-wider border border-emerald-500/20 hover:bg-emerald-500/20 transition-colors"
+            >
+              {categoryName}
+            </a>
+            {article.data.topik && (
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 font-medium uppercase tracking-wide">
+                {article.data.topik}
+              </span>
+            )}
+            <time datetime={article.data.date}>{article.data.date}</time>
+            <span>•</span>
+            <span>Workshop Sriwijaya Grafika Palembang</span>
+          </div>
+
+          <!-- Gambar Ditampilkan Sebelum Judul H1 (Rasio 4:3) -->
+          {article.data.imgurl && (
+            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-xl group">
+              <img
+                src={article.data.imgurl}
+                alt={article.data.imgalt || article.data.title}
+                class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
+                loading="eager"
+                fetchpriority="high"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none"></div>
+              {article.data.imgalt && (
+                <span class="absolute bottom-3 left-3 text-[11px] text-slate-300 bg-slate-950/80 px-2.5 py-1 rounded-md backdrop-blur-md border border-slate-800/80">
+                  {article.data.imgalt}
+                </span>
+              )}
+            </div>
+          )}
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight">
+            {article.data.titleSeo}
+          </h1>
+
+          <p class="text-lg text-slate-300 leading-relaxed font-medium">
+            {article.data.excerpt}
+          </p>
+        </header>
+
+        <!-- Pengantar -->
+        {article.data.pengantar && (
+          <div class="mb-10 p-6 rounded-2xl bg-emerald-950/20 border-l-4 border-emerald-500 text-slate-200 text-base leading-relaxed">
+            <p class="italic">{article.data.pengantar}</p>
+          </div>
+        )}
+
+        <!-- Markdown Content Body -->
+        <div class="prose-blog">
+          <Content />
+        </div>
+
+        <!-- FAQ Accordion jika ada -->
+        {hasFaq && (
+          <section class="mt-14 pt-10 border-t border-slate-800 space-y-6">
+            <h2 class="text-2xl font-bold text-white">Pertanyaan Terkait (FAQ)</h2>
+            <div class="space-y-4">
+              {article.data.faq.map((q: any) => (
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
+                  <h3 class="font-bold text-white text-base">{q.question}</h3>
+                  <p class="text-sm text-slate-300 leading-relaxed">{q.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <!-- Kesimpulan -->
+        {article.data.kesimpulan && (
+          <div class="mt-12 p-6 rounded-2xl bg-slate-900/80 border border-slate-800 text-slate-300 text-base leading-relaxed">
+            <h3 class="text-white font-bold mb-2">Kesimpulan Praktis</h3>
+            <p>{article.data.kesimpulan}</p>
+          </div>
+        )}
+
+        <CtaWhatsapp
+          title={`Konsultasikan Kebutuhan ${categoryName} Anda`}
+          subtitle="Diskusikan perhitungan kebutuhan bahan dan biaya bersama spesialis workshop Sriwijaya Grafika Palembang."
+        />
+      </article>
+
+      <!-- Sidebar di Kanan (TOC & Sticky CTA) -->
+      <aside class="lg:col-span-4 min-w-0 self-stretch relative">
+        <TableOfContents headings={headings} />
+        <div class="sticky top-24 z-20 mt-6" style="position: sticky; top: 6rem;">
+          <BlogSidebarCta categoryName={categoryName} />
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

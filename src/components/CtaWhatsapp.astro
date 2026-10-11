@@ -1,0 +1,72 @@
+---
+import { SITE } from '../config/site';
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  buttonText?: string;
+  customMessage?: string;
+}
+
+const {
+  title = 'Wujudkan Pagar Laser Cutting Impian Anda Bersama Sriwijaya Grafika',
+  subtitle = 'Konsultasi gratis, kalkulasi estimasi volume, dan dapatkan mockup desain 3D sebelum proses potong plat di workshop Talang Jambe Palembang.',
+  buttonText = 'Konsultasi via WhatsApp (0852-1511-1125)',
+  customMessage
+} = Astro.props;
+
+const waMessage = customMessage ? encodeURIComponent(customMessage) : SITE.contact.whatsappText;
+---
+
+<section class="my-16 rounded-3xl bg-gradient-to-br from-emerald-950/80 via-slate-900 to-amber-950/40 border border-emerald-500/30 p-8 sm:p-12 relative overflow-hidden shadow-2xl">
+  <!-- Glow effect -->
+  <div class="absolute -top-24 -right-24 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-3xl mx-auto text-center space-y-6">
+    <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+      <span class="material-symbols-outlined text-[16px] text-amber-400">verified</span>
+      Workshop Sukarami Palembang Sejak 2008
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-snug">
+      {title}
+    </h2>
+
+    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+      {subtitle}
+    </p>
+
+    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href={`https://wa.me/${SITE.contact.whatsapp}?text=${waMessage}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold text-base shadow-xl shadow-emerald-950/80 transition-all hover:scale-103"
+      >
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.448.739.96 1.196.659.587 1.215.769 1.388.856.173.086.275.072.376-.044.101-.116.433-.506.549-.679.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.13.332.202.043.073.043.419-.101.824z" />
+        </svg>
+        {buttonText}
+      </a>
+      <a
+        href="/kontak"
+        class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 text-slate-300 hover:text-white font-semibold text-sm border border-slate-700 transition-colors"
+      >
+        Lihat Lokasi & Jam Buka Workshop
+      </a>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 pt-2">
+      <span class="flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[16px] text-emerald-400">check_circle</span> Plat Besi & Galvanis 0.6 - 12 mm
+      </span>
+      <span class="flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[16px] text-emerald-400">check_circle</span> Stainless Steel 0.6 - 3 mm
+      </span>
+      <span class="flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[16px] text-emerald-400">check_circle</span> Garansi Konstruksi 1 Tahun
+      </span>
+    </div>
+  </div>
+</section>

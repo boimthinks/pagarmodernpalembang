@@ -1,0 +1,168 @@
+---
+import { SITE } from '../config/site';
+
+interface Props {
+  type: 'LocalBusiness' | 'FAQPage' | 'WebSite' | 'Organization' | 'BreadcrumbList' | 'Article' | 'Product';
+  data?: Record<string, any>;
+}
+
+const { type, data = {} } = Astro.props;
+const siteUrl = (Astro.site?.toString() || SITE.url).replace(/\/$/, '');
+
+const schemas: Record<string, object> = {
+  WebSite: {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.name,
+    alternateName: 'Pagar Laser Cutting Palembang - Sriwijaya Grafika',
+    url: siteUrl,
+    image: `${siteUrl}/og-image.jpg`,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: { '@type': 'EntryPoint', urlTemplate: `${siteUrl}/produk?q={search_term_string}` },
+      'query-input': 'required name=search_term_string',
+    },
+  },
+  Organization: {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE.parentBrand,
+    url: SITE.ecosystem.corporate.url,
+    logo: `${siteUrl}/favicon.png`,
+    image: `${siteUrl}/og-image.jpg`,
+    sameAs: [
+      SITE.ecosystem.corporate.url,
+      SITE.ecosystem.service.url,
+      siteUrl
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: SITE.contact.phone,
+      contactType: 'customer service',
+      areaServed: 'ID',
+      availableLanguage: 'Indonesian',
+    },
+  },
+  LocalBusiness: {
+    '@context': 'https://schema.org',
+    '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
+    name: `${SITE.name} (Sriwijaya Grafika)`,
+    url: siteUrl,
+    image: [
+      `${siteUrl}/og-image.jpg`,
+      `${siteUrl}/produk/pagar-laser-cutting_poco.webp`
+    ],
+    telephone: SITE.contact.phone,
+    email: SITE.contact.email,
+    priceRange: 'Rp 850.000 - Rp 3.000.000',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: SITE.address.street,
+      addressLocality: SITE.address.kelurahan,
+      addressRegion: SITE.address.provinsi,
+      postalCode: SITE.address.kodePos,
+      addressCountry: 'ID',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: SITE.address.coordinates.latitude,
+      longitude: SITE.address.coordinates.longitude,
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Palembang' },
+      { '@type': 'AdministrativeArea', name: 'Sumatera Selatan' }
+    ],
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '08:00',
+        closes: '17:00'
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: 'Saturday',
+        opens: '08:00',
+        closes: '15:00'
+      }
+    ],
+    parentOrganization: {
+      '@type': 'Organization',
+      name: SITE.parentBrand,
+      url: SITE.ecosystem.corporate.url,
+    },
+    sameAs: [
+      SITE.ecosystem.corporate.url,
+      SITE.ecosystem.service.url
+    ]
+  },
+  FAQPage: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: (data.questions || []).map((q: any) => ({
+      '@type': 'Question',
+      name: q.question,
+      acceptedAnswer: { '@type': 'Answer', text: q.answer },
+    })),
+  },
+  BreadcrumbList: {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: (data.items || []).map((item: any, i: number) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: item.url.startsWith('http') ? item.url : `${siteUrl}${item.url}`,
+    })),
+  },
+  Article: {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: data.headline || '',
+    description: data.description || '',
+    image: data.image ? (data.image.startsWith('http') ? data.image : `${siteUrl}${data.image}`) : `${siteUrl}/og-default.svg`,
+    datePublished: data.datePublished || '',
+    dateModified: data.dateModified || data.datePublished || '',
+    author: {
+      '@type': 'Organization',
+      name: `${SITE.parentBrand} - ${SITE.name}`,
+      url: siteUrl
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.parentBrand,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/favicon.svg`
+      }
+    }
+  },
+  Product: {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: data.name || '',
+    description: data.description || '',
+    image: data.image ? (data.image.startsWith('http') ? data.image : `${siteUrl}${data.image}`) : `${siteUrl}/og-default.svg`,
+    brand: {
+      '@type': 'Brand',
+      name: `${SITE.parentBrand} - ${SITE.name}`
+    },
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'IDR',
+      lowPrice: data.lowPrice || '950000',
+      highPrice: data.highPrice || '2800000',
+      priceValidUntil: '2027-12-31',
+      availability: 'https://schema.org/InStock',
+      seller: {
+        '@type': 'LocalBusiness',
+        name: SITE.name
+      }
+    }
+  }
+};
+
+const schema = schemas[type];
+---
+
+{schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}

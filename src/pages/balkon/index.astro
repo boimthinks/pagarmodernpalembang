@@ -1,0 +1,516 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CtaWhatsapp from '../../components/CtaWhatsapp.astro';
+import MaterialTable from '../../components/MaterialTable.astro';
+import MotifCard from '../../components/MotifCard.astro';
+import { getCollection } from 'astro:content';
+
+const balkonMotifs = await getCollection('blog', ({ data }) => data.published && data.label_produk === 'balkon' && data.tipe === 'motif');
+
+const pricingTiersBalkon = [
+  {
+    grade: 'Balkon Minimalis Garis Geometris',
+    plat: 'Plat Besi Galvanis 1.8 mm',
+    frame: 'Hollow Galvanis 40x40 mm tebal 1.4 mm',
+    handrail: 'Hollow 40x60 mm doff elegan',
+    price: 'Rp 1.150.000, Rp 1.450.000',
+    bestFor: 'Balkon depan perumahan klaster modern, bentang 2 sampai 4 meter',
+  },
+  {
+    grade: 'Balkon Ornamen Mewah Flora dan Songket',
+    plat: 'Plat Besi Galvanis 2.0 mm, 2.4 mm',
+    frame: 'Hollow Galvanis 40x40 / 40x60 mm tebal 1.4 mm',
+    handrail: 'Pipa bulat galvanis 2 inch atau hollow 40x60 mm',
+    price: 'Rp 1.450.000, Rp 1.950.000',
+    bestFor: 'Fasad lantai dua rumah mewah klasik dan gedung komersial',
+    featured: true,
+  },
+  {
+    grade: 'Balkon Kombinasi Handrail Kayu',
+    plat: 'Plat Besi Galvanis 2.0 mm',
+    frame: 'Hollow Galvanis 40x40 mm tebal 1.4 mm',
+    handrail: 'Kayu kamper oven atau conwood serat kayu outdoor',
+    price: 'Rp 1.650.000, Rp 2.250.000',
+    bestFor: 'Hunian konsep vila tropis modern berfasad hangat',
+  },
+  {
+    grade: 'Balkon Full Stainless Steel 304',
+    plat: 'Plat Stainless Steel 304 tebal 1.5 mm, 2.0 mm',
+    frame: 'Hollow Stainless 40x40 mm tebal 1.2 mm',
+    handrail: 'Pipa bulat stainless 304 hairline finish',
+    price: 'Rp 2.200.000, Rp 3.200.000',
+    bestFor: 'Balkon terbuka bebas karat tanpa perlu dicat ulang selamanya',
+  },
+];
+
+const faqsBalkon = [
+  {
+    question: 'Berapa tinggi standar pagar balkon yang aman untuk anak kecil?',
+    answer: 'Standar keamanan arsitektur yang kami terapkan adalah tinggi minimal 100 cm hingga 110 cm dari permukaan lantai keramik. Pola potong motif laser juga kami rancang rapat sehingga tidak ada celah lubang yang bisa dilalui kepala anak atau dipanjat layaknya tangga.',
+  },
+  {
+    question: 'Bagaimana kekuatan dudukan tiang balkon menahan beban dorong orang dewasa?',
+    answer: 'Setiap tiang utama balkon dilengkapi pelat dasar (baseplate) baja tebal 6 sampai 8 mm yang diikat menggunakan baut dynabolt M10 atau M12 langsung ke balok cor beton lantai dua, mampu menahan beban dorong horizontal lebih dari 150 kg per tiang.',
+  },
+  {
+    question: 'Apakah pagar balkon plat besi aman dari karat air hujan di Palembang?',
+    answer: 'Sangat aman jika diproses dengan benar. Kami menggunakan plat galvanis anti karat yang dilapisi cat dasar epoxy zinc chromate sebanyak dua lapis, lalu disemprot cat duco polyurethane anti-UV sehingga air hujan tidak dapat merembes ke pori-pori logam.',
+  },
+  {
+    question: 'Apakah bisa survei dan mengukur balkon lantai dua yang belum dipasang keramik?',
+    answer: 'Bisa. Teknisi kami akan menghitung elevasi rencana ketebalan adukan semen dan keramik lantai agar ketinggian akhir pagar balkon tetap presisi sesuai standar aman.',
+  },
+];
+---
+
+<BaseLayout
+  title="Pagar Balkon Plat Cutting Laser Palembang | Model Balkon Lantai 2 Mewah"
+  description="Pembuatan pagar balkon plat cutting laser lantai 2 di Palembang. Plat galvanis & stainless 304 anti karat, standar safety anak by Sriwijaya Grafika."
+  ogImage="/produk/balkon-laser-cutting_poco.webp"
+  schemaType="Product"
+  schemaData={{
+    name: 'Pagar Balkon Laser Cutting Palembang',
+    description: 'Pagar balkon lantai 2 plat cutting laser standar safety anak Sriwijaya Grafika Palembang',
+    image: '/produk/balkon-laser-cutting_poco.webp',
+    lowPrice: '1150000',
+    highPrice: '3200000',
+  }}
+  breadcrumbs={[
+    { name: 'Pagar Balkon Laser Cutting', url: '/balkon' }
+  ]}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
+    <Breadcrumb items={[
+      { name: 'Pagar Balkon Laser Cutting', url: '/balkon' }
+    ]} />
+
+    <!-- HERO SECTION -->
+    <header class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider border border-emerald-500/20">
+          Balkon Palembang
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          Pagar Balkon Laser Cutting Palembang dan Pengaman Lantai Dua Mewah
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+          Pagar balkon lantai dua berfungsi ganda sebagai pengaman keselamatan keluarga sekaligus daya tarik visual terkuat fasad rumah bagian atas. Workshop Sriwijaya Grafika memproduksi panel pagar balkon berbahan plat galvanis dan stainless steel bermotif presisi fiber laser. Dibuat dengan ketinggian ergonomis terukur, dudukan angkur kokoh ke struktur beton, dan lapisan cat anti karat tahan cuaca ekstrem Kota Palembang.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a
+            href="https://wa.me/6285215111125?text=Halo%20Sriwijaya%20Grafika%2C%20saya%20ingin%20konsultasi%20pembuatan%20Pagar%20Balkon%20Laser%20Cutting"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm shadow-lg shadow-emerald-950 transition-all"
+          >
+            Konsultasi Ukuran & Mockup Balkon
+          </a>
+          <a
+            href="/motif-laser-cutting"
+            class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
+          >
+            Lihat Pilihan Motif Ornamen →
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-slate-950 aspect-[4/3] shadow-2xl shadow-emerald-950/40 group">
+          <img
+            src="/produk/balkon-laser-cutting_poco.webp"
+            alt="Pagar balkon laser cutting Palembang Sriwijaya Grafika"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="eager"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-900/90 text-white font-medium border border-slate-700/80 backdrop-blur-sm">
+              Workshop Talang Jambe
+            </span>
+            <span class="text-emerald-400 font-semibold bg-emerald-950/80 px-2.5 py-1 rounded-lg border border-emerald-500/30">
+              Safety First
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: DESAIN MOTIF PAGAR BALKON -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Katalog Desain</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Desain Motif Pagar Balkon Laser Cutting</h2>
+        <p class="text-slate-400 text-sm mt-1">Koleksi motif artistik siap pasang untuk mempercantik balkon lantai dua rumah Anda.</p>
+      </div>
+
+      {balkonMotifs.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {balkonMotifs.map((m) => (
+            <MotifCard
+              title={m.data.title}
+              excerpt={m.data.excerpt}
+              slug={m.id}
+              kategori={m.data.label_produk}
+              topik={m.data.topik}
+              imgurl={m.data.imgurl}
+              imgalt={m.data.imgalt}
+            />
+          ))}
+        </div>
+      ) : (
+        <div class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-2">
+            <h3 class="text-lg font-bold text-white">Desain Motif Pagar Balkon Siap Kustom</h3>
+            <p class="text-xs text-slate-400 max-w-xl leading-relaxed">
+              Tersedia beragam pilihan ornamen laser cutting seperti motif dedaunan tropis, floral, kisi minimalis, hingga aksen songket lokal. Kami siap membuatkan gambar mockup 3D gratis untuk fasad balkon Anda.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <a
+              href="/motif-laser-cutting"
+              class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-700 transition-colors"
+            >
+              Lihat Galeri Motif →
+            </a>
+            <a
+              href="https://wa.me/6285215111125?text=Halo%20Sriwijaya%20Grafika%2C%20saya%20ingin%20request%20katalog%20motif%20balkon"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-colors"
+            >
+              Request Mockup WA
+            </a>
+          </div>
+        </div>
+      )}
+    </section>
+
+    <!-- SECTION 1: PILIHAN MODEL BALKON -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Varian Desain Fasad</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Pilihan Model Pagar Balkon Plat Motif Modern</h2>
+        <p class="text-slate-400 text-sm mt-1">Kombinasi panel plat logam presisi dengan aksen pegangan tangan yang nyaman digenggam.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xl">
+              01
+            </div>
+            <h3 class="text-xl font-bold text-white">Balkon Plat Minimalis Geometris</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Memadukan pola garis vertikal tegas, kisi modular, atau lubang perforasi simetris. Memberikan angin segar leluasa ke area kamar tidur lantai dua tanpa mengurangi privasi penghuni rumah.
+            </p>
+            <div class="text-xs text-emerald-400 font-semibold pt-1">
+              Favorit Klaster Modern Palembang
+            </div>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-xl">
+              02
+            </div>
+            <h3 class="text-xl font-bold text-white">Balkon Motif Sulur Flora dan Etnik</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Ornamen daun palem tropis, bunga monstera, atau motif songket khas Palembang. Menghidupkan siluet bayangan artistik di lantai teras atas saat tersorot matahari pagi atau lampu sorot malam hari.
+            </p>
+            <div class="text-xs text-amber-400 font-semibold pt-1">
+              Kesan Mewah dan Estetik Tinggi
+            </div>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-teal-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold text-xl">
+              03
+            </div>
+            <h3 class="text-xl font-bold text-white">Balkon Perpaduan Handrail Kayu</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Panel plat potong laser hitam doff dipadukan dengan pegangan atas berbahan kayu kamper oven atau woodplank serat kayu solid. Terasa hangat dan nyaman saat tangan bersandar menikmati udara sore.
+            </p>
+            <div class="text-xs text-teal-400 font-semibold pt-1">
+              Nuansa Vila Tropis Kontemporer
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: STANDAR KESELAMATAN & STRUKTUR -->
+    <section class="rounded-3xl bg-slate-900/40 border border-slate-800 p-8 sm:p-12 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Keamanan Lantai Dua</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Standar Keselamatan dan Kekuatan Struktur Balkon Lantai Dua</h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Pemasangan pagar di lantai atas tidak boleh berkompromi dengan keselamatan. Setiap unit balkon dari bengkel kami di Talang Jambe mematuhi pedoman teknis keselamatan arsitektural.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-300">
+        <div class="space-y-4 p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+          <h3 class="text-lg font-bold text-white">Ketinggian Pengaman Ergonomis 100 sampai 110 cm</h3>
+          <p class="leading-relaxed">
+            Ketinggian pagar balkon dibuat proporsional antara 100 cm hingga 110 cm dari permukaan lantai keramik selesai. Ukuran ini mencegah risiko jatuh bagi orang dewasa sekaligus aman bagi anak yang sedang bermain di teras lantai dua.
+          </p>
+          <div class="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-300">
+            Celah bukaan motif laser dirancang rapat di bawah 10 cm sehingga kepala anak kecil tidak dapat tersangkut.
+          </div>
+        </div>
+
+        <div class="space-y-4 p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+          <h3 class="text-lg font-bold text-white">Angkur Baseplate Tanam Balok Beton Bertulang</h3>
+          <p class="leading-relaxed">
+            Tiang utama pagar balkon tidak hanya menempel pada keramik tipis. Kami menanamkan plat landasan tebal 6 sampai 8 mm menggunakan baut dynabolt baja panjang menembus balok beton cor lantai agar konstruksi kokoh menahan beban benturan keras.
+          </p>
+          <div class="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300">
+            Sistem pengikatan dilengkapi ring per dan mur pengunci ganda tahan getaran angin kencang.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PROTEKSI KARAT TUNTAS -->
+    <section class="space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Proteksi Cuaca Ekstrem</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Proteksi Karat Ekstra Terhadap Terpaan Hujan Angin Tropis</h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Balkon lantai dua menerima terpaan angin hujan tanpa perlindungan atap tambahan. Karena itu, seluruh material kami persiapkan dengan ketahanan korosi tingkat tinggi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-emerald-400 font-bold text-base">Bahan Plat Galvanis Murni</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Bahan dasar menggunakan plat besi berlapis seng galvanis yang memiliki ketahanan alami terhadap kelembaban udara terbuka dibanding plat besi hitam mentah.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-amber-400 font-bold text-base">Epoxy Primer Zinc Chromate</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Dua lapis cat dasar epoxy tebal menutup setiap sudut potong laser, rongga sambungan las, dan titik pertemuan tiang rangka tanpa meninggalkan celah oksidasi.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-teal-400 font-bold text-base">Top Coat Duco Anti Kusam</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Lapisan akhir cat duco polyurethane tahan sinar matahari terik Palembang. Warna hitam doff, putih bersih, atau bronze antik tetap mengkilap selama bertahun-tahun.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: TABEL ESTIMASI HARGA BALKON -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">RAB Transparan</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Estimasi Spesifikasi dan Perhitungan Biaya Balkon per Meter Lari</h2>
+        <p class="text-slate-400 text-sm mt-1">
+          Harga dihitung per meter panjang keliling balkon (tinggi standar 100 cm), sudah termasuk plat motif, rangka hollow galvanis, baseplate angkur, cat duco, dan pemasangan di Palembang.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800">
+        <table class="w-full text-left text-sm text-slate-300">
+          <thead class="bg-slate-900 text-xs uppercase text-slate-400 tracking-wider border-b border-slate-800">
+            <tr>
+              <th class="py-4 px-6 font-semibold">Tipe Spesifikasi</th>
+              <th class="py-4 px-6 font-semibold">Bahan Plat & Tebal</th>
+              <th class="py-4 px-6 font-semibold">Rangka Bingkai Hollow</th>
+              <th class="py-4 px-6 font-semibold text-emerald-400">Estimasi Biaya / m¹</th>
+              <th class="py-4 px-6 font-semibold">Rekomendasi Handrail</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 bg-slate-950/60">
+            {pricingTiersBalkon.map((row) => (
+              <tr class={row.featured ? 'bg-emerald-950/20' : 'hover:bg-slate-900/40 transition-colors'}>
+                <td class="py-4 px-6 font-bold text-white">
+                  {row.grade}
+                  {row.featured && (
+                    <span class="ml-2 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                      Rekomendasi
+                    </span>
+                  )}
+                </td>
+                <td class="py-4 px-6">{row.plat}</td>
+                <td class="py-4 px-6">{row.frame}</td>
+                <td class="py-4 px-6 font-bold text-emerald-400 whitespace-nowrap">{row.price}</td>
+                <td class="py-4 px-6 text-xs text-slate-400">{row.handrail}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-xs text-slate-400 italic">
+        Catatan, untuk balkon dengan bentuk melengkung (radius kurva) atau ketinggian khusus di atas 120 cm, estimasi biaya akan disesuaikan setelah survei pengukuran lapangan.
+      </p>
+    </section>
+
+    <!-- SECTION 5: MATERIAL TABLE -->
+    <section class="space-y-6">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Fasilitas Pemotongan</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Kapasitas Mesin Pemotongan Plat Fiber Laser Workshop Talang Jambe</h2>
+        <p class="text-slate-400 text-sm mt-1">Presisi mesin 0.1 mm memastikan lekukan ornamen balkon halus dan aman disentuh tangan.</p>
+      </div>
+
+      <MaterialTable />
+    </section>
+
+    <!-- SECTION 6: TAHAPAN PEMBUATAN -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">SOP Produksi</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Tahapan Pembuatan dan Pemasangan Balkon Sriwijaya Grafika</h2>
+        <p class="text-slate-400 text-sm mt-1">Proses terstruktur demi menjamin kerapian sudut pertemuan dan keamanan konstruksi.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 01</div>
+          <h3 class="text-base font-bold text-white">Survei Bentang & Cek Level Lantai</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Teknisi kami mengukur panjang perimeter balkon, memeriksa ketebalan lantai cor dak, dan memastikan posisi pembuangan air hujan terbebas dari tiang.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 02</div>
+          <h3 class="text-base font-bold text-white">Desain Layout Motif Proporsional</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pola motif laser disesuaikan dengan bentang lebar balkon agar ornamen tidak terpotong canggung pada sudut belokan. Mockup visual 3D diserahkan untuk persetujuan.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 03</div>
+          <h3 class="text-base font-bold text-white">Pemotongan Fiber Laser Presisi</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Plat dipotong otomatis dengan laser fiber di workshop Sukarami. Seluruh tepi lekukan dibersihkan agar halus dan tidak melukai tangan pengguna.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 04</div>
+          <h3 class="text-base font-bold text-white">Perakitan Bingkai & Las Argon</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Panel plat ditanam ke dalam bingkai hollow galvanis dengan pengelasan full seam kedap air, lalu baseplate dudukan tiang dipersiapkan secara presisi.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 05</div>
+          <h3 class="text-base font-bold text-white">Pengecatan Epoxy Primer & Duco PU</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Balkon disemprot cat dasar epoxy zinc chromate dua lapis tebal, kemudian diberi lapisan cat duco polyurethane warna pilihan dengan perlindungan anti-UV.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 06</div>
+          <h3 class="text-base font-bold text-white">Instalasi Dynabolt & Serah Terima</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pemasangan di lantai dua menggunakan dynabolt baja bertulang, uji kekakuan goyang di hadapan Anda, dan penyerahan sertifikat garansi konstruksi 1 tahun.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: PANDUAN KONSUMEN -->
+    <section class="rounded-3xl bg-slate-900/50 border border-slate-800 p-8 sm:p-10 space-y-6">
+      <div class="space-y-2">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Edukasi Keamanan</span>
+        <h2 class="text-2xl font-bold text-white">Panduan Memilih Pagar Balkon Aman bagi Keluarga</h2>
+        <p class="text-slate-400 text-sm">Empat aspek wajib sebelum memutuskan desain pagar balkon lantai atas.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-300">
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">01</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Hindari Desain Pagar Berundak Layaknya Tangga</h3>
+            <p class="text-slate-400 leading-relaxed">Jangan memilih kisi horizontal dengan celah pijakan yang bisa dipanjat anak kecil. Panel plat laser cutting bermotif acak jauh lebih aman karena tidak memiliki pijakan panjat.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">02</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Pastikan Kerapian Tepi Sisi Potongan Laser</h3>
+            <p class="text-slate-400 leading-relaxed">Mesin potong yang berkualitas rendah meninggalkan gerigi tajam terak besi. Periksa bahwa seluruh permukaan motif terasa halus saat disentuh telapak tangan.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">03</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Cek Ketebalan Baseplate Tiang Angkur</h3>
+            <p class="text-slate-400 leading-relaxed">Baseplate penahan tiang harus memakai pelat besi tebal minimal 6 mm. Pelat tipis mudah melengkung saat baut dynabolt dikencangkan dan membuat pagar goyang.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">04</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Pilih Handrail yang Ergonomis</h3>
+            <p class="text-slate-400 leading-relaxed">Bagian atas pagar balkon harus nyaman dicengkeram tangan. Gunakan pipa bulat atau hollow berpenampang lebar tanpa sudut tajam.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FAQ ACCORDION -->
+    <section class="space-y-6">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Pertanyaan Umum</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Tanya Jawab Seputar Pagar Balkon Laser Cutting Palembang</h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        {faqsBalkon.map((faq) => (
+          <details class="group rounded-2xl bg-slate-900/60 border border-slate-800 p-6 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base group-open:text-emerald-400">
+              <span>{faq.question}</span>
+              <span class="ml-4 transition-transform group-open:rotate-180 text-emerald-400 font-bold">▾</span>
+            </summary>
+            <p class="mt-4 text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 pt-4">
+              {faq.answer}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- INTERNAL LINKING STRIP -->
+    <section class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-wrap items-center justify-between gap-4 text-xs">
+      <div class="text-slate-300">
+        Jelajahi produk arsitektural logam lainnya
+      </div>
+      <div class="flex flex-wrap items-center gap-4 text-emerald-400 font-semibold">
+        <a href="/pagar" class="hover:underline">Pagar Plat Laser Cutting →</a>
+        <a href="/pintu" class="hover:underline">Pintu Gerbang Plat Mewah →</a>
+        <a href="/railing" class="hover:underline">Railing Tangga Interior →</a>
+        <a href="/motif-laser-cutting" class="hover:underline">Katalog Motif Ornamen →</a>
+      </div>
+    </section>
+
+    <!-- CTA FOOTER -->
+    <CtaWhatsapp
+      title="Pesan Pagar Balkon Plat Cutting Laser Sekarang"
+      subtitle="Konsultasikan dimensi bentang balkon lantai dua rumah Anda bersama tim workshop Sriwijaya Grafika Palembang. Survei lokasi dan mockup 3D gratis ke seluruh Palembang."
+    />
+  </div>
+</BaseLayout>

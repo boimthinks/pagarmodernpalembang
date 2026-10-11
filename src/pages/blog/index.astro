@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import CtaWhatsapp from '../../components/CtaWhatsapp.astro';
+import { getCollection } from 'astro:content';
+
+const parseIndonesianDate = (dStr: string) => {
+  const months: Record<string, number> = {
+    'januari': 0, 'februari': 1, 'maret': 2, 'april': 3, 'mei': 4, 'juni': 5,
+    'juli': 6, 'agustus': 7, 'september': 8, 'oktober': 9, 'november': 10, 'desember': 11
+  };
+  const parts = dStr.split(' ');
+  if (parts.length === 3) {
+    const day = parseInt(parts[0], 10);
+    const month = months[parts[1].toLowerCase()] ?? 0;
+    const year = parseInt(parts[2], 10);
+    return new Date(year, month, day).getTime();
+  }
+  return new Date(dStr).getTime();
+};
+
+const articles = (await getCollection('blog', ({ data }) => data.published && data.tipe === 'artikel'))
+  .sort((a, b) => parseIndonesianDate(b.data.date) - parseIndonesianDate(a.data.date));
+---
+
+<BaseLayout
+  title="Blog & Panduan Pagar Laser Cutting Palembang | Tips & Biaya 2026"
+  description="Artikel edukasi arsitektur logam, panduan estimasi harga pagar laser cutting per meter, tips pemilihan ketebalan plat, dan tren gerbang minimalis di Palembang."
+  breadcrumbs={[
+    { name: 'Blog & Edukasi', url: '/blog' }
+  ]}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <Breadcrumb items={[{ name: 'Blog & Edukasi', url: '/blog' }]} />
+
+    <header class="max-w-3xl space-y-4 mb-12">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+        Panduan Praktis & Artikel Pagar Laser Cutting Palembang
+      </h1>
+      <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+        Ditulis langsung oleh praktisi workshop Sriwijaya Grafika untuk membantu Anda menentukan ketebalan plat yang tepat, memahami estimasi biaya per meter, serta merawat pagar agar bebas karat selama puluhan tahun.
+      </p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
+      {articles.map((art) => (
+        <ArticleCard
+          title={art.data.title}
+          excerpt={art.data.excerpt}
+          date={art.data.date}
+          topik={art.data.topik}
+          slug={art.id}
+          kategori={art.data.label_produk}
+          imgurl={art.data.imgurl}
+          imgalt={art.data.imgalt}
+        />
+      ))}
+    </div>
+
+    <CtaWhatsapp />
+  </div>
+</BaseLayout>

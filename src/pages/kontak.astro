@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { SITE } from '../config/site';
+---
+
+<BaseLayout
+  title="Kontak & Alamat Workshop Pagar Laser Cutting Palembang | Sriwijaya Grafika"
+  description="Hubungi workshop Sriwijaya Grafika Palembang. Alamat: Jl. AMD Pertanian No.105, Talang Jambe, Sukarami. WhatsApp: 0852-1511-1125. Konsultasi dan survei gratis."
+  breadcrumbs={[
+    { name: 'Kontak', url: '/kontak' }
+  ]}
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <Breadcrumb items={[{ name: 'Kontak Workshop', url: '/kontak' }]} />
+
+    <header class="max-w-3xl space-y-4 mb-12">
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+        Hubungi Workshop Sriwijaya Grafika Palembang
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+        Ingin konsultasi model pagar, survei ukuran langsung ke rumah, atau melihat sampel bahan plat di bengkel kami? Tim kami siap melayani Anda.
+      </p>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+      <!-- Info Kontak Card -->
+      <div class="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 space-y-6">
+        <h2 class="text-2xl font-bold text-white">Informasi Resmi (NAP)</h2>
+
+        <div class="space-y-4 text-sm text-slate-300">
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80">
+            <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider mb-1">Nama Usaha</div>
+            <div class="text-base font-bold text-white">{SITE.name} ({SITE.parentBrand})</div>
+            <div class="text-xs text-slate-400">Pimpinan: {SITE.owner}</div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80">
+            <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider mb-1">Alamat Workshop</div>
+            <div class="text-slate-200 font-medium leading-relaxed">{SITE.address.full}</div>
+            <div class="mt-3">
+              <a
+                href={SITE.address.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 hover:text-amber-300"
+              >
+                <span class="material-symbols-outlined text-sm">near_me</span>
+                <span>Buka Rute di Google Maps</span>
+                <span class="material-symbols-outlined text-xs">open_in_new</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80">
+            <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider mb-1">Telepon & WhatsApp</div>
+            <div class="text-lg font-bold text-emerald-400">{SITE.contact.phone}</div>
+            <div class="text-xs text-slate-400">Respons cepat setiap hari kerja</div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800/80">
+            <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider mb-1">Jam Operasional</div>
+            <div class="text-slate-200">Senin sampai Sabtu: 08:00 - 17:00 WIB</div>
+            <div class="text-xs text-slate-500">Minggu & Hari Libur Nasional: Dengan Perjanjian</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WhatsApp Quick Action Box -->
+      <div class="p-8 rounded-3xl bg-gradient-to-br from-emerald-950/60 to-slate-900 border border-emerald-500/30 flex flex-col justify-between space-y-6">
+        <div class="space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+            <span class="material-symbols-outlined text-2xl">chat</span>
+          </div>
+          <h2 class="text-2xl font-bold text-white">Konsultasi Desain & Penawaran Biaya</h2>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Untuk mempercepat estimasi biaya, Anda dapat menyiapkan:
+          </p>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-400 font-bold">1.</span> Foto tampak depan lokasi carport atau teras rumah Anda.
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-400 font-bold">2.</span> Perkiraan panjang bentang dan tinggi pagar yang diinginkan.
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-400 font-bold">3.</span> Contoh motif cutting (daun, wayang, songket, atau minimalis).
+            </li>
+          </ul>
+        </div>
+
+        <a
+          href={`https://wa.me/${SITE.contact.whatsapp}?text=${SITE.contact.whatsappText}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block text-center py-4 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base shadow-lg shadow-emerald-950/80 transition-all hover:scale-102"
+        >
+          Mulai Chat WhatsApp Sekarang
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

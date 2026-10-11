@@ -1,0 +1,516 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CtaWhatsapp from '../../components/CtaWhatsapp.astro';
+import MaterialTable from '../../components/MaterialTable.astro';
+import MotifCard from '../../components/MotifCard.astro';
+import { getCollection } from 'astro:content';
+
+const partisiMotifs = await getCollection('blog', ({ data }) => data.published && data.label_produk === 'partisi' && data.tipe === 'motif');
+
+const pricingTiersPartisi = [
+  {
+    grade: 'Partisi ACP CNC Router Ekonomis',
+    plat: 'Aluminium Composite Panel (ACP) tebal 3 mm, 4 mm',
+    frame: 'Hollow Galvanis 40x40 mm atau Rangka Aluminium',
+    finish: 'Warna bawaan pabrik (doff, glossy, serat kayu)',
+    price: 'Rp 850.000, Rp 1.150.000',
+    bestFor: 'Sekat ruangan ringan, mushola rumah, dan kantor sewa',
+  },
+  {
+    grade: 'Partisi Plat Besi Galvanis Cat Duco',
+    plat: 'Plat Besi Galvanis 1.8 mm, 2.0 mm potong laser',
+    frame: 'Hollow Galvanis 40x40 mm tebal 1.4 mm',
+    finish: 'Cat dasar epoxy + duco polyurethane hitam doff / putih',
+    price: 'Rp 1.250.000, Rp 1.750.000',
+    bestFor: 'Sekat ruang tamu dan ruang keluarga rumah tinggal modern',
+    featured: true,
+  },
+  {
+    grade: 'Partisi PVC Board Tebal Ornamen 3D',
+    plat: 'Solid PVC Foam Board tebal 12 mm, 15 mm',
+    frame: 'Frame profil kayu solid atau hollow galvanis',
+    finish: 'Cat duco semprot mulus warna putih bersih atau pastel',
+    price: 'Rp 1.450.000, Rp 1.950.000',
+    bestFor: 'Mihrab mushola keluarga dan latar belakang backdrop TV',
+  },
+  {
+    grade: 'Partisi Stainless Steel Titanium Gold',
+    plat: 'Plat Stainless Steel 304 tebal 1.5 mm, 2.0 mm',
+    frame: 'Hollow Stainless 304 profil kotak 40x40 mm',
+    finish: 'PVD Coating warna gold, rose gold, atau black titanium',
+    price: 'Rp 2.500.000, Rp 3.800.000',
+    bestFor: 'Lobi hotel, restoran VIP, kafe mewah, dan ruang tamu megah',
+  },
+];
+
+const faqsPartisi = [
+  {
+    question: 'Apakah partisi laser cutting membuat ruangan terasa sempit dan gelap?',
+    answer: 'Sama sekali tidak. Pola lubang motif laser cutting dirancang sebagai sekat semi-transparan. Cahaya lampu dan hembusan udara pendingin ruangan (AC) tetap bersirkulasi bebas ke kedua sisi ruangan, menciptakan batas fungsi ruang tanpa membatasi kelapangan pandangan.',
+  },
+  {
+    question: 'Lebih bagus mana antara partisi plat besi galvanis dan partisi ACP?',
+    answer: 'Keduanya memiliki keunggulan masing-masing. Plat besi galvanis memiliki kekuatan fisik sangat solid, kokoh saat tersenggol, dan memberi kesan arsitektur industrial mewah. Sedangkan material ACP (Aluminium Composite Panel) memiliki bobot lebih ringan dan anti karat alami, sangat pas untuk sekat yang menempel pada partisi gypsum.',
+  },
+  {
+    question: 'Bagaimana cara memasang partisi agar tidak merusak lantai keramik atau granit?',
+    answer: 'Untuk lantai granit atau marmer mewah, teknisi kami menggunakan teknik perkuatan klem plafon dan dinding samping, dipadu perekat struktural heavy-duty di bagian bawah dengan titik baut tersembunyi yang sangat minim sehingga keutuhan lantai tetap terjaga.',
+  },
+  {
+    question: 'Apakah partisi ruangan bisa dibuat sistem lipat atau beroda yang bisa digeser?',
+    answer: 'Bisa. Kami memproduksi partisi lipat fleksibel (movable partition) menggunakan roda geser atas atau engsel lipat kupu-kupu yang mudah dibuka saat Anda membutuhkan ruangan luas untuk acara syukuran atau kumpul keluarga besar.',
+  },
+];
+---
+
+<BaseLayout
+  title="Partisi Ruangan Laser Cutting Palembang | Sekat Ruang Tamu & Mushola Mewah"
+  description="Jasa pembuatan partisi ruangan laser cutting di Palembang. Sekat dekoratif ruang tamu, mushola & kantor berbahan plat besi dan ACP by Sriwijaya Grafika."
+  ogImage="/produk/partisi-laser-cutting_poco.webp"
+  schemaType="Product"
+  schemaData={{
+    name: 'Partisi Ruangan Laser Cutting Palembang',
+    description: 'Partisi ruangan dekoratif sekat ruang tamu mushola plat besi dan ACP Sriwijaya Grafika Palembang',
+    image: '/produk/partisi-laser-cutting_poco.webp',
+    lowPrice: '850000',
+    highPrice: '3800000',
+  }}
+  breadcrumbs={[
+    { name: 'Partisi Laser Cutting', url: '/partisi' }
+  ]}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
+    <Breadcrumb items={[
+      { name: 'Partisi Laser Cutting', url: '/partisi' }
+    ]} />
+
+    <!-- HERO SECTION -->
+    <header class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider border border-emerald-500/20">
+          Partisi Palembang
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          Partisi Ruangan Laser Cutting Palembang dan Sekat Interior Mewah
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+          Hadirkan zonasi fungsi ruang yang anggun tanpa membuat rumah Anda terasa sempit atau terisolasi. Workshop Sriwijaya Grafika memproduksi partisi ruangan dekoratif untuk pemisah ruang tamu, mushola keluarga, foyer lobi, area kerja kantor, hingga kafe komersial di Palembang. Menggunakan plat besi galvanis, stainless steel, dan ACP yang dipotong presisi menggunakan mesin fiber laser dan CNC router berstandar industri.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a
+            href="https://wa.me/6285215111125?text=Halo%20Sriwijaya%20Grafika%2C%20saya%20ingin%20konsultasi%20pembuatan%20Partisi%20Ruangan%20Laser%20Cutting"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm shadow-lg shadow-emerald-950 transition-all"
+          >
+            Konsultasi Ukuran & Mockup Ruangan
+          </a>
+          <a
+            href="/motif-laser-cutting"
+            class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
+          >
+            Katalog Desain Motif Partisi →
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-slate-950 aspect-[4/3] shadow-2xl shadow-emerald-950/40 group">
+          <img
+            src="/produk/partisi-laser-cutting_poco.webp"
+            alt="Partisi ruangan laser cutting Palembang Sriwijaya Grafika"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="eager"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-900/90 text-white font-medium border border-slate-700/80 backdrop-blur-sm">
+              Workshop Talang Jambe
+            </span>
+            <span class="text-emerald-400 font-semibold bg-emerald-950/80 px-2.5 py-1 rounded-lg border border-emerald-500/30">
+              Fiber Laser & CNC
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: DESAIN MOTIF PARTISI RUANGAN -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Katalog Desain</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Desain Motif Partisi Ruangan Laser Cutting</h2>
+        <p class="text-slate-400 text-sm mt-1">Pilihan ornamen pemisah ruang dekoratif yang mempercantik interior rumah dan kantor.</p>
+      </div>
+
+      {partisiMotifs.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {partisiMotifs.map((m) => (
+            <MotifCard
+              title={m.data.title}
+              excerpt={m.data.excerpt}
+              slug={m.id}
+              kategori={m.data.label_produk}
+              topik={m.data.topik}
+              imgurl={m.data.imgurl}
+              imgalt={m.data.imgalt}
+            />
+          ))}
+        </div>
+      ) : (
+        <div class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-2">
+            <h3 class="text-lg font-bold text-white">Desain Motif Partisi Ruangan Siap Kustom</h3>
+            <p class="text-xs text-slate-400 max-w-xl leading-relaxed">
+              Tersedia koleksi ornamen islami arabesque, kaligrafi, sulur bunga, motif songket, dan pola geometris modern dengan opsi bahan plat besi, ACP, atau PVC board. Konsultasikan denah interior Anda untuk visualisasi 3D gratis.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <a
+              href="/motif-laser-cutting"
+              class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-700 transition-colors"
+            >
+              Lihat Galeri Motif →
+            </a>
+            <a
+              href="https://wa.me/6285215111125?text=Halo%20Sriwijaya%20Grafika%2C%20saya%20ingin%20request%20katalog%20motif%20partisi"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-colors"
+            >
+              Request Mockup WA
+            </a>
+          </div>
+        </div>
+      )}
+    </section>
+
+    <!-- SECTION 1: APLIKASI RUANGAN -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Aplikasi Penataan Ruang</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Pilihan Model dan Aplikasi Partisi Ruangan Interior</h2>
+        <p class="text-slate-400 text-sm mt-1">Solusi cerdas membagi fungsi ruangan hunian dan area komersial di Palembang.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xl">
+              01
+            </div>
+            <h3 class="text-xl font-bold text-white">Sekat Foyer & Ruang Tamu Keluarga</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Membatasi pandangan langsung dari pintu masuk utama ke ruang keluarga dan ruang makan. Memberikan privasi santai bagi keluarga inti saat ada tamu berkunjung tanpa perlu membangun dinding tembok bata yang kaku.
+            </p>
+            <div class="text-xs text-emerald-400 font-semibold pt-1">
+              Menjaga Privasi Ruang Keluarga
+            </div>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-xl">
+              02
+            </div>
+            <h3 class="text-xl font-bold text-white">Pembatas Mushola Rumah & Ornamen Islami</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Pilihan motif arabesque geometris islami, kaligrafi ornamen, atau pola songket Palembang. Menghadirkan batas ruang ibadah keluarga yang hening, sakral, dan teduh dengan sirkulasi AC yang tetap sejuk merata.
+            </p>
+            <div class="text-xs text-amber-400 font-semibold pt-1">
+              Suasana Ibadah Tenang dan Khusyuk
+            </div>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-teal-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold text-xl">
+              03
+            </div>
+            <h3 class="text-xl font-bold text-white">Zonasi Kantor, Restoran & Kafe</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Penyekat meja kerja ruang kantor atau pembatas meja makan VIP restoran. Menghadirkan kesan interior modern kontemporer yang estetik untuk konten media sosial para pengunjung bisnis Anda.
+            </p>
+            <div class="text-xs text-teal-400 font-semibold pt-1">
+              Daya Tarik Estetika Komersial
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: MATERIAL LOGAM & CNC -->
+    <section class="rounded-3xl bg-slate-900/40 border border-slate-800 p-8 sm:p-12 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Pilihan Bahan Terbaik</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Pilihan Material Plat Logam dan ACP CNC Router Presisi</h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Workshop kami mengoperasikan dua teknologi mesin pemotong berbeda untuk menyesuaikan berat konstruksi dan anggaran interior Anda.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-300">
+        <div class="space-y-4 p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+          <h3 class="text-lg font-bold text-white">Plat Besi Galvanis Potong Fiber Laser</h3>
+          <p class="leading-relaxed">
+            Plat logam padat dengan ketebalan 1.8 mm sampai 2.0 mm yang dipotong dengan sinar laser fiber. Memiliki bobot mantap dan sangat kaku, tidak mudah bergetar saat tersenggol, serta dilapisi cat duco halus yang memberi kesan arsitektur solid berkelas tinggi.
+          </p>
+          <div class="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-300">
+            Sangat disarankan untuk partisi permanen ruang tamu dan dinding pembatas utama.
+          </div>
+        </div>
+
+        <div class="space-y-4 p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+          <h3 class="text-lg font-bold text-white">Panel ACP dan PVC Board Potong Mesin CNC Router</h3>
+          <p class="leading-relaxed">
+            Material komposit aluminium (ACP) tebal 3 sampai 4 mm atau papan PVC foam board tebal 12 sampai 15 mm yang dipotong menggunakan mata pisau router otomatis. Bobotnya sangat ringan, 100% tahan rayap, dan tidak menyerap lembap, ideal untuk dipasang pada bidang dinding gypsum.
+          </p>
+          <div class="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300">
+            Solusi praktis dan hemat anggaran untuk sekat ruangan yang sering dipindahkan.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SISTEM KONSTRUKSI -->
+    <section class="space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Fleksibilitas Pemasangan</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Sistem Konstruksi Partisi Permanen Tanam dan Partisi Lipat Fleksibel</h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Kami menyesuaikan metode pemasangan rangka dengan aktivitas harian ruangan rumah atau kantor Anda.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-emerald-400 font-bold text-base">Tanam Plafon ke Lantai</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Struktur rangka diikat kencang dari balok lantai atas hingga lantai bawah. Menjadi dinding sekat permanen kokoh dengan kerapian pertemuan sudut tanpa celah goyang.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-amber-400 font-bold text-base">Semi-Permanen Dudukan Plin</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Partisi berdiri bebas dengan penopang baseplate lebar yang disamarkan dengan plin kayu atau profil aluminium. Mudah dibongkar jika Anda menata ulang interior di masa depan.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-teal-400 font-bold text-base">Partisi Lipat Movable</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Panel daun partisi dihubungkan engsel lipat berkualitas dan dilengkapi roda pengunci bawah. Dapat dilipat dan digeser ke sudut dinding saat membutuhkan ruangan lapang.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: TABEL ESTIMASI BIAYA -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Rincian Anggaran Jelas</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Estimasi Spesifikasi dan Perhitungan Biaya Partisi per Meter Persegi</h2>
+        <p class="text-slate-400 text-sm mt-1">
+          Harga dihitung per meter persegi luas bidang sekat (panjang x tinggi), sudah mencakup pemotongan motif presisi, rangka hollow pendukung, finishing cat, dan instalasi lapangan di Palembang.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800">
+        <table class="w-full text-left text-sm text-slate-300">
+          <thead class="bg-slate-900 text-xs uppercase text-slate-400 tracking-wider border-b border-slate-800">
+            <tr>
+              <th class="py-4 px-6 font-semibold">Tipe Spesifikasi</th>
+              <th class="py-4 px-6 font-semibold">Bahan Panel & Tebal</th>
+              <th class="py-4 px-6 font-semibold">Rangka Bingkai</th>
+              <th class="py-4 px-6 font-semibold text-emerald-400">Estimasi Biaya / m²</th>
+              <th class="py-4 px-6 font-semibold">Finishing Permukaan</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 bg-slate-950/60">
+            {pricingTiersPartisi.map((row) => (
+              <tr class={row.featured ? 'bg-emerald-950/20' : 'hover:bg-slate-900/40 transition-colors'}>
+                <td class="py-4 px-6 font-bold text-white">
+                  {row.grade}
+                  {row.featured && (
+                    <span class="ml-2 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                      Rekomendasi
+                    </span>
+                  )}
+                </td>
+                <td class="py-4 px-6">{row.plat}</td>
+                <td class="py-4 px-6">{row.frame}</td>
+                <td class="py-4 px-6 font-bold text-emerald-400 whitespace-nowrap">{row.price}</td>
+                <td class="py-4 px-6 text-xs text-slate-400">{row.finish}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-xs text-slate-400 italic">
+        Catatan, untuk partisi dengan bingkai stainless steel gold mirror atau kombinasi lampu akrilik backlight interior, estimasi rincian biaya dapat disesuaikan saat konsultasi rancangan desain.
+      </p>
+    </section>
+
+    <!-- SECTION 5: MATERIAL TABLE -->
+    <section class="space-y-6">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Kapasitas Mesin Produksi</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Kapasitas Mesin Fiber Laser dan CNC Router Workshop Sriwijaya Grafika</h2>
+        <p class="text-slate-400 text-sm mt-1">Dikerjakan dengan mesin potong logam dan kayu terlengkap di workshop Talang Jambe Sukarami.</p>
+      </div>
+
+      <MaterialTable />
+    </section>
+
+    <!-- SECTION 6: TAHAPAN PEMBUATAN -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">SOP Pembuatan Rapi</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Tahapan Pembuatan Partisi Ruangan di Workshop Talang Jambe</h2>
+        <p class="text-slate-400 text-sm mt-1">Enam langkah teratur untuk hasil sekat ruangan yang presisi dan bersih saat pemasangan.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 01</div>
+          <h3 class="text-base font-bold text-white">Survei Dimensi & Analisis Ruang</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Teknisi kami mengukur tinggi plafon dan lebar ruangan, memeriksa jalur sirkulasi AC, serta meninjau posisi stopkontak listrik di sekitar sekat.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 02</div>
+          <h3 class="text-base font-bold text-white">Simulasi Skala Gambar 3D</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Desainer kami membuatkan simulasi 3D penempatan partisi di dalam denah ruangan Anda. Kerapatan pola motif disesuaikan dengan tingkat privasi yang diinginkan.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 03</div>
+          <h3 class="text-base font-bold text-white">Pemotongan Mesin Otomatis</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pemotongan plat besi dengan fiber laser atau ACP dengan mesin CNC router. Seluruh sudut lekukan ornamen dipotong presisi tinggi tanpa cacat gerigi.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 04</div>
+          <h3 class="text-base font-bold text-white">Penyatuan Panel ke Bingkai</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Panel ditanam kuat ke dalam bingkai hollow dengan sambungan tersembunyi. Dinding bingkai diratakan tanpa menyisakan tonjolan las yang kasar.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 05</div>
+          <h3 class="text-base font-bold text-white">Finishing Cat Duco Ramah Interior</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pengecatan cat dasar epoxy dan cat duco polyurethane lembut yang tidak berbau menyengat dan tahan goresan pembersihan debu harian.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 06</div>
+          <h3 class="text-base font-bold text-white">Instalasi Rapi Tanpa Rusak Lantai</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pemasangan rapi di dalam rumah dengan perlindungan alas lantai, penyetelan ketegakan lot vertikal, dan serah terima garansi resmi 1 tahun.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: PANDUAN KONSUMEN -->
+    <section class="rounded-3xl bg-slate-900/50 border border-slate-800 p-8 sm:p-10 space-y-6">
+      <div class="space-y-2">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Tips Dekorasi Ruang</span>
+        <h2 class="text-2xl font-bold text-white">Panduan Memilih Desain Sekat Ruangan yang Proporsional</h2>
+        <p class="text-slate-400 text-sm">Empat pertimbangan penting agar partisi fungsional dan serasi dengan furnitur rumah Anda.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-300">
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">01</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Tentukan Derajat Privasi Ruangan</h3>
+            <p class="text-slate-400 leading-relaxed">Untuk ruang tamu, pilihlah motif dengan kerapatan sedang agar ruangan tetap terang. Sedangkan untuk mushola, pilih motif rapat yang menghalangi pandangan lalu lalang orang.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">02</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Perhatikan Bobot dan Kekuatan Lantai</h3>
+            <p class="text-slate-400 leading-relaxed">Jika dipasang di lantai dua dengan struktur dak kayu atau gypsum, gunakan material ACP yang ringan. Jika di lantai dasar, gunakan plat besi galvanis padat yang kokoh.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">03</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Sesuaikan Warna dengan Kusen dan Dinding</h3>
+            <p class="text-slate-400 leading-relaxed">Warna hitam doff memberi aksen tegas modern monokrom. Warna putih memberi kesan lapang luas, sedangkan warna emas memberi sentuhan mewah klasik.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">04</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Kemudahan Pembersihan Celah Motif</h3>
+            <p class="text-slate-400 leading-relaxed">Pastikan celah potong laser tidak terlalu sempit berlekuk tajam agar debu ruangan mudah dibersihkan menggunakan kain mikrofiber atau kuas halus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FAQ ACCORDION -->
+    <section class="space-y-6">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Pertanyaan Umum</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Tanya Jawab Seputar Partisi Ruangan Laser Cutting Palembang</h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        {faqsPartisi.map((faq) => (
+          <details class="group rounded-2xl bg-slate-900/60 border border-slate-800 p-6 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base group-open:text-emerald-400">
+              <span>{faq.question}</span>
+              <span class="ml-4 transition-transform group-open:rotate-180 text-emerald-400 font-bold">▾</span>
+            </summary>
+            <p class="mt-4 text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 pt-4">
+              {faq.answer}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- INTERNAL LINKING STRIP -->
+    <section class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-wrap items-center justify-between gap-4 text-xs">
+      <div class="text-slate-300">
+        Jelajahi produk arsitektural logam lainnya
+      </div>
+      <div class="flex flex-wrap items-center gap-4 text-emerald-400 font-semibold">
+        <a href="/pagar" class="hover:underline">Pagar Plat Laser Cutting →</a>
+        <a href="/pintu" class="hover:underline">Pintu Gerbang Plat Mewah →</a>
+        <a href="/railing" class="hover:underline">Railing Tangga Interior →</a>
+        <a href="/motif-laser-cutting" class="hover:underline">Katalog Motif Ornamen →</a>
+      </div>
+    </section>
+
+    <!-- CTA FOOTER -->
+    <CtaWhatsapp
+      title="Pesan Partisi Ruangan Laser Cutting Custom Sekarang"
+      subtitle="Konsultasikan ukuran tinggi dan lebar ruangan Anda bersama desainer Sriwijaya Grafika Palembang. Free survei lokasi dan visualisasi gambar 3D tanpa biaya."
+    />
+  </div>
+</BaseLayout>

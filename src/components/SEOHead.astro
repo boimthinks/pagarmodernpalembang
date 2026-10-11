@@ -1,0 +1,74 @@
+---
+import { SITE } from '../config/site';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  ogType?: string;
+  canonicalUrl?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  canonicalUrl,
+  noindex = false,
+} = Astro.props;
+
+const fullTitle = `${title} | ${SITE.name}`;
+const siteUrl = (Astro.site?.toString() || SITE.url).replace(/\/$/, '');
+const url = canonicalUrl || siteUrl + Astro.url.pathname;
+const fullOgImage = ogImage.startsWith('http') ? ogImage : siteUrl + ogImage;
+
+// Deteksi MIME type gambar OG
+let ogImageType = 'image/jpeg';
+if (fullOgImage.endsWith('.webp')) {
+  ogImageType = 'image/webp';
+} else if (fullOgImage.endsWith('.png')) {
+  ogImageType = 'image/png';
+} else if (fullOgImage.endsWith('.svg')) {
+  ogImageType = 'image/svg+xml';
+}
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={url} />
+{noindex ? (
+  <meta name="robots" content="noindex, nofollow" />
+) : (
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+)}
+
+<!-- Google Search Thumbnail -->
+<meta name="thumbnail" content={fullOgImage} />
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={url} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={fullOgImage} />
+<meta property="og:image:secure_url" content={fullOgImage} />
+<meta property="og:image:type" content={ogImageType} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={fullTitle} />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:locale" content="id_ID" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={url} />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={fullOgImage} />
+<meta name="twitter:image:alt" content={fullTitle} />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />

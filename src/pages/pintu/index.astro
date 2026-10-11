@@ -1,0 +1,516 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CtaWhatsapp from '../../components/CtaWhatsapp.astro';
+import MaterialTable from '../../components/MaterialTable.astro';
+import MotifCard from '../../components/MotifCard.astro';
+import { getCollection } from 'astro:content';
+
+const pintuMotifs = await getCollection('blog', ({ data }) => data.published && data.label_produk === 'pintu' && data.tipe === 'motif');
+
+const pricingTiersPintu = [
+  {
+    grade: 'Gerbang Lipat Standar',
+    plat: 'Plat Besi Galvanis 1.8 mm, 2.0 mm',
+    frame: 'Hollow Galvanis 40x40 / 40x60 mm tebal 1.4 mm',
+    hardware: 'Engsel bubut diameter 32 mm las full seam',
+    price: 'Rp 1.450.000, Rp 1.850.000',
+    bestFor: 'Carport lahan terbatas, bukaan 3 sampai 4 daun lipat',
+  },
+  {
+    grade: 'Gerbang Dorong Heavy-Duty',
+    plat: 'Plat Besi Galvanis 2.4 mm, 3.0 mm',
+    frame: 'Hollow Galvanis 40x60 mm tebal 1.6 mm',
+    hardware: 'Roda bearing Jepang ganda, rel as baja pejal 16 mm',
+    price: 'Rp 1.850.000, Rp 2.450.000',
+    bestFor: 'Pintu pagar geser samping bentang 3 sampai 5 meter',
+    featured: true,
+  },
+  {
+    grade: 'Gerbang Autogate Ready',
+    plat: 'Plat Besi Galvanis 2.4 mm, 3.2 mm',
+    frame: 'Hollow Galvanis 50x100 mm tebal 1.6 mm',
+    hardware: 'Braket motor penggerak, gear rack baja, rel stopper',
+    price: 'Rp 2.200.000, Rp 2.900.000',
+    bestFor: 'Hunian modern dengan sistem buka tutup otomatis remote',
+  },
+  {
+    grade: 'Gerbang Stainless 304 Premium',
+    plat: 'Plat Stainless Steel 304 tebal 2.0 mm',
+    frame: 'Hollow Stainless Steel 40x60 mm tebal 1.5 mm',
+    hardware: 'Engsel dan roda stainless full bearing anti karat',
+    price: 'Rp 2.600.000, Rp 3.600.000',
+    bestFor: 'Fasad mewah bebas perawatan cat ulang selamanya',
+  },
+];
+
+const faqsPintu = [
+  {
+    question: 'Berapa ketebalan plat yang disarankan untuk pintu gerbang dorong bentang lebar?',
+    answer: 'Untuk pintu gerbang dorong bentang 3 meter ke atas, kami mewajibkan pemakaian plat tebal minimal 2.4 mm hingga 3.2 mm. Plat dengan ketebalan ini memiliki ketahanan puntir yang tinggi saat diterpa hembusan angin kencang Palembang dan tidak bergetar saat digeser.',
+  },
+  {
+    question: 'Mengapa pintu gerbang laser cutting rawan anjlok jika dibuat asal-asalan?',
+    answer: 'Panel plat motif memiliki bobot mati yang lebih berat dibanding tralis pipa biasa. Jika bengkel menggunakan engsel tipis tanpa diagonal bracing pada rangka hollow, daun pintu akan melorot ke bawah dalam hitungan bulan. Kami menggunakan engsel bubut pejal diameter 32 sampai 40 mm yang mampu menahan beban hingga ratusan kilogram.',
+  },
+  {
+    question: 'Apakah pintu gerbang ini bisa dipasangi mesin motor otomatis remote?',
+    answer: 'Bisa. Kami merancang rangka bawah dan titik dudukan motor autogate dengan kepresisian tinggi agar gear rack terpasang lurus sempurna, membuat kerja motor otomatis awet dan tidak cepat panas.',
+  },
+  {
+    question: 'Bagaimana agar rel gerbang bawah tidak cepat rusak tergilas mobil?',
+    answer: 'Kami menanam rel menggunakan as baja bulat padat berdiameter 16 mm yang dilas ke jangkar cakar ayam beton, bukan sekadar besi siku tipis. Konstruksi ini tahan gilasan kendaraan berat tanpa risiko rel melesak atau bengkok.',
+  },
+];
+---
+
+<BaseLayout
+  title="Pintu Laser Cutting Palembang | Pintu Gerbang & Pintu Plat Besi Mewah"
+  description="Pembuatan pintu gerbang laser cutting dorong dan lipat di Palembang. Plat tebal kokoh anti anjlok, roda bearing Jepang, presisi fiber laser Sriwijaya Grafika."
+  ogImage="/produk/pintu-laser-cutting_poco.webp"
+  schemaType="Product"
+  schemaData={{
+    name: 'Pintu Gerbang Plat Cutting Laser Palembang',
+    description: 'Pintu gerbang dorong dan lipat plat cutting laser kokoh anti anjlok Sriwijaya Grafika Palembang',
+    image: '/produk/pintu-laser-cutting_poco.webp',
+    lowPrice: '1450000',
+    highPrice: '3600000',
+  }}
+  breadcrumbs={[
+    { name: 'Pintu Laser Cutting', url: '/pintu' }
+  ]}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
+    <Breadcrumb items={[
+      { name: 'Pintu Laser Cutting', url: '/pintu' }
+    ]} />
+
+    <!-- HERO SECTION -->
+    <header class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider border border-emerald-500/20">
+          Pintu Palembang
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          Pintu Laser Cutting Palembang dan Pintu Gerbang Plat Mewah
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+          Pintu gerbang adalah benteng pengaman pertama sekaligus pusat perhatian visual fasad bangunan Anda. Workshop Sriwijaya Grafika memproduksi pintu gerbang geser dorong, gerbang lipat, pintu pagar swing, dan pintu utama bermotif presisi tinggi. Menggunakan plat baja galvanis solid pemotongan fiber laser modern yang dipadu engsel bubut heavy-duty dan rel as baja pejal anti macet.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a
+            href="https://wa.me/6285215111125?text=Halo%20Sriwijaya%20Grafika%2C%20saya%20ingin%20konsultasi%20pembuatan%20Pintu%20Gerbang%20Laser%20Cutting"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm shadow-lg shadow-emerald-950 transition-all"
+          >
+            Konsultasi Ukuran & Mockup Gerbang
+          </a>
+          <a
+            href="/motif-laser-cutting"
+            class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
+          >
+            Pilih Motif Gerbang →
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-slate-950 aspect-[4/3] shadow-2xl shadow-emerald-950/40 group">
+          <img
+            src="/produk/pintu-laser-cutting_poco.webp"
+            alt="Pintu gerbang laser cutting Palembang Sriwijaya Grafika"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="eager"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-900/90 text-white font-medium border border-slate-700/80 backdrop-blur-sm">
+              Workshop Talang Jambe
+            </span>
+            <span class="text-emerald-400 font-semibold bg-emerald-950/80 px-2.5 py-1 rounded-lg border border-emerald-500/30">
+              Bearing Jepang
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: DESAIN MOTIF PINTU GERBANG -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Katalog Desain</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Desain Motif Pintu Gerbang Laser Cutting</h2>
+        <p class="text-slate-400 text-sm mt-1">Inspirasi motif ornamen potong laser siap produksi untuk pintu gerbang rumah Anda.</p>
+      </div>
+
+      {pintuMotifs.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {pintuMotifs.map((m) => (
+            <MotifCard
+              title={m.data.title}
+              excerpt={m.data.excerpt}
+              slug={m.id}
+              kategori={m.data.label_produk}
+              topik={m.data.topik}
+              imgurl={m.data.imgurl}
+              imgalt={m.data.imgalt}
+            />
+          ))}
+        </div>
+      ) : (
+        <div class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-2">
+            <h3 class="text-lg font-bold text-white">Desain Motif Pintu Gerbang Siap Kustom</h3>
+            <p class="text-xs text-slate-400 max-w-xl leading-relaxed">
+              Tersedia ratusan pilihan motif potong laser mulai dari pola minimalis simetris hingga ukiran etnik songket Palembang. Kirim referensi motif Anda ke WhatsApp kami untuk visualisasi mockup 3D gratis.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <a
+              href="/motif-laser-cutting"
+              class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-700 transition-colors"
+            >
+              Lihat Galeri Motif →
+            </a>
+            <a
+              href="https://wa.me/6285215111125?text=Halo%20Sriwijaya%20Grafika%2C%20saya%20ingin%20request%20katalog%20motif%20pintu%20gerbang"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-colors"
+            >
+              Request Mockup WA
+            </a>
+          </div>
+        </div>
+      )}
+    </section>
+
+    <!-- SECTION 1: SISTEM BUKAAN GERBANG -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Pilihan Mekanisme</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Pilihan Sistem Bukaan Pintu Gerbang Laser Cutting</h2>
+        <p class="text-slate-400 text-sm mt-1">Menyesuaikan bentuk lahan carport dan kenyamanan akses keluar masuk kendaraan.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xl">
+              01
+            </div>
+            <h3 class="text-xl font-bold text-white">Gerbang Dorong Geser (Sliding Gate)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Pilihan ideal untuk halaman dengan area dinding samping yang panjang. Pintu bergeser sejajar pagar tanpa memakan ruang parkir mobil di dalam carport. Dilengkapi stopper baja dan rel tanam rata lantai yang nyaman dilewati kendaraan.
+            </p>
+            <div class="text-xs text-emerald-400 font-semibold pt-1">
+              Rekomendasi Plat, 2.4 mm sampai 3.2 mm
+            </div>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-xl">
+              02
+            </div>
+            <h3 class="text-xl font-bold text-white">Gerbang Lipat (Folding Gate)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Solusi cerdas bagi rumah dengan lebar jalan sempit atau tidak memiliki dinding geser ke samping. Setiap daun pintu saling terhubung dengan engsel bubut presisi yang melipat rapi ke sisi tiang pagar saat dibuka penuh.
+            </p>
+            <div class="text-xs text-amber-400 font-semibold pt-1">
+              Rekomendasi Plat, 1.8 mm sampai 2.4 mm per daun
+            </div>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-teal-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold text-xl">
+              03
+            </div>
+            <h3 class="text-xl font-bold text-white">Pintu Pagar Pedestrian (Swing Gate)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Pintu bukaan kecil selebar 80 hingga 100 cm untuk akses harian anggota keluarga atau sepeda motor. Dibuat menyatu secara harmonis dengan motif gerbang utama sehingga tampilan fasad depan tetap senada.
+            </p>
+            <div class="text-xs text-teal-400 font-semibold pt-1">
+              Akses Cepat Kunci Tanam Stainless
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: STANDAR MEKANIKAL BERAT -->
+    <section class="rounded-3xl bg-slate-900/40 border border-slate-800 p-8 sm:p-12 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Keamanan & Ketahanan Beban</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Standar Mekanikal Gerbang Berat Bebas Anjlok dan Bebas Macet</h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Pintu gerbang yang memakai plat solid memiliki bobot total antara 80 hingga 250 kilogram. Tanpa perhitungan mekanikal yang matang, pintu akan cepat seret dan merusak tiang beton. Di workshop Talang Jambe, kami menerapkan standar fabrikasi teruji.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-300">
+        <div class="space-y-4 p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+          <h3 class="text-lg font-bold text-white">Sistem Roda Bearing Ganda Industri Jepang</h3>
+          <p class="leading-relaxed">
+            Kami menggunakan roda dengan rumah baja cor tebal dan bearing tertutup ganda buatan Jepang. Bearing tertutup mencegah partikel pasir jalanan dan rembesan air hujan masuk ke ruang pelor, menjaga putaran roda tetap licin dan senyap saat digeser dengan satu tangan.
+          </p>
+          <div class="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-300">
+            Kapasitas tumpu sepasang roda bearing kami mampu menahan beban dorong dinamis hingga 500 kilogram.
+          </div>
+        </div>
+
+        <div class="space-y-4 p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+          <h3 class="text-lg font-bold text-white">Engsel Bubut Padat Berpelumas Berkala</h3>
+          <p class="leading-relaxed">
+            Untuk gerbang lipat dan pintu swing, kami tidak pernah memakai engsel plat tipis toko bangunan. Kami memproduksi engsel bubut padat berbahan baja dengan diameter 32 sampai 40 mm yang dilengkapi lubang nipel gemuk untuk perawatan berkala, menjamin pintu tidak akan anjlok.
+          </p>
+          <div class="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300">
+            Dilengkapi pengelasan full seam di sekeliling tiang pipa agar sambungan tahan terhadap beban ayun konstan.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PROTEKSI KARAT TUNTAS -->
+    <section class="space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Proteksi Area Rawan Air</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Perlindungan Karat Ekstra pada Titik Tumpu dan Rel Bawah</h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Bagian bawah pintu gerbang adalah area paling rentan terhadap korosi karena dekat dengan genangan air hujan carport dan percikan roda mobil. Kami menerapkan perlindungan ganda pada setiap komponen bawah.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-emerald-400 font-bold text-base">Rel As Pejal Tanam Angkur</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Rel dibuat dari as baja bulat utuh diameter 16 mm yang dilas ke angkur beton bertulang. Bebas celah rongga udara di bawah rel sehingga air hujan langsung mengalir ke saluran drainase.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-amber-400 font-bold text-base">Jarak Celah Bawah Terukur</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Celah antara bagian bawah daun pintu dan lantai diatur presisi 5 sampai 7 cm. Cukup aman mencegah cipratan lumpur mengenai plat motif tanpa membuat celah terlalu lebar bagi hewan peliharaan.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-teal-400 font-bold text-base">Primer Epoxy Zinc Chromate</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Seluruh celah potong motif laser dan sudut sambungan las dilapisi cat dasar epoxy anti karat dua lapis sebelum disemprot cat duco polyurethane warna pilihan Anda.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: TABEL ESTIMASI HARGA GERBANG -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Perhitungan Transparan</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Estimasi Spesifikasi dan Perhitungan Biaya Gerbang per Meter Persegi</h2>
+        <p class="text-slate-400 text-sm mt-1">
+          Harga dihitung per meter persegi luas bukaan gerbang, sudah termasuk plat motif laser, rangka hollow galvanis, aksesoris roda atau engsel, rel, dan instalasi lapangan di Palembang.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800">
+        <table class="w-full text-left text-sm text-slate-300">
+          <thead class="bg-slate-900 text-xs uppercase text-slate-400 tracking-wider border-b border-slate-800">
+            <tr>
+              <th class="py-4 px-6 font-semibold">Tipe Spesifikasi</th>
+              <th class="py-4 px-6 font-semibold">Bahan Plat & Tebal</th>
+              <th class="py-4 px-6 font-semibold">Rangka Hollow</th>
+              <th class="py-4 px-6 font-semibold text-emerald-400">Estimasi Biaya / m²</th>
+              <th class="py-4 px-6 font-semibold">Kelengkapan Hardware</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 bg-slate-950/60">
+            {pricingTiersPintu.map((row) => (
+              <tr class={row.featured ? 'bg-emerald-950/20' : 'hover:bg-slate-900/40 transition-colors'}>
+                <td class="py-4 px-6 font-bold text-white">
+                  {row.grade}
+                  {row.featured && (
+                    <span class="ml-2 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                      Rekomendasi
+                    </span>
+                  )}
+                </td>
+                <td class="py-4 px-6">{row.plat}</td>
+                <td class="py-4 px-6">{row.frame}</td>
+                <td class="py-4 px-6 font-bold text-emerald-400 whitespace-nowrap">{row.price}</td>
+                <td class="py-4 px-6 text-xs text-slate-400">{row.hardware}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-xs text-slate-400 italic">
+        Catatan, biaya belum termasuk unit mesin motor remote autogate jika Anda menghendaki sistem bukaan elektrik otomatis. Hubungi kami untuk penawaran paket gerbang komplit autogate.
+      </p>
+    </section>
+
+    <!-- SECTION 5: MATERIAL TABLE -->
+    <section class="space-y-6">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Kapasitas Produksi</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Spesifikasi Material Logam Workshop Sriwijaya Grafika</h2>
+        <p class="text-slate-400 text-sm mt-1">Dipotong menggunakan mesin fiber laser presisi 0.1 mm di workshop Talang Jambe Sukarami.</p>
+      </div>
+
+      <MaterialTable />
+    </section>
+
+    <!-- SECTION 6: ALUR KERJA PEMBUATAN GERBANG -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Standar Pengerjaan</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Tahapan Pembuatan Pintu Gerbang di Workshop Sriwijaya Grafika</h2>
+        <p class="text-slate-400 text-sm mt-1">Alur fabrikasi presisi untuk memastikan gerbang beroperasi ringan dan kokoh puluhan tahun.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 01</div>
+          <h3 class="text-base font-bold text-white">Survei Lapangan & Cek Waterpass</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Teknisi kami mengukur kemiringan lantai carport menggunakan selang waterpass dan memeriksa tiang beton penahan engsel agar bukaan gerbang tidak seret.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 02</div>
+          <h3 class="text-base font-bold text-white">Desain CAD & Simulasi Motif 3D</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Desainer kami membuat gambar kerja CAD detail dan visualisasi tampak depan rumah. Anda dapat merevisi motif dan tata letak lubang angin sampai benar-benar cocok.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 03</div>
+          <h3 class="text-base font-bold text-white">Pemotongan Plat Fiber Laser</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Proses pemotongan plat galvanis tebal 2.0 sampai 3.2 mm dilakukan otomatis dengan sinar fiber laser berdaya potong tinggi untuk hasil tepian rapi bebas gerinda kasar.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 04</div>
+          <h3 class="text-base font-bold text-white">Fabrikasi Bracing & Pengelasan Rangka</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Rangka hollow dirakit dengan penambahan bracing diagonal penguat sudut. Sambungan dilas full keliling dengan las MIG argon untuk kekuatan mekanikal maksimal.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 05</div>
+          <h3 class="text-base font-bold text-white">Pengecatan Epoxy & Duco Polyurethane</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Penyemprotan cat dasar epoxy zinc chromate dua lapis tebal, diikuti cat duco polyurethane warna pilihan (hitam doff, abu-abu graphite, putih, atau tembaga antik).
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 06</div>
+          <h3 class="text-base font-bold text-white">Pemasangan Lapangan & Uji Coba Dorong</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Instalasi rel bawah, penyetelan roda bearing, pemasangan kunci tanam, dan uji coba kelancaran dorong di depan Anda sebelum serah terima garansi resmi 1 tahun.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: CHECKLIST KONSUMEN -->
+    <section class="rounded-3xl bg-slate-900/50 border border-slate-800 p-8 sm:p-10 space-y-6">
+      <div class="space-y-2">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Tips Cerdas Konsumen</span>
+        <h2 class="text-2xl font-bold text-white">Panduan Evaluasi Rangka dan Hardware Pintu Gerbang</h2>
+        <p class="text-slate-400 text-sm">Hal-hal teknis yang membedakan pintu gerbang berkualitas tinggi dari pintu gerbang murah rawan macet.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-300">
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">01</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Tanyakan Ketebalan Dinding Hollow Rangka</h3>
+            <p class="text-slate-400 leading-relaxed">Rangka gerbang harus memakai hollow tebal minimal 1.6 mm. Hollow tipis 1.0 mm mudah retak pada titik sambungan las engsel saat menahan beban ayun daun pintu.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">02</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Cek Jenis Rel Bawah yang Disediakan</h3>
+            <p class="text-slate-400 leading-relaxed">Hindari pemakaian besi siku tipis sebagai rel tanam karena mudah melengkung tergilas mobil. Selalu mintalah rel batangan as baja bulat pejal diameter 16 mm.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">03</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Pastikan Adanya Bracing Penguat Sudut</h3>
+            <p class="text-slate-400 leading-relaxed">Pintu gerbang bentang di atas 2.5 meter memerlukan siku penguat internal agar bingkai tetap membentuk sudut 90 derajat siku tanpa mengalami penurunan ujung pintu.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">04</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Garansi Konstruksi dan Kelancaran Roda</h3>
+            <p class="text-slate-400 leading-relaxed">Pastikan Anda memperoleh jaminan servis jika dalam beberapa bulan terjadi perubahan level lantai yang menyebabkan pintu gerbang terasa berat digeser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FAQ ACCORDION -->
+    <section class="space-y-6">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Pertanyaan Umum</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Tanya Jawab Seputar Pintu Gerbang Laser Cutting Palembang</h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        {faqsPintu.map((faq) => (
+          <details class="group rounded-2xl bg-slate-900/60 border border-slate-800 p-6 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base group-open:text-emerald-400">
+              <span>{faq.question}</span>
+              <span class="ml-4 transition-transform group-open:rotate-180 text-emerald-400 font-bold">▾</span>
+            </summary>
+            <p class="mt-4 text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 pt-4">
+              {faq.answer}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- INTERNAL LINKING STRIP -->
+    <section class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-wrap items-center justify-between gap-4 text-xs">
+      <div class="text-slate-300">
+        Mencari padanan produk arsitektural lainnya?
+      </div>
+      <div class="flex flex-wrap items-center gap-4 text-emerald-400 font-semibold">
+        <a href="/pagar" class="hover:underline">Pagar Plat Laser Cutting →</a>
+        <a href="/balkon" class="hover:underline">Pagar Balkon Lantai 2 →</a>
+        <a href="/motif-laser-cutting" class="hover:underline">Katalog Motif Ornamen →</a>
+        <a href="/pagar/harga-pagar-laser-cutting-per-meter-palembang" class="hover:underline text-amber-400">Panduan Harga 2026 →</a>
+      </div>
+    </section>
+
+    <!-- CTA FOOTER -->
+    <CtaWhatsapp
+      title="Rancang Pintu Gerbang Cutting Laser Custom untuk Rumah Anda"
+      subtitle="Konsultasikan kebutuhan bentang bukaan gerbang Anda bersama spesialis pengelasan dan laser cutting Sriwijaya Grafika Palembang. Free survei lokasi dan visualisasi 3D."
+    />
+  </div>
+</BaseLayout>

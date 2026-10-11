@@ -1,0 +1,449 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CtaWhatsapp from '../../components/CtaWhatsapp.astro';
+import MaterialTable from '../../components/MaterialTable.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import MotifCard from '../../components/MotifCard.astro';
+import { getCollection } from 'astro:content';
+
+const pagarMotifs = await getCollection('blog', ({ data }) => data.published && data.label_produk === 'pagar' && data.tipe === 'motif');
+const relatedArticles = await getCollection('blog', ({ data }) => data.published && data.label_produk === 'pagar' && data.tipe === 'artikel');
+
+const pricingTiers = [
+  {
+    grade: 'Ekonomis Minimalis',
+    plat: 'Plat Besi Galvanis 1.4 mm, 1.6 mm',
+    frame: 'Hollow Galvanis 40x40 mm tebal 1.2 mm',
+    price: 'Rp 950.000, Rp 1.250.000',
+    bestFor: 'Pagar pembatas samping, teras kavling kecil, bukaan pagar ringan',
+  },
+  {
+    grade: 'Standar Rekomendasi Workshop',
+    plat: 'Plat Besi Galvanis 1.8 mm, 2.0 mm',
+    frame: 'Hollow Galvanis 40x40 / 40x60 mm tebal 1.4 mm',
+    price: 'Rp 1.350.000, Rp 1.750.000',
+    bestFor: 'Pagar utama rumah tinggal, klaster perumahan, bentang 1.5 - 2 meter',
+    featured: true,
+  },
+  {
+    grade: 'Heavy-Duty Mewah',
+    plat: 'Plat Besi Galvanis 2.4 mm, 3.2 mm',
+    frame: 'Hollow Galvanis 40x60 mm tebal 1.6 mm',
+    price: 'Rp 1.800.000, Rp 2.400.000',
+    bestFor: 'Gerbang dorong bentang lebar, motif ornamen songket rapat',
+  },
+  {
+    grade: 'Premium Stainless 304',
+    plat: 'Plat Stainless Steel 304 tebal 1.5 mm, 2.0 mm',
+    frame: 'Hollow Stainless 40x40 mm tebal 1.2 mm',
+    price: 'Rp 2.200.000, Rp 3.200.000',
+    bestFor: 'Hunian premium bebas karat tanpa perlu pengecatan ulang berkala',
+  },
+];
+
+const faqsPagar = [
+  {
+    question: 'Berapa ketebalan plat besi yang ideal untuk pagar rumah di Palembang?',
+    answer: 'Untuk bentang standar tinggi 1.5 hingga 1.8 meter, kami menyarankan plat besi galvanis tebal 1.8 mm sampai 2.0 mm. Ketebalan ini menjaga plat tetap kaku, lurus, dan tidak memuai menggelombang saat terpapar terik matahari siang Palembang.',
+  },
+  {
+    question: 'Apakah hasil potongan plat laser cutting tajam dan berkarat?',
+    answer: 'Mesin fiber laser kami memotong dengan akurasi 0.1 mm sehingga tepian plat halus tanpa terak kasar. Seluruh bidang potong dibersihkan dan dilapisi cat dasar epoxy anti karat sebelum perakitan, mencegah korosi dari celah motif.',
+  },
+  {
+    question: 'Apakah bisa memesan motif songket khas Palembang atau desain sendiri?',
+    answer: 'Sangat bisa. Kami menyediakan katalog motif songket Palembang, wayang, dedaunan, hingga pola kisi geometris. Jika Anda memiliki gambar dari arsitek atau file AutoCAD, tim desainer kami siap membuatkan simulasi pola potong gratis.',
+  },
+  {
+    question: 'Berapa lama proses pembuatan pagar dari survei sampai pasang?',
+    answer: 'Rata-rata memakan waktu 7 hingga 14 hari kerja tergantung volume bentang dan antrean workshop. Pengerjaan mencakup survei lokasi, pembuatan gambar kerja, pemotongan laser, perakitan las, pengecatan dua lapis, hingga instalasi di lokasi.',
+  },
+];
+---
+
+<BaseLayout
+  title="Pagar Laser Cutting Palembang | Model Minimalis & Mewah Plat Besi"
+  description="Pusat pembuatan pagar laser cutting Palembang. Model minimalis & mewah motif songket, plat galvanis tahan panas matahari, presisi fiber laser Sriwijaya Grafika."
+  ogImage="/produk/pagar-laser-cutting_poco.webp"
+  schemaType="Product"
+  schemaData={{
+    name: 'Pagar Laser Cutting Palembang',
+    description: 'Pagar modern plat besi dan galvanis potong laser presisi fiber laser by Sriwijaya Grafika Palembang',
+    image: '/produk/pagar-laser-cutting_poco.webp',
+    lowPrice: '950000',
+    highPrice: '3200000',
+  }}
+  breadcrumbs={[
+    { name: 'Pagar Laser Cutting', url: '/pagar' }
+  ]}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
+    <Breadcrumb items={[
+      { name: 'Pagar Laser Cutting', url: '/pagar' }
+    ]} />
+
+    <!-- HERO SECTION -->
+    <header class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider border border-emerald-500/20">
+          Pagar Palembang
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          Pagar Laser Cutting Palembang Modern, Mewah dan Presisi Tinggi
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+          Pagar laser cutting mengubah lembaran plat logam padat menjadi karya arsitektural bernilai seni tinggi. Dikerjakan langsung di workshop Sriwijaya Grafika Talang Jambe Sukarami menggunakan mesin fiber laser berdaya potong akurat hingga toleransi 0.1 mm. Hasil potong rapi tanpa terak kasar, kokoh melindungi hunian, dan memberikan privasi ideal bagi pemilik rumah di wilayah Kota Palembang.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a
+            href="https://wa.me/6285215111125?text=Halo%20Sriwijaya%20Grafika%2C%20saya%20ingin%20konsultasi%20pembuatan%20Pagar%20Laser%20Cutting"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm shadow-lg shadow-emerald-950 transition-all"
+          >
+            Konsultasi Ukuran & Mockup Gratis
+          </a>
+          <a
+            href="/pagar/minimalis"
+            class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
+          >
+            Lihat Sub-Kategori Minimalis →
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-slate-950 aspect-[4/3] shadow-2xl shadow-emerald-950/40 group">
+          <img
+            src="/produk/pagar-laser-cutting_poco.webp"
+            alt="Pagar laser cutting Palembang Sriwijaya Grafika"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="eager"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-900/90 text-white font-medium border border-slate-700/80 backdrop-blur-sm">
+              Workshop Talang Jambe
+            </span>
+            <span class="text-emerald-400 font-semibold bg-emerald-950/80 px-2.5 py-1 rounded-lg border border-emerald-500/30">
+              Presisi 0.1 mm
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: PILIHAN DESAIN MOTIF PAGAR -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Varian Desain Populer</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Desain Motif Pagar Laser Cutting</h2>
+        <p class="text-slate-400 text-sm mt-1">Sesuaikan karakter fasad rumah Anda dengan konsep ornamen yang tepat.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {pagarMotifs.map((m) => (
+          <MotifCard
+            title={m.data.title}
+            excerpt={m.data.excerpt}
+            slug={m.id}
+            kategori={m.data.label_produk}
+            topik={m.data.topik}
+            imgurl={m.data.imgurl}
+            imgalt={m.data.imgalt}
+          />
+        ))}
+      </div>
+    </section>
+
+    <!-- SECTION 2: STANDAR KETEBALAN PLAT & MITIGASI PANAS -->
+    <section class="rounded-3xl bg-slate-900/40 border border-slate-800 p-8 sm:p-12 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Standar Mutu Lapangan</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Standar Ketebalan Plat dan Konstruksi Rangka Tahan Cuaca</h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Di workshop kami di Talang Jambe, setiap lembaran plat diperiksa menggunakan alat caliper digital sebelum masuk meja potong laser. Kami menolak penggunaan plat tipis di bawah standar untuk area luar ruangan karena alasan teknis yang nyata.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-300">
+        <div class="space-y-4 p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+          <h3 class="text-lg font-bold text-white">Bahaya Plat Tipis Terkena Panas Siang Palembang</h3>
+          <p class="leading-relaxed">
+            Paparan sinar matahari terik menyebabkan pemuaian material logam. Ketika plat berukuran lebar hanya memiliki tebal 1.0 mm atau 1.2 mm, pemotongan motif berulang akan menghilangkan massa struktural plat. Akibatnya timbul fenomena pelengkungan gelombang yang membuat pagar tampak bengkok dan ringkih.
+          </p>
+          <div class="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300">
+            Rekomendasi teknisi kami, gunakan plat minimal 1.8 mm hingga 2.0 mm agar bentang pagar tetap lurus tegak selama bertahun-tahun.
+          </div>
+        </div>
+
+        <div class="space-y-4 p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+          <h3 class="text-lg font-bold text-white">Konstruksi Rangka Hollow Full Las Kedap Air</h3>
+          <p class="leading-relaxed">
+            Plat laser cut harus ditopang rangka hollow galvanis tebal minimal 1.4 mm. Sistem penyambungan di bengkel kami menggunakan las rapat di sekeliling bingkai untuk mencegah air hujan masuk ke rongga dalam hollow. Air yang terjebak di dalam pipa hollow adalah penyebab nomor satu pagar keropos dari bagian dalam.
+          </p>
+          <div class="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-300">
+            Tersedia pilihan rangka hollow 40x40 mm untuk pagar sorong standar dan hollow 40x60 mm untuk pintu gerbang lipat bentang lebar.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PROTEKSI KOROSI & CAT DUCO -->
+    <section class="space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Proteksi Jangka Panjang</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Sistem Pelapisan Anti Karat untuk Iklim Lembap Palembang</h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Palembang memiliki tingkat kelembaban udara yang tinggi dengan siklus pergantian panas terik dan hujan lebat. Kami menerapkan standar pengecatan multi-tahap agar pagar Anda bebas karat tanpa perlu dicat ulang setiap tahun.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-emerald-400 font-bold text-base">Tahap 1, Degreasing Plat</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Lembaran plat dibersihkan dari minyak pabrik, residu debu, dan karat halus menggunakan cairan solvent khusus agar pori-pori logam siap mengikat cat dasar.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-amber-400 font-bold text-base">Tahap 2, Epoxy Primer 2 Lapis</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Penyemprotan cat dasar epoxy zinc chromate sebanyak dua lapis tebal. Lapisan ini menjadi benteng pelindung kedap udara yang mengunci permukaan besi galvanis dari oksidasi air hujan.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-teal-400 font-bold text-base">Tahap 3, Duco Polyurethane UV</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pengecatan akhir menggunakan cat duco polyurethane tahan radiasi ultraviolet. Warna tidak mudah kusam, tidak mengelupas, dengan pilihan tekstur doff elegan, satin, atau glossy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: TABEL ESTIMASI HARGA -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Transparansi Biaya</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Estimasi Spesifikasi dan Perhitungan Biaya per Meter Persegi</h2>
+        <p class="text-slate-400 text-sm mt-1">
+          Harga dihitung per meter persegi luas bidang pagar (panjang x tinggi). Sudah mencakup plat motif, rangka hollow galvanis, cat duco, dan pemasangan di Palembang.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800">
+        <table class="w-full text-left text-sm text-slate-300">
+          <thead class="bg-slate-900 text-xs uppercase text-slate-400 tracking-wider border-b border-slate-800">
+            <tr>
+              <th class="py-4 px-6 font-semibold">Tipe Spesifikasi</th>
+              <th class="py-4 px-6 font-semibold">Bahan Plat & Tebal</th>
+              <th class="py-4 px-6 font-semibold">Rangka Bingkai Hollow</th>
+              <th class="py-4 px-6 font-semibold text-emerald-400">Estimasi Biaya / m²</th>
+              <th class="py-4 px-6 font-semibold">Rekomendasi Area</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 bg-slate-950/60">
+            {pricingTiers.map((row) => (
+              <tr class={row.featured ? 'bg-emerald-950/20' : 'hover:bg-slate-900/40 transition-colors'}>
+                <td class="py-4 px-6 font-bold text-white">
+                  {row.grade}
+                  {row.featured && (
+                    <span class="ml-2 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                      Paling Populer
+                    </span>
+                  )}
+                </td>
+                <td class="py-4 px-6">{row.plat}</td>
+                <td class="py-4 px-6">{row.frame}</td>
+                <td class="py-4 px-6 font-bold text-emerald-400 whitespace-nowrap">{row.price}</td>
+                <td class="py-4 px-6 text-xs text-slate-400">{row.bestFor}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-xs text-slate-400 italic">
+        Catatan, harga dapat menyesuaikan dengan tingkat kerapatan potong motif laser dan kondisi fondasi lapangan. Hubungi kami untuk survei ukuran gratis ke lokasi Anda.
+      </p>
+    </section>
+
+    <!-- SECTION 5: MATERIAL TABLE KOMPONEN RESMI WORKSHOP -->
+    <section class="space-y-6">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Fasilitas Mesin Produksi</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Kapasitas Mesin Potong Fiber Laser Workshop Talang Jambe</h2>
+        <p class="text-slate-400 text-sm mt-1">Kami menggunakan mesin industri berdaya tinggi untuk menjamin akurasi dan kecepatan waktu pengerjaan.</p>
+      </div>
+
+      <MaterialTable />
+    </section>
+
+    <!-- SECTION 6: ALUR KERJA PEMESANAN -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Proses Kerja Rapi</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Tahapan Pengerjaan di Workshop Sriwijaya Grafika</h2>
+        <p class="text-slate-400 text-sm mt-1">Enam langkah terstruktur dari awal konsultasi hingga serah terima garansi resmi.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 01</div>
+          <h3 class="text-base font-bold text-white">Konsultasi Desain & Estimasi Biaya</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Kirimkan perkiraan panjang dan tinggi pagar via WhatsApp. Tim kami segera memberikan estimasi biaya transparan dan opsi motif yang sesuai budget.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 02</div>
+          <h3 class="text-base font-bold text-white">Survei Pengukuran Presisi ke Lokasi</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Teknisi kami datang langsung ke alamat rumah Anda di Palembang untuk mengukur kelurusan tiang, kemiringan lantai carport, dan bentang opening pagar.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 03</div>
+          <h3 class="text-base font-bold text-white">Penyusunan Gambar Kerja CAD & 3D</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Desainer kami membuatkan layout detail 2D dan simulasi mockup tampak depan. Proses potong baru dimulai setelah Anda menyetujui layout tersebut.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 04</div>
+          <h3 class="text-base font-bold text-white">Pemotongan Fiber Laser Otomatis</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Plat dipotong di meja mesin fiber laser workshop Talang Jambe. Sinar laser berdaya tinggi memotong lekukan motif secara presisi tanpa sentuhan fisik.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 05</div>
+          <h3 class="text-base font-bold text-white">Fabrikasi Pengelasan & Pengecatan Duco</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Plat dirakit ke dalam bingkai hollow dengan las rapat, digerinda halus, diberi cat dasar epoxy dua lapis, lalu disemprot cat duco polyurethane warna pilihan.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 06</div>
+          <h3 class="text-base font-bold text-white">Pengiriman, Pemasangan & Garansi</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pagar diantar menggunakan armada workshop kami dan dipasang oleh teknisi berpengalaman. Pekerjaan dilengkapi garansi konstruksi las selama 1 tahun penuh.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: PANDUAN EVALUASI BENGKEL LAS -->
+    <section class="rounded-3xl bg-slate-900/50 border border-slate-800 p-8 sm:p-10 space-y-6">
+      <div class="space-y-2">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Tips Cerdas Konsumen</span>
+        <h2 class="text-2xl font-bold text-white">Panduan Memilih Bengkel Pagar Laser Cutting Terpercaya</h2>
+        <p class="text-slate-400 text-sm">Empat poin penting yang wajib Anda tanyakan sebelum menyepakati pesanan pagar plat.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-300">
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">01</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Minta Pengukuran Ketebalan Plat di Depan Anda</h3>
+            <p class="text-slate-400 leading-relaxed">Pastikan plat diukur menggunakan jangka sorong digital. Banyak bengkel menawarkan harga murah namun menggunakan plat 1.2 mm yang mudah melengkung.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">02</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Tanyakan Jenis Cat Dasar yang Digunakan</h3>
+            <p class="text-slate-400 leading-relaxed">Jangan menerima pengecatan yang hanya menggunakan meni besi biasa. Mintalah cat dasar epoxy dua komponen yang kedap air hujan tropis.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">03</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Cek Apakah Bengkel Memiliki Mesin Sendiri</h3>
+            <p class="text-slate-400 leading-relaxed">Bengkel yang memiliki mesin fiber laser sendiri seperti Sriwijaya Grafika dapat memberikan harga lebih terjangkau, pengerjaan lebih cepat, dan kontrol mutu langsung.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">04</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Pastikan Garansi Konstruksi dan Engsel Roda</h3>
+            <p class="text-slate-400 leading-relaxed">Pagar dorong atau lipat membutuhkan roda bearing berkualitas agar tidak anjlok. Pastikan vendor memberikan komitmen garansi tertulis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FAQ ACCORDION -->
+    <section class="space-y-6">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Pertanyaan Umum</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Tanya Jawab Seputar Pagar Laser Cutting Palembang</h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        {faqsPagar.map((faq) => (
+          <details class="group rounded-2xl bg-slate-900/60 border border-slate-800 p-6 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base group-open:text-emerald-400">
+              <span>{faq.question}</span>
+              <span class="ml-4 transition-transform group-open:rotate-180 text-emerald-400 font-bold">▾</span>
+            </summary>
+            <p class="mt-4 text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 pt-4">
+              {faq.answer}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- SECTION 9: ARTIKEL TERKAIT SILO -->
+    {relatedArticles.length > 0 && (
+      <section class="space-y-6 pt-6 border-t border-slate-800">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Edukasi & Panduan Biaya</span>
+            <h2 class="text-2xl font-bold text-white mt-1">Artikel dan Panduan Terkait Pagar Plat</h2>
+            <p class="text-slate-400 text-sm mt-1">Baca rincian biaya per meter dan tips teknis pemilihan material dari praktisi kami.</p>
+          </div>
+          <a href="/blog" class="text-xs font-semibold text-emerald-400 hover:text-amber-400 transition-colors">
+            Lihat Semua Artikel Blog →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {relatedArticles.map((art) => (
+            <ArticleCard
+              title={art.data.title}
+              excerpt={art.data.excerpt}
+              date={art.data.date}
+              topik={art.data.topik}
+              slug={art.id}
+              kategori={art.data.label_produk}
+              imgurl={art.data.imgurl}
+              imgalt={art.data.imgalt}
+            />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- CTA FOOTER -->
+    <CtaWhatsapp
+      title="Konsultasikan Model Pagar Laser Cutting Rumah Anda"
+      subtitle="Kirimkan perkiraan ukuran panjang dan tinggi pagar ke WhatsApp kami. Tim desainer Sriwijaya Grafika siap membantu perhitungan biaya dan visualisasi 3D tanpa dipungut biaya."
+    />
+  </div>
+</BaseLayout>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pagarmodernpalembang.com/sitemap-index.xml
+Host: https://pagarmodernpalembang.com

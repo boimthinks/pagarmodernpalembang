@@ -1,0 +1,516 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CtaWhatsapp from '../../components/CtaWhatsapp.astro';
+import MaterialTable from '../../components/MaterialTable.astro';
+import MotifCard from '../../components/MotifCard.astro';
+import { getCollection } from 'astro:content';
+
+const kanopiMotifs = await getCollection('blog', ({ data }) => data.published && data.label_produk === 'kanopi' && data.tipe === 'motif');
+
+const pricingTiersKanopi = [
+  {
+    grade: 'Kanopi Rangka Hollow Plat Motif Ringan',
+    plat: 'Plat Besi Galvanis 1.4 mm, 1.6 mm',
+    frame: 'Hollow Galvanis 40x80 / 50x100 mm tebal 1.4 mm',
+    roof: 'Atap Polycarbonate Solid / Solarflat 1.2 mm',
+    price: 'Rp 1.150.000, Rp 1.550.000',
+    bestFor: 'Teras samping, kanopi jendela, dan carport bentang kecil',
+  },
+  {
+    grade: 'Kanopi Carport Atap Ganda Solarflat Solid',
+    plat: 'Plat Besi Galvanis 1.8 mm, 2.0 mm',
+    frame: 'Hollow Galvanis 50x100 mm tebal 1.6 mm',
+    roof: 'Solarflat Solid 3 mm transparan / grey + plafon laser',
+    price: 'Rp 1.650.000, Rp 2.350.000',
+    bestFor: 'Carport 2 mobil perumahan modern, siluet bayangan artistik',
+    featured: true,
+  },
+  {
+    grade: 'Kanopi Plafon Laser Atap Alderon Twinwall',
+    plat: 'Plat Besi Galvanis 1.8 mm, 2.0 mm',
+    frame: 'Hollow Galvanis 50x100 mm tebal 1.6 mm',
+    roof: 'Alderon uPVC Twinwall 10 mm peredam panas maksimal',
+    price: 'Rp 1.750.000, Rp 2.450.000',
+    bestFor: 'Carport terik siang hari dengan kebutuhan suhu sejuk di bawah atap',
+  },
+  {
+    grade: 'Kanopi Bentang Lebar Baja WF Kantilever',
+    plat: 'Plat Besi Galvanis 2.0 mm, 2.4 mm',
+    frame: 'Baja I-Beam / WF 150 dipadu Hollow 50x100 mm',
+    roof: 'Kaca Tempered 8 mm / 10 mm laminated safety glass',
+    price: 'Rp 2.400.000, Rp 3.500.000',
+    bestFor: 'Hunian mewah bentang lebar tanpa tiang tengah pengganggu parkir',
+  },
+];
+
+const faqsKanopi = [
+  {
+    question: 'Apakah kanopi bermotif laser cutting bisa bocor saat hujan deras di Palembang?',
+    answer: 'Sama sekali tidak bocor. Kanopi laser cutting kami menggunakan sistem atap ganda (double-roof system). Lapisan paling atas adalah penutup atap kedap air penuh seperti Solarflat solid atau kaca tempered, sedangkan panel plat laser cutting berada di lapisan plafon bawah sebagai elemen estetika dan peredam silau matahari.',
+  },
+  {
+    question: 'Berapa ketebalan rangka hollow yang aman untuk bentang carport 2 mobil?',
+    answer: 'Untuk bentang carport bebas tiang selebar 4 hingga 6 meter, kami mewajibkan pemakaian hollow galvanis berukuran minimal 50x100 mm dengan ketebalan dinding pipa 1.6 mm sampai 2.0 mm atau balok baja WF 150 agar kanopi kokoh menahan beban terpaan angin badai.',
+  },
+  {
+    question: 'Apakah plat motif di bawah kanopi bisa dipasangi lampu LED?',
+    answer: 'Bisa. Banyak klien kami di Palembang menambahkan lampu LED strip tersembunyi (indirect lighting) atau lampu sorot downlight di atas panel motif. Saat malam hari, pola motif laser akan menyala dramatis dan memproyeksikan bayangan mewah ke lantai carport.',
+  },
+  {
+    question: 'Bagaimana sistem pembuangan air hujan agar tidak meluap ke teras rumah?',
+    answer: 'Setiap kanopi yang kami rakit dilengkapi talang air tersembunyi (hidden gutter) berbahan plat galvanis tebal dengan kemiringan buang minimal 5 derajat, disalurkan melalui pipa buangan 2.5 sampai 3 inch langsung ke saluran pembuangan utama.',
+  },
+];
+---
+
+<BaseLayout
+  title="Kanopi Plat Laser Cutting Palembang | Atap Carport & Teras Mewah"
+  description="Jasa pembuatan kanopi plat laser cutting carport di Palembang. Rangka kokoh WF dan hollow galvanis, plafon motif laser artistik by Sriwijaya Grafika."
+  ogImage="/produk/kanopi-laser-cutting_poco.webp"
+  schemaType="Product"
+  schemaData={{
+    name: 'Kanopi Plat Laser Cutting Palembang',
+    description: 'Kanopi carport atap ganda plafon plat motif laser cutting anti bocor Sriwijaya Grafika Palembang',
+    image: '/produk/kanopi-laser-cutting_poco.webp',
+    lowPrice: '1150000',
+    highPrice: '3500000',
+  }}
+  breadcrumbs={[
+    { name: 'Kanopi Laser Cutting', url: '/kanopi' }
+  ]}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
+    <Breadcrumb items={[
+      { name: 'Kanopi Laser Cutting', url: '/kanopi' }
+    ]} />
+
+    <!-- HERO SECTION -->
+    <header class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider border border-emerald-500/20">
+          Kanopi Palembang
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          Kanopi Plat Laser Cutting Palembang dan Atap Carport Mewah
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+          Lindungi kendaraan berharga dan ruang teras depan Anda dari sengatan terik matahari siang serta hujan lebat Kota Palembang. Workshop Sriwijaya Grafika memproduksi kanopi modern yang memadukan rangka baja kokoh dengan plafon plat bermotif fiber laser presisi. Memberikan perlindungan total bebas bocor, mereduksi panas radiasi, sekaligus menciptakan siluet bayangan eksklusif yang memikat di lantai carport rumah Anda.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a
+            href="https://wa.me/6285215111125?text=Halo%20Sriwijaya%20Grafika%2C%20saya%20ingin%20konsultasi%20pembuatan%20Kanopi%20Laser%20Cutting"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm shadow-lg shadow-emerald-950 transition-all"
+          >
+            Konsultasi Ukuran & Mockup Carport
+          </a>
+          <a
+            href="/motif-laser-cutting"
+            class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
+          >
+            Katalog Desain Motif Plafon →
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-slate-950 aspect-[4/3] shadow-2xl shadow-emerald-950/40 group">
+          <img
+            src="/produk/kanopi-laser-cutting_poco.webp"
+            alt="Kanopi laser cutting Palembang Sriwijaya Grafika"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="eager"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-900/90 text-white font-medium border border-slate-700/80 backdrop-blur-sm">
+              Workshop Talang Jambe
+            </span>
+            <span class="text-emerald-400 font-semibold bg-emerald-950/80 px-2.5 py-1 rounded-lg border border-emerald-500/30">
+              Double Roof
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: DESAIN MOTIF PLAFON KANOPI -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Katalog Desain</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Desain Motif Plafon Kanopi Laser Cutting</h2>
+        <p class="text-slate-400 text-sm mt-1">Pilihan motif potong laser plafon artistik yang memproyeksikan bayangan indah ke lantai carport.</p>
+      </div>
+
+      {kanopiMotifs.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {kanopiMotifs.map((m) => (
+            <MotifCard
+              title={m.data.title}
+              excerpt={m.data.excerpt}
+              slug={m.id}
+              kategori={m.data.label_produk}
+              topik={m.data.topik}
+              imgurl={m.data.imgurl}
+              imgalt={m.data.imgalt}
+            />
+          ))}
+        </div>
+      ) : (
+        <div class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-2">
+            <h3 class="text-lg font-bold text-white">Desain Motif Plafon Kanopi Siap Kustom</h3>
+            <p class="text-xs text-slate-400 max-w-xl leading-relaxed">
+              Tersedia pilihan motif dedaunan tropis, kisi geometris sarang lebah, dan ornamen kontemporer yang siap dipadukan dengan pencahayaan lampu LED strip tersembunyi. Hubungi kami untuk konsultasi layout atap 3D gratis.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <a
+              href="/motif-laser-cutting"
+              class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-700 transition-colors"
+            >
+              Lihat Galeri Motif →
+            </a>
+            <a
+              href="https://wa.me/6285215111125?text=Halo%20Sriwijaya%20Grafika%2C%20saya%20ingin%20request%20katalog%20motif%20kanopi"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-colors"
+            >
+              Request Mockup WA
+            </a>
+          </div>
+        </div>
+      )}
+    </section>
+
+    <!-- SECTION 1: SISTEM ATAP KANOPI -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Pilihan Sistem Atap</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Pilihan Sistem Atap Kanopi Laser Cutting Modern</h2>
+        <p class="text-slate-400 text-sm mt-1">Kombinasi material penutup atap atas dengan panel motif laser plafon bawah sesuai kebutuhan Anda.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xl">
+              01
+            </div>
+            <h3 class="text-xl font-bold text-white">Sistem Atap Ganda Solarflat</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Menggunakan lembaran Solarflat solid tebal 3 mm anti pecah di bagian atas dipadu plafon plat laser cut di bawahnya. Sinar matahari tetap menerangi teras dengan bayangan motif yang sangat estetik tanpa hawa panas menyengat.
+            </p>
+            <div class="text-xs text-emerald-400 font-semibold pt-1">
+              Favorit Desain Fasad Kontemporer
+            </div>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-xl">
+              02
+            </div>
+            <h3 class="text-xl font-bold text-white">Sistem Atap Sejuk Alderon Twinwall</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Memadukan atap uPVC berongga Alderon tebal 10 mm penolak panas dan peredam suara tetesan hujan dengan panel lis plang laser cutting di sekeliling bingkai kanopi untuk tampilan depan mewah.
+            </p>
+            <div class="text-xs text-amber-400 font-semibold pt-1">
+              Peredam Panas dan Suara Hujan Maksimal
+            </div>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-teal-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold text-xl">
+              03
+            </div>
+            <h3 class="text-xl font-bold text-white">Kanopi Kaca Tempered & Plat Metal</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Kaca tempered tebal 8 mm atau 10 mm laminated yang dipasang di atas rangka balok baja kokoh. Memberikan kesan hotel bintang lima bagi pintu masuk foyer atau area carport rumah mewah Anda.
+            </p>
+            <div class="text-xs text-teal-400 font-semibold pt-1">
+              Kemewahan Kelas Premium
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: STANDAR STRUKTUR BAJA -->
+    <section class="rounded-3xl bg-slate-900/40 border border-slate-800 p-8 sm:p-12 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Konstruksi Tahan Badai</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Konstruksi Rangka Baja Kokoh Tahan Terpaan Angin Kencang</h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Kanopi carport memiliki bidang tangkapan angin yang sangat luas. Di workshop Sriwijaya Grafika Talang Jambe, seluruh kalkulasi dimensi hollow dan angkur pengikat dihitung cermat agar kanopi tidak terangkat atau melengkung saat cuaca badai.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-300">
+        <div class="space-y-4 p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+          <h3 class="text-lg font-bold text-white">Rangka Hollow Galvanis 50x100 Dinding Tebal</h3>
+          <p class="leading-relaxed">
+            Kami menggunakan pipa hollow galvanis minimal 50x100 mm dengan ketebalan dinding 1.6 mm hingga 2.0 mm untuk balok pikul utama. Ukuran hollow ini menjamin lendutan bentang tetap di bawah batas aman arsitektur, bahkan saat menopang atap kaca tempered seberat puluhan kilogram.
+          </p>
+          <div class="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-300">
+            Untuk bentang lebar tanpa tiang tengah, kami menyediakan opsi balok baja I-Beam / WF 150 sistem kantilever.
+          </div>
+        </div>
+
+        <div class="space-y-4 p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+          <h3 class="text-lg font-bold text-white">Talang Air Tersembunyi (Hidden Gutter) Anti Meluap</h3>
+          <p class="leading-relaxed">
+            Talang pembuangan dirancang menyatu di dalam rangka bingkai kanopi menggunakan plat galvanis tebal berlapis anti bocor. Air hujan dialirkan rapi melalui pipa paralon di dalam tiang kolom, menjaga lantai teras depan tetap kering tanpa cipratan air cucuran atap.
+          </p>
+          <div class="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300">
+            Dilengkapi saringan daun di lubang corong talang untuk mencegah penyumbatan sampah dedaunan.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: EFEK PENCAHAYAAN DAN PENOLAK PANAS -->
+    <section class="space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Fungsi & Estetika</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Sistem Atap Ganda Kedap Air Hujan dan Penolak Panas</h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Plafon laser cutting bekerja menyaring intensitas sinar matahari terik menjadi pendaran cahaya lembut yang sejuk bagi bodi mobil Anda.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-emerald-400 font-bold text-base">Siluet Bayangan Artistik</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pola motif laser memproyeksikan bayangan indah di lantai carport saat matahari melintas dari pagi hingga sore hari, memberikan kepuasan visual bernilai seni tinggi.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-amber-400 font-bold text-base">Integrasi Lampu LED Strip</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Rangka plafon disiapkan dengan jalur kabel tersembunyi untuk penempatan lampu LED strip warm white. Menjadikan fasad rumah Anda tampak megah bercahaya di malam hari.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="text-teal-400 font-bold text-base">Finishing Epoxy Duco PU</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Seluruh rangka dan plat motif disemprot cat dasar epoxy zinc chromate anti karat dua lapis tebal dan cat duco polyurethane anti-UV yang tahan panas matahari outdoor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: TABEL ESTIMASI BIAYA -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">RAB Jelas & Transparan</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Estimasi Spesifikasi dan Perhitungan Biaya Kanopi per Meter Persegi</h2>
+        <p class="text-slate-400 text-sm mt-1">
+          Harga dihitung per meter persegi luas atap kanopi (panjang x lebar), sudah termasuk rangka baja hollow, atap penutup atas, plafon laser cut, talang air, cat duco, dan instalasi di Palembang.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800">
+        <table class="w-full text-left text-sm text-slate-300">
+          <thead class="bg-slate-900 text-xs uppercase text-slate-400 tracking-wider border-b border-slate-800">
+            <tr>
+              <th class="py-4 px-6 font-semibold">Tipe Spesifikasi</th>
+              <th class="py-4 px-6 font-semibold">Plat Plafon Motif</th>
+              <th class="py-4 px-6 font-semibold">Konstruksi Rangka</th>
+              <th class="py-4 px-6 font-semibold text-emerald-400">Estimasi Biaya / m²</th>
+              <th class="py-4 px-6 font-semibold">Penutup Atap Atas</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 bg-slate-950/60">
+            {pricingTiersKanopi.map((row) => (
+              <tr class={row.featured ? 'bg-emerald-950/20' : 'hover:bg-slate-900/40 transition-colors'}>
+                <td class="py-4 px-6 font-bold text-white">
+                  {row.grade}
+                  {row.featured && (
+                    <span class="ml-2 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                      Rekomendasi
+                    </span>
+                  )}
+                </td>
+                <td class="py-4 px-6">{row.plat}</td>
+                <td class="py-4 px-6">{row.frame}</td>
+                <td class="py-4 px-6 font-bold text-emerald-400 whitespace-nowrap">{row.price}</td>
+                <td class="py-4 px-6 text-xs text-slate-400">{row.roof}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-xs text-slate-400 italic">
+        Catatan, untuk kanopi model gantung kabel baja seling atau konstruksi balok kantilever tanpa tiang depan, perhitungan struktur akan disesuaikan dengan kondisi dinding penopang rumah Anda.
+      </p>
+    </section>
+
+    <!-- SECTION 5: MATERIAL TABLE -->
+    <section class="space-y-6">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Fasilitas Mesin Produksi</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Kapasitas Mesin Pemotongan Plat Fiber Laser Workshop Talang Jambe</h2>
+        <p class="text-slate-400 text-sm mt-1">Dipotong menggunakan teknologi fiber laser presisi tinggi di workshop Sriwijaya Grafika Sukarami.</p>
+      </div>
+
+      <MaterialTable />
+    </section>
+
+    <!-- SECTION 6: TAHAPAN PEMASANGAN -->
+    <section class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">SOP Lapangan</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Tahapan Pengerjaan Kanopi Carport di Workshop Sriwijaya Grafika</h2>
+        <p class="text-slate-400 text-sm mt-1">Proses kerja presisi menjamin keamanan atap dan kenyamanan aktivitas keluarga Anda.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 01</div>
+          <h3 class="text-base font-bold text-white">Survei Dimensi & Titik Tiang</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Teknisi kami mengukur panjang lebar area carport, memeriksa kekuatan dinding tumpuan rumah, serta merencanakan posisi pipa pembuangan talang air.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 02</div>
+          <h3 class="text-base font-bold text-white">Gambar Desain 3D Tampak Fasad</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Desainer kami menyajikan visualisasi 3D kanopi yang disesuaikan dengan proporsi fasad rumah Anda. Anda dapat menentukan motif plafon yang paling disukai.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 03</div>
+          <h3 class="text-base font-bold text-white">Pemotongan Fiber Laser Presisi</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Panel plat dipotong di workshop Talang Jambe dengan akurasi 0.1 mm, menghasilkan lubang kisi yang rapi dan halus untuk sirkulasi cahaya dan udara.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 04</div>
+          <h3 class="text-base font-bold text-white">Fabrikasi Modul Rangka di Workshop</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Rangka hollow dirakit dan dilas sebagian di bengkel untuk meminimalkan kebisingan dan debu pengelasan di lokasi rumah Anda saat hari pemasangan.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 05</div>
+          <h3 class="text-base font-bold text-white">Pengecatan Primer Epoxy & Duco PU</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pelapisan cat dasar epoxy anti karat zinc chromate dua lapis tebal disemprot merata pada seluruh permukaan hollow sebelum pelapisan cat akhir duco PU.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-emerald-400 font-extrabold text-sm">Langkah 06</div>
+          <h3 class="text-base font-bold text-white">Instalasi Rangka, Atap & Uji Air</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pemasangan tiang angkur, penataan penutup atap dengan seal karet anti bocor, pemasangan plafon motif laser, uji siram air hujan, dan serah terima garansi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: CHECKLIST KONSUMEN -->
+    <section class="rounded-3xl bg-slate-900/50 border border-slate-800 p-8 sm:p-10 space-y-6">
+      <div class="space-y-2">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Tips Cerdas Konsumen</span>
+        <h2 class="text-2xl font-bold text-white">Panduan Memilih Kanopi Carport yang Aman dan Awet Bebas Bocor</h2>
+        <p class="text-slate-400 text-sm">Perhatikan empat poin penting ini sebelum menyetujui penawaran pembuatan kanopi.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-300">
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">01</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Pastikan Kemiringan Atap Cukup Curam</h3>
+            <p class="text-slate-400 leading-relaxed">Kanopi yang terlalu datar akan menahan genangan air hujan yang mempercepat kerusakan seal silikon. Kemiringan atap minimal harus mencapai 5 sampai 7 derajat.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">02</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Periksa Ketebalan Dinding Hollow Utama</h3>
+            <p class="text-slate-400 leading-relaxed">Jangan tergiur harga murah yang memakai hollow tipis 1.0 mm. Mintalah hollow galvanis dengan ketebalan dinding minimal 1.6 mm demi keamanan jangka panjang.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">03</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Gunakan Sealant Karet Khusus Outdoor</h3>
+            <p class="text-slate-400 leading-relaxed">Titik sambungan atap Solarflat atau kaca harus direkatkan menggunakan lem sealant netral berkualitas tinggi yang tahan radiasi matahari dan tidak mudah getas.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+          <div class="text-emerald-400 font-bold text-lg">04</div>
+          <div class="space-y-1">
+            <h3 class="font-bold text-white text-sm">Garansi Resmi Kebocoran Air Hujan</h3>
+            <p class="text-slate-400 leading-relaxed">Pastikan vendor memberikan komitmen garansi kebocoran air tertulis saat hujan lebat pertama turun setelah pemasangan selesai.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FAQ ACCORDION -->
+    <section class="space-y-6">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Pertanyaan Umum</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Tanya Jawab Seputar Kanopi Plat Laser Cutting Palembang</h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        {faqsKanopi.map((faq) => (
+          <details class="group rounded-2xl bg-slate-900/60 border border-slate-800 p-6 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base group-open:text-emerald-400">
+              <span>{faq.question}</span>
+              <span class="ml-4 transition-transform group-open:rotate-180 text-emerald-400 font-bold">▾</span>
+            </summary>
+            <p class="mt-4 text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 pt-4">
+              {faq.answer}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- INTERNAL LINKING STRIP -->
+    <section class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-wrap items-center justify-between gap-4 text-xs">
+      <div class="text-slate-300">
+        Jelajahi produk arsitektural logam lainnya
+      </div>
+      <div class="flex flex-wrap items-center gap-4 text-emerald-400 font-semibold">
+        <a href="/pagar" class="hover:underline">Pagar Plat Laser Cutting →</a>
+        <a href="/pintu" class="hover:underline">Pintu Gerbang Plat Mewah →</a>
+        <a href="/balkon" class="hover:underline">Pagar Balkon Lantai 2 →</a>
+        <a href="/motif-laser-cutting" class="hover:underline">Katalog Motif Ornamen →</a>
+      </div>
+    </section>
+
+    <!-- CTA FOOTER -->
+    <CtaWhatsapp
+      title="Pesan Kanopi Carport Laser Cutting Sekarang"
+      subtitle="Konsultasikan ukuran carport dan model atap rumah Anda bersama tim workshop Sriwijaya Grafika Palembang. Free survei lokasi dan gambar desain mockup 3D."
+    />
+  </div>
+</BaseLayout>

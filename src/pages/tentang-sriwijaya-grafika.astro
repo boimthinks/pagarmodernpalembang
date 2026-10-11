@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import CtaWhatsapp from '../components/CtaWhatsapp.astro';
+import { SITE } from '../config/site';
+---
+
+<BaseLayout
+  title="Tentang Sriwijaya Grafika | Spesialis Pagar Laser Cutting Palembang Sejak 2008"
+  description="Profil Sriwijaya Grafika & workshop Talang Jambe Sukarami Palembang. Lebih dari 16 tahun melayani percetakan, advertising, dan produksi pagar modern laser cutting presisi."
+  breadcrumbs={[
+    { name: 'Tentang Kami', url: '/tentang-sriwijaya-grafika' }
+  ]}
+>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <Breadcrumb items={[{ name: 'Tentang Sriwijaya Grafika', url: '/tentang-sriwijaya-grafika' }]} />
+
+    <header class="max-w-3xl space-y-4 mb-12">
+      <span class="inline-flex items-center px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider border border-emerald-500/20">
+        Profil Brand Sejak 2008
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+        Dedikasi 16+ Tahun Sriwijaya Grafika Membangun Estetika Logam di Palembang
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+        Didirikan oleh <strong>M. Edy Munandar</strong>, Sriwijaya Grafika berawal dari industri advertising, reklame, dan percetakan. Seiring perkembangan teknologi konstruksi modern, kami bertransformasi menghadirkan mesin fiber laser berdaya tinggi untuk memproduksi elemen arsitektural logam seperti pagar, pintu gerbang, dan railing tangga bermotif presisi.
+      </p>
+    </header>
+
+    <div class="space-y-12 text-slate-300 leading-relaxed">
+      <!-- Misi Sosial -->
+      <section class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800 space-y-4">
+        <h2 class="text-2xl font-bold text-white">Pemberdayaan Tenaga Kerja Lokal & Rekan Tuna Rungu</h2>
+        <p>
+          Salah satu kebanggaan terbesar kami di workshop Talang Jambe adalah komitmen sosial. Kami secara aktif memberdayakan tenaga kerja lokal Sumatera Selatan, termasuk rekan-rekan penyandang <strong>Tuna Rungu</strong> yang memiliki ketelitian, ketekunan, dan keahlian tinggi dalam pengoperasian mesin presisi dan proses finishing.
+        </p>
+      </section>
+
+      <!-- Ekosistem 3 Website -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-bold text-white">Ekosistem 3 Website Sriwijaya Grafika</h2>
+        <p>
+          Untuk memberikan pelayanan yang terfokus bagi kebutuhan masyarakat Palembang, kami membagi layanan ke dalam 3 platform:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+            <h3 class="font-bold text-white text-lg mb-2">1. SriwijayaGrafika.com</h3>
+            <p class="text-xs text-slate-400 mb-4">
+              Website korporat induk. Melayani kebutuhan advertising, plang nama instansi, huruf timbul, dan percetakan komersial.
+            </p>
+            <a href="https://sriwijayagrafika.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-400 hover:underline">
+              <span>Kunjungi Web Induk</span>
+              <span class="material-symbols-outlined text-xs">open_in_new</span>
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+            <h3 class="font-bold text-white text-lg mb-2">2. LaserindoPalembang.com</h3>
+            <p class="text-xs text-slate-400 mb-4">
+              Khusus penyedia <strong>Jasa Cutting Laser</strong> mentah. Pelanggan atau bengkel las lain dapat membawa bahan sendiri untuk dipotong presisi.
+            </p>
+            <a href="https://laserindopalembang.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-amber-400 hover:underline">
+              <span>Kunjungi Web Jasa</span>
+              <span class="material-symbols-outlined text-xs">open_in_new</span>
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-emerald-950/30 border border-emerald-900/50">
+            <h3 class="font-bold text-white text-lg mb-2">3. PagarModernPalembang.com</h3>
+            <p class="text-xs text-slate-300 mb-4">
+              Khusus etalase <strong>Hasil Produk Jadi</strong> (Pagar rumah, pintu gerbang, balkon) lengkap dengan rangka, cat oven/duco, dan instalasi terpasang.
+            </p>
+            <span class="text-xs font-semibold text-emerald-400">
+              (Website yang sedang Anda kunjungi)
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fasilitas 3 Mesin Cutting -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-bold text-white">Fasilitas 3 Jenis Mesin Cutting di Workshop</h2>
+        <p>
+          Untuk menghasilkan produk pagar, gerbang, dan ornamen dekoratif dengan standar presisi tinggi, workshop Sriwijaya Grafika mengoperasikan 3 jenis mesin pemotong spesifik sesuai karakter material:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 overflow-hidden group flex flex-col justify-between">
+            <div class="space-y-4">
+              <a href="/blog/mesin-potong-laser-fiber-palembang" class="block relative aspect-[16/10] rounded-xl overflow-hidden bg-slate-950 border border-slate-800 group/img">
+                <img
+                  src="/mesin/mesin-potong-laser-fiber_poco.webp"
+                  alt="Mesin Potong Laser Fiber Sriwijaya Grafika Palembang"
+                  class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
+                <span class="absolute bottom-2.5 left-2.5 text-xs px-2.5 py-0.5 rounded-md font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 backdrop-blur-md">
+                  Mesin 1: Logam
+                </span>
+              </a>
+              <h3 class="text-lg font-bold text-white">
+                <a href="/blog/mesin-potong-laser-fiber-palembang" class="hover:text-emerald-400 transition-colors inline-flex items-center gap-1.5">
+                  <span>Mesin Potong Laser Fiber</span>
+                  <span class="material-symbols-outlined text-[16px] text-slate-500">arrow_forward</span>
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Khusus memotong lembaran logam tebal dan tipis dengan toleransi 0.1 mm tanpa gerinda (burr-free).
+              </p>
+            </div>
+            <div class="space-y-3 pt-3 border-t border-slate-800">
+              <div class="text-xs text-slate-400">
+                <strong class="text-white block mb-1">Material yang Ditangani:</strong>
+                Plat Besi & Galvanis (0.6 - 12 mm), Stainless Steel (0.6 - 3 mm), Aluminium (1.2 - 3 mm).
+              </div>
+              <a href="/blog/mesin-potong-laser-fiber-palembang" class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-400 hover:text-emerald-300">
+                <span>Baca artikel mesin fiber laser</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 overflow-hidden group flex flex-col justify-between">
+            <div class="space-y-4">
+              <a href="/blog/mesin-potong-cnc-router-palembang" class="block relative aspect-[16/10] rounded-xl overflow-hidden bg-slate-950 border border-slate-800 group/img">
+                <img
+                  src="/mesin/mesin-potong-CNC-router_poco.webp"
+                  alt="Mesin Potong CNC Router Sriwijaya Grafika Palembang"
+                  class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
+                <span class="absolute bottom-2.5 left-2.5 text-xs px-2.5 py-0.5 rounded-md font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/40 backdrop-blur-md">
+                  Mesin 2: Kayu & Komposit
+                </span>
+              </a>
+              <h3 class="text-lg font-bold text-white">
+                <a href="/blog/mesin-potong-cnc-router-palembang" class="hover:text-amber-400 transition-colors inline-flex items-center gap-1.5">
+                  <span>Mesin Potong CNC Router</span>
+                  <span class="material-symbols-outlined text-[16px] text-slate-500">arrow_forward</span>
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Khusus memotong dan mengukir panel kayu olahan, komposit fasad, dan lembaran sintetis secara presisi.
+              </p>
+            </div>
+            <div class="space-y-3 pt-3 border-t border-slate-800">
+              <div class="text-xs text-slate-400">
+                <strong class="text-white block mb-1">Material yang Ditangani:</strong>
+                Plywood (3 - 20 mm), MDF / MHR (3 - 20 mm), PVC Board (3 - 20 mm), ACP (3 - 4 mm).
+              </div>
+              <a href="/blog/mesin-potong-cnc-router-palembang" class="inline-flex items-center gap-1 text-xs font-semibold text-amber-400 hover:text-amber-300">
+                <span>Baca artikel mesin CNC router</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 overflow-hidden group flex flex-col justify-between">
+            <div class="space-y-4">
+              <a href="/blog/mesin-potong-laser-co2-palembang" class="block relative aspect-[16/10] rounded-xl overflow-hidden bg-slate-950 border border-slate-800 group/img">
+                <img
+                  src="/mesin/mesin-potong-laser-CO2_poco.webp"
+                  alt="Mesin Potong Laser CO2 Sriwijaya Grafika Palembang"
+                  class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
+                <span class="absolute bottom-2.5 left-2.5 text-xs px-2.5 py-0.5 rounded-md font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 backdrop-blur-md">
+                  Mesin 3: Akrilik
+                </span>
+              </a>
+              <h3 class="text-lg font-bold text-white">
+                <a href="/blog/mesin-potong-laser-co2-palembang" class="hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5">
+                  <span>Mesin Potong Laser CO2</span>
+                  <span class="material-symbols-outlined text-[16px] text-slate-500">arrow_forward</span>
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Khusus memotong lembaran akrilik bening dan warna dengan hasil tepian potongan halus dan mengkilap.
+              </p>
+            </div>
+            <div class="space-y-3 pt-3 border-t border-slate-800">
+              <div class="text-xs text-slate-400">
+                <strong class="text-white block mb-1">Material yang Ditangani:</strong>
+                Akrilik / Acrylic Lembaran (2 - 10 mm) untuk logo plat, nomor rumah LED, & partisi.
+              </div>
+              <a href="/blog/mesin-potong-laser-co2-palembang" class="inline-flex items-center gap-1 text-xs font-semibold text-cyan-400 hover:text-cyan-300">
+                <span>Baca artikel mesin laser CO2</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Workshop Lokasi -->
+      <section class="p-8 rounded-3xl bg-slate-900/40 border border-slate-800 space-y-4">
+        <h2 class="text-2xl font-bold text-white">Workshop & Fasilitas Produksi</h2>
+        <p>
+          Seluruh proses perancangan desain CAD, pemotongan plat fiber laser, perakitan rangka las, hingga pengecatan duco dilakukan terpadu di workshop kami:
+        </p>
+        <p class="text-emerald-400 font-semibold">
+          {SITE.address.full}
+        </p>
+        <p class="text-xs text-slate-400">
+          Kami menyambut kunjungan Anda untuk melihat langsung proses pemotongan laser dan contoh display fisik material.
+        </p>
+      </section>
+    </div>
+
+    <CtaWhatsapp />
+  </div>
+</BaseLayout>
