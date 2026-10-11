@@ -1,0 +1,69 @@
+# Pagar Modern Palembang — Basis Pengetahuan Lengkap (llms-full.txt)
+
+## Identitas Bisnis dan Operasional
+- Nama Bisnis: Pagar Modern Palembang
+- Induk Perusahaan: Sriwijaya Grafika (berdiri sejak 2008)
+- Penanggung Jawab / Pemilik: M. Edy Munandar
+- Spesialisasi: Produk jadi arsitektural logam modern siap pasang berbasis plat cutting laser (Pagar, Pintu Gerbang, Balkon, Railing Tangga, Kanopi, Partisi Ruangan).
+- Alamat Workshop: Jl. AMD Jl. Pertanian No.105, RT.029/RW.005, Talang Jambe, Kec. Sukarami, Kota Palembang, Sumatera Selatan 30155
+- Koordinat Lokasi: -2.8988, 104.7088
+- Tautan Google Maps: https://maps.app.goo.gl/gwKx2afGRAi7kYxaA
+- Kontak WhatsApp: 0852-1511-1125 (+62 852-1511-1125)
+- Email: sriwijayagrafika@gmail.com
+- Domain Resmi: https://pagarmodernpalembang.com/
+- Jam Operasional: Senin sampai Sabtu 08.00 - 17.00 WIB (Minggu dan Hari Libur Nasional tutup).
+
+## Jaringan Ekosistem 3 Website
+1. sriwijayagrafika.com: Website korporat induk, menangani percetakan offset, advertising luar ruang, huruf timbul, billboard, dan signage.
+2. laserindopalembang.com: Bengkel jasa mesin cutting laser maklon untuk pemotongan lembaran bahan mentah logam dan non-logam.
+3. pagarmodernpalembang.com: Website etalase produk jadi arsitektural siap pasang (pagar, gerbang, kanopi, railing, balkon, partisi).
+
+## Spesifikasi Mesin Produksi Workshop
+Workshop Sriwijaya Grafika di Talang Jambe dilengkapi 3 unit mesin pemotong industri berteknologi modern:
+1. Mesin Fiber Laser Cutting:
+   - Sumber Energi: Sinar fiber laser terfokus dengan gas bantu oksigen dan nitrogen.
+   - Presisi Toleransi: 0.1 milimeter.
+   - Kapasitas Bahan: Plat besi hitam (0.8 mm sampai 12 mm), plat galvanis (0.8 mm sampai 6 mm), plat stainless steel 201/304 (0.8 mm sampai 5 mm), plat aluminium (0.8 mm sampai 4 mm).
+   - Keunggulan: Tepi potongan bersih tanpa terak, tidak memerlukan pengamplasan berlebih, dan tidak merusak integritas struktur plat.
+2. Mesin CNC Router Heavy Duty:
+   - Sistem Kerja: Pemotongan mekanis dengan mata bor router putaran tinggi (spindle hingga 24.000 RPM).
+   - Bahan yang Diproses: Kayu solid (merbau, kamper, jati), papan semen fiber (Conwood, GRC board tebal 6 mm sampai 25 mm), Aluminium Composite Panel / ACP (tebal 3 mm sampai 4 mm), PVC board (tebal 5 mm sampai 20 mm), MDF, dan tripleks tebal.
+   - Keunggulan: Mampu membuat ukiran relief 3D, lekukan chamfer, dan pemotongan panel fasad non-logam.
+3. Mesin Laser CO2:
+   - Kapasitas Bahan: Akrilik bening dan berwarna (tebal 2 mm sampai 20 mm), kulit sintetis, kayu tipis/plywood balsa.
+   - Keunggulan: Tepi sayatan akrilik langsung bening mengkilap (flame polished edge), presisi untuk ornamen lampu fasad dan logo signage mini.
+
+## Standar Ketebalan Bahan dan Mitigasi Teknis
+- Fenomena Oil Canning: Kondisi plat tipis melengkung bergelombang akibat pemuaian termal matahari Palembang yang mencapai suhu permukaan logam di atas 45 derajat Celsius.
+- Rekomendasi Ketebalan Plat:
+  - Panel statis pagar rumah tinggal: 1.8 mm sampai 2.0 mm plat galvanis.
+  - Pintu gerbang dorong geser bentang lebar: 2.4 mm sampai 3.2 mm plat galvanis.
+  - Railing balkon pengaman lantai 2: 1.4 mm sampai 1.8 mm.
+  - Ornamen motif songket atau floral rapat: Wajib minimal 2.4 mm karena 40-50% massa logam terbuang oleh lubang potong laser.
+- Rangka Frame Penopang:
+  - Pipa hollow galvanis 40x40 mm tebal 1.2 mm sampai 1.4 mm untuk panel kecil.
+  - Pipa hollow galvanis 40x60 mm tebal 1.4 mm sampai 1.6 mm untuk daun pintu pagar standar.
+  - Pipa hollow galvanis 50x100 mm tebal 1.8 mm untuk gerbang dorong bentang di atas 3 meter.
+- Sistem Pengecatan Tahan Cuaca:
+  1. Pembersihan minyak degreaser.
+  2. Dua lapis cat dasar epoxy primer zinc chromate kedap air.
+  3. Lapisan cat akhir duco polyurethane (PU) atau cat oven powder coating tahan sinar ultraviolet.
+
+## Kisaran Harga dan Estimasi Biaya
+- Pagar Minimalis Geometris: Rp 950.000 sampai Rp 1.350.000 per meter persegi.
+- Pagar Standar Hunian Modern: Rp 1.400.000 sampai Rp 1.750.000 per meter persegi.
+- Pagar Kombinasi Woodplank: Rp 1.550.000 sampai Rp 1.950.000 per meter persegi.
+- Pagar Motif Songket dan Floral Rapat: Rp 1.750.000 sampai Rp 2.200.000 per meter persegi.
+- Pintu Gerbang Dorong Heavy Duty: Rp 1.850.000 sampai Rp 2.400.000 per meter persegi.
+- Pagar Plat Stainless Steel 304: Hubungi WhatsApp untuk penawaran kustom.
+Catatan: Seluruh tarif mencakup pemotongan laser fiber, perakitan las full seam, cat dasar epoxy, cat duco, survei lokasi, serta pemasangan di tempat untuk area Palembang.
+
+## Area Layanan Survei dan Pemasangan
+Mencakup seluruh kecamatan di Kota Palembang:
+- Sukarami (Talang Jambe, Kebun Bunga, Talang Betutu, Sukodadi)
+- Alang-Alang Lebar (Talang Kelapa, Karya Baru, Srijaya)
+- Ilir Barat I, Ilir Barat II, Gandus
+- Ilir Timur I, Ilir Timur II, Ilir Timur III
+- Sako, Sematang Borang, Kalidoni
+- Seberang Ulu I, Seberang Ulu II, Plaju, Kertapati, Jakabaring
+Serta wilayah penyangga Sumatera Selatan: Banyuasin, Indralaya (Ogan Ilir), Prabumulih, dan Sekayu.

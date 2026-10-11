@@ -1,5 +1,12 @@
 User-agent: *
 Allow: /
 
+# Sitemap Index
 Sitemap: https://pagarmodernpalembang.com/sitemap-index.xml
+Sitemap: https://pagarmodernpalembang.com/sitemap.xml
+
+# LLM & AI Context
+# https://pagarmodernpalembang.com/llms.txt
+# https://pagarmodernpalembang.com/llms-full.txt
+
 Host: https://pagarmodernpalembang.com

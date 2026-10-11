@@ -47,7 +47,8 @@ Website ini dibangun dengan pendekatan modern yang memprioritaskan performa ting
 - **Tipografi:** Plus Jakarta Sans & Google Material Symbols Outlined
 - **SEO Semantik:** Schema.org JSON-LD (LocalBusiness, HomeAndConstructionBusiness, WebSite, Organization, Article, BreadcrumbList)
 - **Open Graph:** Gambar beresolusi 1200x630 piksel rasio 1.91:1 dengan direktif `max-image-preview:large`
-- **Sitemap & Feed:** `@astrojs/sitemap` terintegrasi otomatis
+- **Sitemap:** Otomatis digenerate via `@astrojs/sitemap` di [`/sitemap-index.xml`](https://pagarmodernpalembang.com/sitemap-index.xml) dan [`/sitemap-0.xml`](https://pagarmodernpalembang.com/sitemap-0.xml) (dengan redirect 301 dari `/sitemap.xml`)
+- **AI & LLM Context (GEO 2026):** Mendukung standar llmstxt.org di [`/llms.txt`](https://pagarmodernpalembang.com/llms.txt) dan [`/llms-full.txt`](https://pagarmodernpalembang.com/llms-full.txt) untuk perayap SearchGPT, Perplexity, Gemini, dan ChatGPT
 
 ---
 
