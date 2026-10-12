@@ -35,9 +35,10 @@ Website ini adalah **Pagar Modern Palembang** (`pagarmodernpalembang.com`), webs
 
 ### Perintah Utama
 ```bash
-npm run dev      # Jalankan local development server
-npm run build    # Build static site ke folder dist/
-npm run preview  # Pratinjau hasil build dist/
+npm run dev       # Jalankan local development server
+npm run autolink  # Jalankan mekanisme auto internal linking artikel & motif
+npm run build     # Build static site ke folder dist/ (otomatis menjalankan prebuild autolink)
+npm run preview   # Pratinjau hasil build dist/
 ```
 
 ---
@@ -108,14 +109,21 @@ src/
    - Halaman blog otomatis merender schema `Article` dan `FAQPage`.
 4. **Harga:**
    - Selalu sertakan kata "Mulai Dari" atau instruksi "Hubungi WhatsApp untuk perhitungan volume". Jangan pernah mengunci harga flat tanpa syarat.
-5. **Larangan Titik Dua (:) pada Heading:**
-   - DILARANG menggunakan tanda titik dua (`:`) pada heading manapun (H1, H2, H3, H4, dst.) baik pada file Markdown (.md) maupun komponen Astro (.astro).
-   - Ganti tanda titik dua dengan tanda koma (`,`), tanda titik (`.`), tanda pisah (`—`), atau susun ulang kalimat secara alami tanpa tanda titik dua.
+5. **Larangan Titik Dua (:) dan Angka pada Heading:**
+   - DILARANG menggunakan tanda titik dua (`:`) pada heading manapun (H1, H2, H3, H4, dst.) baik pada file Markdown (.md) maupun komponen Astro (.astro). Ganti dengan tanda koma (`,`), tanda titik (`.`), tanda pisah (`—`), atau susun kalimat secara alami.
+   - DILARANG menggunakan angka Arab (1, 2, 3, dst.) maupun angka Romawi (I, II, III, dst.) pada heading H1, H2, H3, dst. Gunakan urutan kata alami (misal: "Tahap Pertama", "Langkah Awal") atau tanpa penomoran.
+6. **Mekanisme Auto Internal Linking:**
+   - Dikelola oleh skrip `scripts/auto-internal-links.mjs` dan master data `src/data/internal-link-keywords.mjs`.
+   - Otomatis menghubungkan kata kunci produk (`/pagar/`, `/pintu/`, `/balkon/`, `/railing/`, `/kanopi/`, `/partisi/`, `/motif-laser-cutting/`) dan homepage (`/`).
+   - Minimal 2 internal link per konten artikel/motif (1 ke homepage, 1 ke produk relevan, plus produk lain yang dibahas).
+   - Hanya kata kunci pertama yang ditemukan (*first occurrence only*) yang diberi link per URL target.
+   - **TIDAK PERNAH** menginjeksi link ke dalam heading (`H1`–`H6`), gambar, blok kode, atau inline code.
 
 ---
 
 ## 6. Checklist Sebelum Menyelesaikan Tugas
 
+- [ ] Jalankan `npm run autolink` atau biarkan `prebuild` memproses internal link secara otomatis.
 - [ ] Jalankan `npm run build` untuk memverifikasi tidak ada error sintaks atau rute rusak.
 - [ ] Pastikan sitemap XML terbuat di `dist/sitemap-index.xml`.
 - [ ] Cek file `SUMBER-PENGETAHUAN.md` jika ada penambahan produk/harga baru.

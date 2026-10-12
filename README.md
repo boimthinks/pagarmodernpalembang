@@ -19,6 +19,7 @@ Kami memproduksi aneka produk arsitektur eksterior dan interior hunian di Palemb
 - **[Pagar Cutting Minimalis](https://pagarmodernpalembang.com/pagar/minimalis)** — Pola geometris simetris, kisi modular, dan perforasi gradasi modern untuk perumahan klaster.
 - **[Pagar Kombinasi Woodplank](https://pagarmodernpalembang.com/pagar/kombinasi-woodplank)** — Harmoni plat besi laser cut dan bilah Conwood serat kayu tahan air anti rayap berkonsep tropis hangat.
 - **[Pagar Motif Songket Palembang](https://pagarmodernpalembang.com/pagar/pagar-cutting-motif-songket-palembang)** — Desain eksklusif ragam hias bungo intan dan pucuk rebung khas kearifan lokal Sumatera Selatan.
+- **[Pintu Plat Cutting Motif Daun Tropis](https://pagarmodernpalembang.com/pintu/pintu-laser-cutting-plat-besi-motif-daun)** — Desain floral organik asimetris plat besi 2.0 mm perpaduan frame hollow tebal.
 - **Pintu Gerbang Plat Cutting** — Pintu dorong geser heavy duty dan pintu lipat rangka hollow tebal dengan rel bearing Jepang.
 - **Balkon dan Railing Tangga** — Pengaman lantai dua dan tangga rumah estetik dengan standar keselamatan teruji.
 - **Kanopi Plat Cutting** — Peneduh carport artistik yang membiaskan bayangan motif indah saat tersorot matahari.
@@ -44,7 +45,9 @@ Website ini dibangun dengan pendekatan modern yang memprioritaskan performa ting
 
 - **Framework:** Astro 5 (Static Site Generation / SSG)
 - **Styling:** Tailwind CSS v4 dengan `@tailwindcss/vite` dan `@tailwindcss/typography`
-- **Tipografi:** Plus Jakarta Sans & Google Material Symbols Outlined
+- **Ikonografi & Performa:** Komponen SVG internal lokal murni (`Icon.astro`) bebas render-blocking (PageSpeed Mobile skor tinggi)
+- **Tipografi:** Plus Jakarta Sans dimuat secara asinkron non-blocking
+- **Auto Internal Linking:** Sistem otomatisasi penautan link berbasis keyword produk dan brand (`scripts/auto-internal-links.mjs`) yang otomatis aktif saat proses build
 - **SEO Semantik:** Schema.org JSON-LD (LocalBusiness, HomeAndConstructionBusiness, WebSite, Organization, Article, BreadcrumbList)
 - **Open Graph:** Gambar beresolusi 1200x630 piksel rasio 1.91:1 dengan direktif `max-image-preview:large`
 - **Sitemap:** Otomatis digenerate via `@astrojs/sitemap` di [`/sitemap-index.xml`](https://pagarmodernpalembang.com/sitemap-index.xml) dan [`/sitemap-0.xml`](https://pagarmodernpalembang.com/sitemap-0.xml) (dengan redirect 301 dari `/sitemap.xml`)
@@ -71,11 +74,16 @@ npm run dev
 ```
 Akses server lokal di `http://localhost:4321`.
 
-### 4. Build untuk Produksi
+### 4. Sinkronisasi Internal Link Otomatis
+```bash
+npm run autolink
+```
+
+### 5. Build untuk Produksi
 ```bash
 npm run build
 ```
-Hasil build statis tersimpan di folder `dist/` dan siap dideploy ke Netlify, Vercel, atau server web statis lainnya.
+Perintah build otomatis menjalankan `prebuild` untuk sinkronisasi internal link, lalu mengkompilasi file statis ke folder `dist/` siap dideploy ke Netlify, Vercel, atau server web statis lainnya.
 
 ---
 

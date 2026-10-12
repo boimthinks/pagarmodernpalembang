@@ -187,10 +187,16 @@ Setiap pembuatan atau pembaruan artikel blog **WAJIB** merujuk ke skill `penulis
        answer: "Jawaban to-the-point dengan data teknis dari workshop."
    ```
 
-4. **Internal Linking Mandatori:**
-   - Setiap artikel minimal menautkan 1 tautan ke Hub Silo Produk (`/pagar` atau `/pintu`).
-   - Tautkan CTA konsultasi WhatsApp ke nomor `0852-1511-1125`.
-   - Jika membahas jasa potong mentah, tautkan ke `https://laserindopalembang.com/`.
+4. **Larangan Titik Dua (:) dan Angka pada Seluruh Heading:**
+   - DILARANG menggunakan tanda titik dua (`:`) pada heading manapun (H1, H2, H3, dst). Ganti dengan koma (`,`), titik (`.`), tanda pisah (`—`), atau susun kalimat secara alami.
+   - DILARANG menggunakan angka Arab (1, 2, 3) maupun angka Romawi (I, II, III) di heading H1, H2, H3, dst. Gunakan urutan kata ("Tahap Pertama", "Langkah Berikutnya") atau sub-heading deskriptif tanpa angka.
+
+5. **Mekanisme Auto Internal Linking Mandatori:**
+   - Website dilengkapi skrip auto-linking (`scripts/auto-internal-links.mjs` & `src/data/internal-link-keywords.mjs`) yang otomatis aktif saat build (`prebuild`).
+   - Setiap artikel/motif otomatis dihubungkan minimal 2 link: ke Homepage (`/`) via entitas brand Sriwijaya Grafika, dan ke SILO produk terkait (`/pagar/`, `/pintu/`, `/balkon/`, `/railing/`, `/kanopi/`, `/partisi/`, `/motif-laser-cutting/`).
+   - Link otomatis hanya mengambil kemunculan pertama kata kunci (*first occurrence only*) dan tidak akan pernah diinjeksi ke heading.
+   - CTA konsultasi WhatsApp wajib mengarah ke nomor `0852-1511-1125`.
+   - Jika membahas jasa potong laser maklon/mentah, tautkan ke `https://laserindopalembang.com/`.
 
 ---
 
