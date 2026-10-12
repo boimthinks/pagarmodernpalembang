@@ -1,6 +1,6 @@
 ---
 title: "Pagar Cutting Minimalis Palembang"
-titleSeo: "Pagar Cutting Minimalis Palembang Model Geometris Modern Elegan"
+titleSeo: "Pagar Cutting Minimalis Geometris Modern Palembang"
 tipe: "motif"
 label_produk: "pagar"
 excerpt: "Pilihan model pagar cutting minimalis bermotif geometris dan kisi simetris plat besi galvanis tahan panas matahari di Palembang."
@@ -24,7 +24,7 @@ faq:
 
 Arsitektur perumahan modern di Kota Palembang menuntut kepraktisan bentuk yang serasi dengan garis fasad bangunan yang tegas dan bersih. Pola dekoratif klasik dengan banyak lekukan melingkar mulai digantikan oleh motif geometris simetris, kisi modular, dan perforasi presisi.
 
-Pagar cutting minimalis memanfaatkan keunggulan sinar mesin laser fiber untuk memotong lembaran plat besi dengan kepresisian tinggi. Hasilnya adalah bidang pagar yang rapi, elegan, dan fungsional tanpa menimbulkan kesan visual yang berlebihan.
+[Pagar cutting minimalis](/pagar/) memanfaatkan keunggulan sinar mesin laser fiber untuk memotong lembaran plat besi dengan kepresisian tinggi. Hasilnya adalah bidang pagar yang rapi, elegan, dan fungsional tanpa menimbulkan kesan visual yang berlebihan.
 
 Tiga keunggulan utama model minimalis ini di lapangan antara lain:
 
@@ -47,7 +47,7 @@ Ketahanan pagar outdoor tidak hanya ditentukan oleh keindahan desainnya di kompu
 
 ## Ragam Pilihan Pola Geometris Minimalis Terpopuler
 
-Workshop Sriwijaya Grafika menyediakan puluhan variasi desain minimalis berbasis vektor yang dapat disesuaikan dengan proporsi pintu gerbang rumah Anda.
+[Workshop Sriwijaya Grafika](/) menyediakan puluhan variasi desain minimalis berbasis vektor yang dapat disesuaikan dengan proporsi [pintu gerbang](/pintu/) rumah Anda.
 
 ### 1. Pola Garis Kisi Vertikal Asimetris
 Pola ini mengombinasikan garis sayatan vertikal dengan lebar dan celah yang bervariasi secara teratur. Bidang garis tegak memberikan ilusi mata yang membuat pagar tampak lebih tinggi dan kokoh. Pola ini sangat digemari pemilik rumah klaster di kawasan Alang-Alang Lebar dan Sukarami karena menyuguhkan privasi visual yang sangat baik dari jalan raya.

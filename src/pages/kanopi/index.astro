@@ -65,7 +65,7 @@ const faqsKanopi = [
 ---
 
 <BaseLayout
-  title="Kanopi Plat Laser Cutting Palembang | Atap Carport & Teras Mewah"
+  title="Kanopi Plat Laser Cutting Carport Mewah Palembang"
   description="Jasa pembuatan kanopi plat laser cutting carport di Palembang. Rangka kokoh WF dan hollow galvanis, plafon motif laser artistik by Sriwijaya Grafika."
   ogImage="/produk/kanopi-laser-cutting_poco.webp"
   schemaType="Product"
@@ -75,14 +75,15 @@ const faqsKanopi = [
     image: '/produk/kanopi-laser-cutting_poco.webp',
     lowPrice: '1150000',
     highPrice: '3500000',
+    offerCount: '8',
   }}
   breadcrumbs={[
-    { name: 'Kanopi Laser Cutting', url: '/kanopi' }
+    { name: 'Kanopi Laser Cutting', url: '/kanopi/' }
   ]}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
     <Breadcrumb items={[
-      { name: 'Kanopi Laser Cutting', url: '/kanopi' }
+      { name: 'Kanopi Laser Cutting', url: '/kanopi/' }
     ]} />
 
     <!-- HERO SECTION -->
@@ -110,7 +111,7 @@ const faqsKanopi = [
             Konsultasi Ukuran & Mockup Carport
           </a>
           <a
-            href="/motif-laser-cutting"
+            href="/motif-laser-cutting/"
             class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
           >
             Katalog Desain Motif Plafon →
@@ -123,8 +124,12 @@ const faqsKanopi = [
           <img
             src="/produk/kanopi-laser-cutting_poco.webp"
             alt="Kanopi laser cutting Palembang Sriwijaya Grafika"
+            width="800"
+            height="600"
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="eager"
+            fetchpriority="high"
+            decoding="async"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
           <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs">
@@ -171,7 +176,7 @@ const faqsKanopi = [
           </div>
           <div class="flex items-center gap-3 shrink-0">
             <a
-              href="/motif-laser-cutting"
+              href="/motif-laser-cutting/"
               class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-700 transition-colors"
             >
               Lihat Galeri Motif →
@@ -500,10 +505,10 @@ const faqsKanopi = [
         Jelajahi produk arsitektural logam lainnya
       </div>
       <div class="flex flex-wrap items-center gap-4 text-emerald-400 font-semibold">
-        <a href="/pagar" class="hover:underline">Pagar Plat Laser Cutting →</a>
-        <a href="/pintu" class="hover:underline">Pintu Gerbang Plat Mewah →</a>
-        <a href="/balkon" class="hover:underline">Pagar Balkon Lantai 2 →</a>
-        <a href="/motif-laser-cutting" class="hover:underline">Katalog Motif Ornamen →</a>
+        <a href="/pagar/" class="hover:underline">Pagar Plat Laser Cutting →</a>
+        <a href="/pintu/" class="hover:underline">Pintu Gerbang Plat Mewah →</a>
+        <a href="/balkon/" class="hover:underline">Pagar Balkon Lantai 2 →</a>
+        <a href="/motif-laser-cutting/" class="hover:underline">Katalog Motif Ornamen →</a>
       </div>
     </section>
 

@@ -47,23 +47,6 @@
 }
 
 @layer components {
-  .material-symbols-outlined {
-    font-family: 'Material Symbols Outlined';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    font-feature-settings: 'liga';
-    vertical-align: middle;
-  }
   .prose-blog {
     @apply prose prose-invert prose-lg max-w-none;
     @apply prose-headings:text-white prose-headings:font-bold prose-headings:mt-10 prose-headings:mb-4;

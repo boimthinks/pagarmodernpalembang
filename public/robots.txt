@@ -3,7 +3,6 @@ Allow: /
 
 # Sitemap Index
 Sitemap: https://pagarmodernpalembang.com/sitemap-index.xml
-Sitemap: https://pagarmodernpalembang.com/sitemap.xml
 
 # LLM & AI Context
 # https://pagarmodernpalembang.com/llms.txt

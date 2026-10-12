@@ -1,5 +1,6 @@
 ---
 import { MATERIALS, WORKSHOP_MACHINES } from '../data/materials';
+import Icon from './Icon.astro';
 ---
 
 <div class="my-10 space-y-8">
@@ -12,8 +13,11 @@ import { MATERIALS, WORKSHOP_MACHINES } from '../data/materials';
             <img
               src={machine.image}
               alt={machine.name}
+              width="600"
+              height="375"
               class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
               loading="lazy"
+              decoding="async"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
             <span class={`absolute bottom-2.5 left-2.5 text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border backdrop-blur-md shadow-sm ${machine.badgeColor}`}>
@@ -26,7 +30,7 @@ import { MATERIALS, WORKSHOP_MACHINES } from '../data/materials';
           <h4 class="text-base font-bold text-white">
             <a href={machine.articleUrl} class="hover:text-emerald-400 transition-colors inline-flex items-center gap-1.5">
               <span>{machine.name}</span>
-              <span class="material-symbols-outlined text-[16px] text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all">arrow_forward</span>
+              <Icon name="arrow_forward" size={16} class="text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all" />
             </a>
           </h4>
           <p class="text-xs text-slate-300 leading-relaxed">{machine.specialty}</p>
@@ -37,7 +41,7 @@ import { MATERIALS, WORKSHOP_MACHINES } from '../data/materials';
             <ul class="space-y-1 text-xs text-slate-300">
               {machine.materials.map((m) => (
                 <li class="flex items-center gap-1.5">
-                  <span class="material-symbols-outlined text-emerald-400 text-[14px] leading-none">check</span>
+                  <Icon name="check" size={14} class="text-emerald-400" />
                   <span>{m}</span>
                 </li>
               ))}
@@ -48,7 +52,7 @@ import { MATERIALS, WORKSHOP_MACHINES } from '../data/materials';
             class="inline-flex items-center justify-center gap-1.5 w-full py-2 px-3 text-xs font-semibold text-emerald-400 bg-emerald-950/30 hover:bg-emerald-900/50 border border-emerald-800/50 hover:border-emerald-700 rounded-xl transition-all"
           >
             <span>Baca Ulasan Lengkap Mesin</span>
-            <span class="material-symbols-outlined text-[14px] leading-none">arrow_forward</span>
+            <Icon name="arrow_forward" size={14} />
           </a>
         </div>
       </div>
@@ -128,7 +132,7 @@ import { MATERIALS, WORKSHOP_MACHINES } from '../data/materials';
     </div>
 
     <div class="p-4 bg-slate-950/80 border-t border-slate-800 text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-2">
-      <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-amber-400 text-[16px]">lightbulb</span> Butuh jasa potong mentah tanpa instalasi pagar? Kunjungi website jasa kami di <a href="https://laserindopalembang.com/" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline font-semibold">Laserindo Palembang</a>.</span>
+      <span class="flex items-center gap-1.5"><Icon name="lightbulb" size={16} class="text-amber-400" /> Butuh jasa potong mentah tanpa instalasi pagar? Kunjungi website jasa kami di <a href="https://laserindopalembang.com/" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline font-semibold">Laserindo Palembang</a>.</span>
       <a href="https://wa.me/6285215111125" class="text-emerald-400 hover:underline font-medium">Tanya Ketersediaan Stok Material Plat →</a>
     </div>
   </div>

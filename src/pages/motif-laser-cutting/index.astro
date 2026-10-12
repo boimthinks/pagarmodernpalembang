@@ -3,20 +3,21 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import CtaWhatsapp from '../../components/CtaWhatsapp.astro';
 import MotifCard from '../../components/MotifCard.astro';
+import Icon from '../../components/Icon.astro';
 import { getCollection } from 'astro:content';
 
 const motifs = await getCollection('blog', ({ data }) => data.published && data.tipe === 'motif');
 ---
 
 <BaseLayout
-  title="Motif Pagar Laser Cutting Palembang | Daun, Bunga, Songket, Batik & Wayang"
-  description="Katalog motif laser cutting untuk pagar, pintu gerbang, dan balkon di Palembang. Motif daun tropis, songket Palembang, wayang, batik minimalis, dan ornamen custom."
+  title="Motif Pagar Laser Cutting Songket Batik Daun Palembang"
+  description="Katalog motif laser cutting pagar dan gerbang di Palembang. Pilihan motif daun tropis, songket Palembang, wayang, batik, dan ornamen custom presisi."
   breadcrumbs={[
-    { name: 'Motif Laser Cutting', url: '/motif-laser-cutting' }
+    { name: 'Motif Laser Cutting', url: '/motif-laser-cutting/' }
   ]}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <Breadcrumb items={[{ name: 'Motif Laser Cutting', url: '/motif-laser-cutting' }]} />
+    <Breadcrumb items={[{ name: 'Motif Laser Cutting', url: '/motif-laser-cutting/' }]} />
 
     <header class="max-w-4xl space-y-4 mb-14">
       <span class="inline-flex items-center px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider border border-emerald-500/20">
@@ -47,7 +48,7 @@ const motifs = await getCollection('blog', ({ data }) => data.published && data.
     ) : (
       <div class="mb-16 p-8 rounded-3xl bg-slate-900/40 border border-slate-800 text-center space-y-4">
         <div class="w-12 h-12 mx-auto rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center">
-          <span class="material-symbols-outlined text-2xl">palette</span>
+          <Icon name="palette" size={24} class="text-emerald-400" />
         </div>
         <h2 class="text-xl font-bold text-white">Katalog Desain Motif Segera Hadir</h2>
         <p class="text-sm text-slate-400 max-w-lg mx-auto leading-relaxed">

@@ -21,7 +21,7 @@ const {
   imgalt
 } = Astro.props;
 
-const articleUrl = `/${kategori}/${slug}`;
+const articleUrl = `/${kategori}/${slug}/`;
 ---
 
 <article class="group rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-emerald-950/30">
@@ -31,8 +31,11 @@ const articleUrl = `/${kategori}/${slug}`;
       <img
         src={imgurl}
         alt={imgalt || title}
+        width="400"
+        height="300"
         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         loading="lazy"
+        decoding="async"
       />
       {topik && (
         <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-sm text-emerald-400 font-semibold text-xs border border-emerald-500/30 uppercase tracking-wide">

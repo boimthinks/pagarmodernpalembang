@@ -2,18 +2,19 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import CtaWhatsapp from '../../components/CtaWhatsapp.astro';
+import Icon from '../../components/Icon.astro';
 import { SITE } from '../../config/site';
 ---
 
 <BaseLayout
-  title="Jangkauan Layanan Pasang Pagar Laser Cutting Palembang & Sekitarnya"
-  description="Layanan survei, produksi, dan pemasangan pagar modern laser cutting di seluruh kecamatan Kota Palembang: Sukarami, Alang-Alang Lebar, Ilir Timur, Ilir Barat, Sako, Plaju."
+  title="Layanan Pasang Pagar Laser Cutting Palembang & Sekitar"
+  description="Layanan survei dan pasang pagar laser cutting di seluruh Kota Palembang meliputi Sukarami, Alang-Alang Lebar, Ilir Timur, Ilir Barat, Sako, dan Plaju."
   breadcrumbs={[
-    { name: 'Area Layanan', url: '/area-layanan/palembang' }
+    { name: 'Area Layanan', url: '/area-layanan/palembang/' }
   ]}
 >
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <Breadcrumb items={[{ name: 'Area Layanan Palembang', url: '/area-layanan/palembang' }]} />
+    <Breadcrumb items={[{ name: 'Area Layanan Palembang', url: '/area-layanan/palembang/' }]} />
 
     <header class="max-w-3xl space-y-4 mb-12">
       <span class="inline-flex items-center px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider border border-emerald-500/20">
@@ -33,7 +34,7 @@ import { SITE } from '../../config/site';
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-xs">
           {SITE.geo.coverage.map((area) => (
             <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 flex items-center gap-2">
-              <span class="material-symbols-outlined text-emerald-400 text-sm leading-none">location_on</span>
+              <Icon name="location_on" size={14} class="text-emerald-400" />
               <span class="font-medium text-slate-200">{area}</span>
             </div>
           ))}

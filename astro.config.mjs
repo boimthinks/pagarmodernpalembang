@@ -6,7 +6,7 @@ import mdx from '@astrojs/mdx';
 
 export default defineConfig({
   site: 'https://pagarmodernpalembang.com',
-  prefetch: true,
+  trailingSlash: 'always',
   integrations: [sitemap(), mdx()],
   vite: {
     plugins: [tailwindcss()]

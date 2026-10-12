@@ -1,6 +1,6 @@
 ---
 title: "Pagar Cutting Motif Songket Palembang"
-titleSeo: "Pagar Cutting Motif Songket Palembang Elegan Plat Tebal Tahan Cuaca"
+titleSeo: "Pagar Cutting Motif Songket Plat Tebal Palembang"
 tipe: "motif"
 label_produk: "pagar"
 excerpt: "Koleksi desain pagar cutting motif songket Palembang mewah dengan ornamen bungo intan dan pucuk rebung plat tebal tahan cuaca terik."
@@ -24,7 +24,7 @@ faq:
 
 Kain songket adalah mahakarya seni tenun kebanggaan masyarakat Sumatera Selatan yang melambangkan kejayaan, keanggunan, dan derajat kehormatan. Di era arsitektur modern saat ini, keindahan ragam hias songket tidak lagi terbatas pada busana adat, melainkan bertransformasi menjadi elemen dekoratif utama pada eksterior hunian mewah di Kota Palembang.
 
-Pagar cutting motif songket Palembang menghadirkan nuansa kearifan lokal yang abadi pada fasad bangunan. Diproduksi menggunakan mesin pemotong laser fiber berdaya tinggi, setiap lekukan geometris bunga intan dan pucuk rebung terpotong mulus tanpa menyisakan terak kasar atau gerinda manual.
+[Pagar cutting motif songket](/pagar/) Palembang menghadirkan nuansa kearifan lokal yang abadi pada fasad bangunan. Diproduksi menggunakan mesin pemotong laser fiber berdaya tinggi, setiap lekukan geometris bunga intan dan pucuk rebung terpotong mulus tanpa menyisakan terak kasar atau gerinda manual.
 
 Pemasangan pagar bermotif songket memberikan nilai tambah yang luar biasa bagi pemilik hunian:
 
@@ -34,10 +34,10 @@ Pemasangan pagar bermotif songket memberikan nilai tambah yang luar biasa bagi p
 
 ## Ragam Motif Songket Palembang yang Diterapkan pada Plat Besi
 
-Songket Palembang memiliki filosofi bentuk yang kaya makna. Workshop Sriwijaya Grafika mengonversi pola tenun tradisional menjadi format digital vektor siap potong dengan mempertahankan proporsi orisinalnya.
+Songket Palembang memiliki filosofi bentuk yang kaya makna. [Workshop Sriwijaya Grafika](/) mengonversi pola tenun tradisional menjadi format digital vektor siap potong dengan mempertahankan proporsi orisinalnya.
 
 ### 1. Motif Bungo Intan yang Simetris Anggun
-Motif bungo intan tersusun atas pola wajik belah ketupat dengan ornamen bunga bertabur di bagian tengahnya. Pola simetris ini sangat ideal diterapkan pada panel pintu gerbang utama karena menciptakan keteraturan visual yang menenangkan saat dipandang dari kejauhan.
+Motif bungo intan tersusun atas pola wajik belah ketupat dengan ornamen bunga bertabur di bagian tengahnya. Pola simetris ini sangat ideal diterapkan pada panel [pintu gerbang utama](/pintu/) karena menciptakan keteraturan visual yang menenangkan saat dipandang dari kejauhan.
 
 ### 2. Motif Pucuk Rebung Lambang Keteguhan
 Pola pucuk rebung yang menyerupai bentuk tunas bambu melambangkan tunas kehidupan yang terus tumbuh kuat. Bentuk segitiga bersusun ini sering kami posisikan di bagian atas atau bawah panel pagar, memberikan aksen mahkota pelindung yang mempertegas wibawa gerbang rumah Anda.

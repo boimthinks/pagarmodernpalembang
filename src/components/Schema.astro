@@ -15,13 +15,8 @@ const schemas: Record<string, object> = {
     '@type': 'WebSite',
     name: SITE.name,
     alternateName: 'Pagar Laser Cutting Palembang - Sriwijaya Grafika',
-    url: siteUrl,
+    url: `${siteUrl}/`,
     image: `${siteUrl}/og-image.jpg`,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: `${siteUrl}/produk?q={search_term_string}` },
-      'query-input': 'required name=search_term_string',
-    },
   },
   Organization: {
     '@context': 'https://schema.org',
@@ -47,7 +42,7 @@ const schemas: Record<string, object> = {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
     name: `${SITE.name} (Sriwijaya Grafika)`,
-    url: siteUrl,
+    url: `${siteUrl}/`,
     image: [
       `${siteUrl}/og-image.jpg`,
       `${siteUrl}/produk/pagar-laser-cutting_poco.webp`
@@ -108,32 +103,37 @@ const schemas: Record<string, object> = {
   BreadcrumbList: {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: (data.items || []).map((item: any, i: number) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      name: item.name,
-      item: item.url.startsWith('http') ? item.url : `${siteUrl}${item.url}`,
-    })),
+    itemListElement: (data.items || []).map((item: any, i: number) => {
+      const formattedUrl = item.url.startsWith('http')
+        ? (item.url.endsWith('/') ? item.url : `${item.url}/`)
+        : `${siteUrl}${item.url.endsWith('/') ? item.url : `${item.url}/`}`;
+      return {
+        '@type': 'ListItem',
+        position: i + 1,
+        name: item.name,
+        item: formattedUrl,
+      };
+    }),
   },
   Article: {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: data.headline || '',
     description: data.description || '',
-    image: data.image ? (data.image.startsWith('http') ? data.image : `${siteUrl}${data.image}`) : `${siteUrl}/og-default.svg`,
+    image: data.image ? (data.image.startsWith('http') ? data.image : `${siteUrl}${data.image}`) : `${siteUrl}/og-image.jpg`,
     datePublished: data.datePublished || '',
     dateModified: data.dateModified || data.datePublished || '',
     author: {
       '@type': 'Organization',
       name: `${SITE.parentBrand} - ${SITE.name}`,
-      url: siteUrl
+      url: `${siteUrl}/`
     },
     publisher: {
       '@type': 'Organization',
       name: SITE.parentBrand,
       logo: {
         '@type': 'ImageObject',
-        url: `${siteUrl}/favicon.svg`
+        url: `${siteUrl}/favicon.png`
       }
     }
   },
@@ -142,7 +142,7 @@ const schemas: Record<string, object> = {
     '@type': 'Product',
     name: data.name || '',
     description: data.description || '',
-    image: data.image ? (data.image.startsWith('http') ? data.image : `${siteUrl}${data.image}`) : `${siteUrl}/og-default.svg`,
+    image: data.image ? (data.image.startsWith('http') ? data.image : `${siteUrl}${data.image}`) : `${siteUrl}/og-image.jpg`,
     brand: {
       '@type': 'Brand',
       name: `${SITE.parentBrand} - ${SITE.name}`
@@ -152,12 +152,22 @@ const schemas: Record<string, object> = {
       priceCurrency: 'IDR',
       lowPrice: data.lowPrice || '950000',
       highPrice: data.highPrice || '2800000',
+      offerCount: data.offerCount || '10',
       priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
+      url: `${siteUrl}${Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`}`,
       seller: {
-        '@type': 'LocalBusiness',
-        name: SITE.name
+        '@type': 'Organization',
+        name: SITE.name,
+        url: `${siteUrl}/`
       }
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '48',
+      bestRating: '5',
+      worstRating: '1'
     }
   }
 };

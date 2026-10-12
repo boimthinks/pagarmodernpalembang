@@ -1,5 +1,6 @@
 ---
 import { SITE } from '../config/site';
+import Icon from './Icon.astro';
 
 interface Props {
   title?: string;
@@ -25,7 +26,7 @@ const waMessage = customMessage ? encodeURIComponent(customMessage) : SITE.conta
 
   <div class="relative z-10 max-w-3xl mx-auto text-center space-y-6">
     <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
-      <span class="material-symbols-outlined text-[16px] text-amber-400">verified</span>
+      <Icon name="verified" size={16} class="text-amber-400" />
       Workshop Sukarami Palembang Sejak 2008
     </div>
 
@@ -50,7 +51,7 @@ const waMessage = customMessage ? encodeURIComponent(customMessage) : SITE.conta
         {buttonText}
       </a>
       <a
-        href="/kontak"
+        href="/kontak/"
         class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 text-slate-300 hover:text-white font-semibold text-sm border border-slate-700 transition-colors"
       >
         Lihat Lokasi & Jam Buka Workshop
@@ -59,13 +60,13 @@ const waMessage = customMessage ? encodeURIComponent(customMessage) : SITE.conta
 
     <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 pt-2">
       <span class="flex items-center gap-1.5">
-        <span class="material-symbols-outlined text-[16px] text-emerald-400">check_circle</span> Plat Besi & Galvanis 0.6 - 12 mm
+        <Icon name="check_circle" size={16} class="text-emerald-400" /> Plat Besi & Galvanis 0.6 - 12 mm
       </span>
       <span class="flex items-center gap-1.5">
-        <span class="material-symbols-outlined text-[16px] text-emerald-400">check_circle</span> Stainless Steel 0.6 - 3 mm
+        <Icon name="check_circle" size={16} class="text-emerald-400" /> Stainless Steel 0.6 - 3 mm
       </span>
       <span class="flex items-center gap-1.5">
-        <span class="material-symbols-outlined text-[16px] text-emerald-400">check_circle</span> Garansi Konstruksi 1 Tahun
+        <Icon name="check_circle" size={16} class="text-emerald-400" /> Garansi Konstruksi 1 Tahun
       </span>
     </div>
   </div>

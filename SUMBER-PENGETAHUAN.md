@@ -211,6 +211,7 @@ Setiap pembuatan atau pembaruan artikel blog **WAJIB** merujuk ke skill `penulis
 5. `/pagar/harga-pagar-laser-cutting-per-meter-palembang` (06 Oktober 2026 — Harga Pagar Laser Cutting per Meter Palembang 2026)
 
 ### Katalog Desain Motif (tipe: motif)
-1. `/pagar/minimalis` (Pagar Cutting Minimalis Palembang)
-2. `/pagar/pagar-cutting-motif-songket-palembang` (Pagar Cutting Motif Songket Palembang)
-3. `/pagar/kombinasi-woodplank` (Pagar Cutting Kombinasi Woodplank Serat Kayu Tropis)
+1. `/pintu/pintu-laser-cutting-plat-besi-motif-daun` (12 Oktober 2026 — Pintu Plat Laser Cutting Motif Daun Tropis Palembang)
+2. `/pagar/minimalis` (Pagar Cutting Minimalis Palembang)
+3. `/pagar/pagar-cutting-motif-songket-palembang` (Pagar Cutting Motif Songket Palembang)
+4. `/pagar/kombinasi-woodplank` (Pagar Cutting Kombinasi Woodplank Serat Kayu Tropis)

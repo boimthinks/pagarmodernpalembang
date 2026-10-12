@@ -1,9 +1,9 @@
 ---
 title: "Mengenal Mesin Potong Laser Fiber Workshop Palembang"
-titleSeo: "Keunggulan Mesin Potong Laser Fiber untuk Pagar dan Plat Logam di Palembang"
+titleSeo: "Mesin Potong Laser Fiber Pagar Plat Logam Palembang"
 tipe: "artikel"
 label_produk: "blog"
-excerpt: "Kenali cara kerja mesin potong laser fiber di workshop Sriwijaya Grafika Palembang. Mampu memotong plat besi, stainless, dan aluminium dengan toleransi 0.1 mm bebas terak."
+excerpt: "Mesin potong laser fiber Sriwijaya Grafika Palembang memotong plat besi, stainless, dan aluminium dengan toleransi 0.1 mm presisi tanpa terak kasar."
 date: "11 Oktober 2026"
 topik: "panduan"
 imgurl: "/mesin/mesin-potong-laser-fiber_poco.webp"
@@ -22,9 +22,9 @@ faq:
 
 ## Peran Sentral Mesin Laser Fiber dalam Fabrikasi Logam Modern
 
-Bagi pemilik hunian di Palembang yang menginginkan pagar rumah bermotif presisi, metode pemotongan logam menjadi faktor penentu utama keindahan hasil akhir. Pemotongan konvensional menggunakan gerinda potong atau mesin plasma manual kerap menyisakan tepian bergelombang, percikan kerak las (dross), dan lubang motif yang tidak simetris.
+Bagi pemilik hunian di Palembang yang menginginkan [pagar rumah](/pagar/) bermotif presisi, metode pemotongan logam menjadi faktor penentu utama keindahan hasil akhir. Pemotongan konvensional menggunakan gerinda potong atau mesin plasma manual kerap menyisakan tepian bergelombang, percikan kerak las (dross), dan lubang motif yang tidak simetris.
 
-Di bengkel kami di Talang Jambe, Kecamatan Sukarami, pemotongan seluruh lembaran logam untuk pagar, pintu gerbang, balkon, dan kanopi dialihkan ke mesin potong laser fiber otomatis. Mesin ini mengonversi energi listrik menjadi sinar laser melalui resonator serat optik berkekuatan tinggi, lalu memfokuskannya ke titik mikroskopis pada permukaan lembaran plat.
+Di bengkel kami di Talang Jambe, Kecamatan Sukarami, pemotongan seluruh lembaran logam untuk pagar, [pintu gerbang](/pintu/), balkon, dan kanopi dialihkan ke mesin potong laser fiber otomatis. Mesin ini mengonversi energi listrik menjadi sinar laser melalui resonator serat optik berkekuatan tinggi, lalu memfokuskannya ke titik mikroskopis pada permukaan lembaran plat.
 
 ## Keunggulan Teknis Pemotongan Menggunakan Sinar Fiber Laser
 
@@ -41,7 +41,7 @@ Banyak pemilik rumah mengeluhkan plat pagar yang melengkung setelah dipotong. Pa
 
 ## Kapasitas Material yang Ditangani Mesin Laser Fiber
 
-Workshop Sriwijaya Grafika membagi kemampuan potong mesin laser fiber ke dalam beberapa grade ketebalan material logam sesuai standar keselamatan konstruksi:
+[Workshop Sriwijaya Grafika](/) membagi kemampuan potong mesin laser fiber ke dalam beberapa grade ketebalan material logam sesuai standar keselamatan konstruksi:
 
 | Kelompok Material | Rentang Ketebalan | Aplikasi Produk di Palembang |
 |---|---|---|
@@ -49,7 +49,7 @@ Workshop Sriwijaya Grafika membagi kemampuan potong mesin laser fiber ke dalam b
 | Plat Galvanis Standar Pagar | 1.4 mm sampai 2.0 mm | Pagar rumah minimalis, panel pintu lipat, balkon |
 | Plat Galvanis Medium dan Heavy | 2.4 mm sampai 5.0 mm | Pintu gerbang dorong bentang lebar, motif rapat |
 | Plat Baja Struktural Tebal | 6.0 mm sampai 12.0 mm | Baseplate tiang, sambungan konstruksi baja, ornamen solid |
-| Stainless Steel SUS 304 | 0.6 mm sampai 3.0 mm | Pagar premium bebas karat, railing tangga, aksen mewah |
+| Stainless Steel SUS 304 | 0.6 mm sampai 3.0 mm | Pagar premium bebas karat, [railing tangga](/railing/), aksen mewah |
 | Lembaran Aluminium Plate | 1.2 mm sampai 3.0 mm | Pintu gerbang otomatis ringan anti beban motor |
 
 ## Penggunaan Gas Pembantu Nitrogen dan Oksigen

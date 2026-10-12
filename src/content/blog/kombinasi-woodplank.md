@@ -1,6 +1,6 @@
 ---
 title: "Pagar Cutting Kombinasi Woodplank"
-titleSeo: "Pagar Cutting Kombinasi Woodplank Serat Kayu Tropis Modern Palembang"
+titleSeo: "Pagar Cutting Kombinasi Woodplank Tropis Palembang"
 tipe: "motif"
 label_produk: "pagar"
 excerpt: "Perpaduan estetika plat besi laser cutting dan bilah woodplank serat kayu tahan cuaca anti rayap untuk konsep hunian tropis hangat di Palembang."
@@ -22,7 +22,7 @@ faq:
 
 ## Harmoni Ketegasan Logam dan Kehangatan Serat Kayu Alami
 
-Gaya arsitektur tropis modern dan tema industrial hangat menuntut perpaduan material yang seimbang antara elemen logam yang maskulin dengan sentuhan kayu yang ramah. Bidang pagar rumah yang seluruhnya menggunakan plat besi terkadang memberi kesan kaku bagi sebagian orang. Sebaliknya, memakai kayu solid asli seperti merbau atau ulin menghadapi risiko lapuk dan pengeroposan oleh rayap tanah yang banyak dijumpai di kawasan Palembang.
+Gaya arsitektur tropis modern dan tema industrial hangat menuntut perpaduan material yang seimbang antara elemen logam yang maskulin dengan sentuhan kayu yang ramah. Bidang [pagar rumah](/pagar/) yang seluruhnya menggunakan plat besi terkadang memberi kesan kaku bagi sebagian orang. Sebaliknya, memakai kayu solid asli seperti merbau atau ulin menghadapi risiko lapuk dan pengeroposan oleh rayap tanah yang banyak dijumpai di kawasan Palembang.
 
 Pagar cutting kombinasi woodplank hadir menjembatani kebutuhan tersebut. Bagian dekoratif bermotif dipotong menggunakan mesin laser fiber otomatis, sementara bidang pengisi lainnya menggunakan bilah papan semen fiber berserat kayu timbul.
 
@@ -50,7 +50,7 @@ Menyatukan dua jenis material dengan koefisien pemuaian yang berbeda menuntut ke
 Setiap hunian memiliki karakter fasad yang unik. Kami membagi rancangan kombinasi ini ke dalam tiga model penataan yang paling digemari pemilik rumah di Palembang.
 
 ### 1. Model Panel Laser Tengah Diapit Kisi Kayu Simetris
-Pada model ini, lembaran plat potong laser berukuran lebar 80 cm hingga 120 cm ditempatkan tepat di bagian tengah daun gerbang. Motif potongannya dapat berupa siluet daun tropis monstera, kisi geometris heksagon, atau logo identitas keluarga. Sisi kiri dan kanan panel tersebut diisi oleh bilah woodplank horizontal berjarak rapat. Model ini sangat cocok untuk gerbang dorong bentang 3 meter hingga 4 meter.
+Pada model ini, lembaran plat potong laser berukuran lebar 80 cm hingga 120 cm ditempatkan tepat di bagian tengah daun gerbang. Motif potongannya dapat berupa siluet daun tropis monstera, kisi geometris heksagon, atau logo identitas keluarga. Sisi kiri dan kanan panel tersebut diisi oleh bilah woodplank horizontal berjarak rapat. Model ini sangat cocok untuk [gerbang dorong](/pintu/) bentang 3 meter hingga 4 meter.
 
 ### 2. Model Selang Seling Bilah Vertikal Modern
 Model ini menyusun bilah woodplank tegak lurus ke atas dengan selingan panel plat laser ramping di beberapa titik modul. Komposisi garis vertikal memberikan efek visual bangunan tampak lebih tinggi dan ramping, sangat serasi untuk rumah dua lantai bergaya modern minimalis di perumahan klaster.
@@ -68,6 +68,6 @@ Untuk rangka hollow dan plat besi, seluruh sambungan las digerinda rata kemudian
 
 ## Konsultasi Pembuatan Pagar Kombinasi di Palembang
 
-Bagi Anda yang berencana membangun pagar rumah baru atau mengganti pagar lama di kawasan Sukarami, Alang-Alang Lebar, Sako, Ilir Barat, hingga Gandus, silakan berkonsultasi langsung dengan tim workshop Sriwijaya Grafika.
+Bagi Anda yang berencana membangun pagar rumah baru atau mengganti pagar lama di kawasan Sukarami, Alang-Alang Lebar, Sako, Ilir Barat, hingga Gandus, silakan berkonsultasi langsung dengan tim [workshop Sriwijaya Grafika](/).
 
 Kami mengundang Anda melihat sampel fisik potongan bilah woodplank dan plat laser di Jalan AMD Pertanian Nomor 105, Talang Jambe, Sukarami. Anda juga dapat menghubungi kami melalui WhatsApp di nomor 0852-1511-1125 untuk mendapatkan panduan estimasi biaya dan visualisasi desain 3D gratis.

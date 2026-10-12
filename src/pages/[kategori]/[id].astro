@@ -24,10 +24,10 @@ const { Content, headings } = await render(article);
 const isBlogGeneral = article.data.label_produk === 'blog';
 const categoryObj = PRODUCT_CATEGORIES.find((c) => c.slug === article.data.label_produk);
 const categoryName = categoryObj ? categoryObj.fullName : (isBlogGeneral ? 'Blog & Panduan' : article.data.label_produk);
-const categoryUrl = isBlogGeneral ? '/blog' : `/${article.data.label_produk}`;
+const categoryUrl = isBlogGeneral ? '/blog/' : `/${article.data.label_produk}/`;
 
 const hasFaq = article.data.faq && article.data.faq.length > 0;
-const currentUrl = `/${article.data.label_produk}/${article.id}`;
+const currentUrl = `/${article.data.label_produk}/${article.id}/`;
 ---
 
 <BaseLayout
@@ -78,9 +78,12 @@ const currentUrl = `/${article.data.label_produk}/${article.id}`;
               <img
                 src={article.data.imgurl}
                 alt={article.data.imgalt || article.data.title}
+                width="800"
+                height="600"
                 class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
                 loading="eager"
                 fetchpriority="high"
+                decoding="async"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none"></div>
               {article.data.imgalt && (

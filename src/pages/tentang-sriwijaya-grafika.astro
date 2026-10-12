@@ -2,18 +2,19 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import CtaWhatsapp from '../components/CtaWhatsapp.astro';
+import Icon from '../components/Icon.astro';
 import { SITE } from '../config/site';
 ---
 
 <BaseLayout
-  title="Tentang Sriwijaya Grafika | Spesialis Pagar Laser Cutting Palembang Sejak 2008"
-  description="Profil Sriwijaya Grafika & workshop Talang Jambe Sukarami Palembang. Lebih dari 16 tahun melayani percetakan, advertising, dan produksi pagar modern laser cutting presisi."
+  title="Profil Sriwijaya Grafika Spesialis Pagar Palembang"
+  description="Profil workshop Sriwijaya Grafika Talang Jambe Palembang. Berpengalaman 16+ tahun produksi pagar laser cutting presisi, advertising, dan signage."
   breadcrumbs={[
-    { name: 'Tentang Kami', url: '/tentang-sriwijaya-grafika' }
+    { name: 'Tentang Kami', url: '/tentang-sriwijaya-grafika/' }
   ]}
 >
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <Breadcrumb items={[{ name: 'Tentang Sriwijaya Grafika', url: '/tentang-sriwijaya-grafika' }]} />
+    <Breadcrumb items={[{ name: 'Tentang Sriwijaya Grafika', url: '/tentang-sriwijaya-grafika/' }]} />
 
     <header class="max-w-3xl space-y-4 mb-12">
       <span class="inline-flex items-center px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider border border-emerald-500/20">
@@ -50,7 +51,7 @@ import { SITE } from '../config/site';
             </p>
             <a href="https://sriwijayagrafika.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-400 hover:underline">
               <span>Kunjungi Web Induk</span>
-              <span class="material-symbols-outlined text-xs">open_in_new</span>
+              <Icon name="open_in_new" size={14} class="text-emerald-400" />
             </a>
           </div>
 
@@ -61,7 +62,7 @@ import { SITE } from '../config/site';
             </p>
             <a href="https://laserindopalembang.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-amber-400 hover:underline">
               <span>Kunjungi Web Jasa</span>
-              <span class="material-symbols-outlined text-xs">open_in_new</span>
+              <Icon name="open_in_new" size={14} class="text-amber-400" />
             </a>
           </div>
 
@@ -86,12 +87,15 @@ import { SITE } from '../config/site';
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 overflow-hidden group flex flex-col justify-between">
             <div class="space-y-4">
-              <a href="/blog/mesin-potong-laser-fiber-palembang" class="block relative aspect-[16/10] rounded-xl overflow-hidden bg-slate-950 border border-slate-800 group/img">
+              <a href="/blog/mesin-potong-laser-fiber-palembang/" class="block relative aspect-[16/10] rounded-xl overflow-hidden bg-slate-950 border border-slate-800 group/img">
                 <img
                   src="/mesin/mesin-potong-laser-fiber_poco.webp"
                   alt="Mesin Potong Laser Fiber Sriwijaya Grafika Palembang"
+                  width="600"
+                  height="375"
                   class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
                 <span class="absolute bottom-2.5 left-2.5 text-xs px-2.5 py-0.5 rounded-md font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 backdrop-blur-md">
@@ -99,9 +103,9 @@ import { SITE } from '../config/site';
                 </span>
               </a>
               <h3 class="text-lg font-bold text-white">
-                <a href="/blog/mesin-potong-laser-fiber-palembang" class="hover:text-emerald-400 transition-colors inline-flex items-center gap-1.5">
+                <a href="/blog/mesin-potong-laser-fiber-palembang/" class="hover:text-emerald-400 transition-colors inline-flex items-center gap-1.5">
                   <span>Mesin Potong Laser Fiber</span>
-                  <span class="material-symbols-outlined text-[16px] text-slate-500">arrow_forward</span>
+                  <Icon name="arrow_forward" size={16} class="text-slate-500" />
                 </a>
               </h3>
               <p class="text-xs text-slate-300 leading-relaxed">
@@ -113,21 +117,24 @@ import { SITE } from '../config/site';
                 <strong class="text-white block mb-1">Material yang Ditangani:</strong>
                 Plat Besi & Galvanis (0.6 - 12 mm), Stainless Steel (0.6 - 3 mm), Aluminium (1.2 - 3 mm).
               </div>
-              <a href="/blog/mesin-potong-laser-fiber-palembang" class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-400 hover:text-emerald-300">
+              <a href="/blog/mesin-potong-laser-fiber-palembang/" class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-400 hover:text-emerald-300">
                 <span>Baca artikel mesin fiber laser</span>
-                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                <Icon name="arrow_forward" size={14} />
               </a>
             </div>
           </div>
 
           <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 overflow-hidden group flex flex-col justify-between">
             <div class="space-y-4">
-              <a href="/blog/mesin-potong-cnc-router-palembang" class="block relative aspect-[16/10] rounded-xl overflow-hidden bg-slate-950 border border-slate-800 group/img">
+              <a href="/blog/mesin-potong-cnc-router-palembang/" class="block relative aspect-[16/10] rounded-xl overflow-hidden bg-slate-950 border border-slate-800 group/img">
                 <img
                   src="/mesin/mesin-potong-CNC-router_poco.webp"
                   alt="Mesin Potong CNC Router Sriwijaya Grafika Palembang"
+                  width="600"
+                  height="375"
                   class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
                 <span class="absolute bottom-2.5 left-2.5 text-xs px-2.5 py-0.5 rounded-md font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/40 backdrop-blur-md">
@@ -135,9 +142,9 @@ import { SITE } from '../config/site';
                 </span>
               </a>
               <h3 class="text-lg font-bold text-white">
-                <a href="/blog/mesin-potong-cnc-router-palembang" class="hover:text-amber-400 transition-colors inline-flex items-center gap-1.5">
+                <a href="/blog/mesin-potong-cnc-router-palembang/" class="hover:text-amber-400 transition-colors inline-flex items-center gap-1.5">
                   <span>Mesin Potong CNC Router</span>
-                  <span class="material-symbols-outlined text-[16px] text-slate-500">arrow_forward</span>
+                  <Icon name="arrow_forward" size={16} class="text-slate-500" />
                 </a>
               </h3>
               <p class="text-xs text-slate-300 leading-relaxed">
@@ -149,21 +156,24 @@ import { SITE } from '../config/site';
                 <strong class="text-white block mb-1">Material yang Ditangani:</strong>
                 Plywood (3 - 20 mm), MDF / MHR (3 - 20 mm), PVC Board (3 - 20 mm), ACP (3 - 4 mm).
               </div>
-              <a href="/blog/mesin-potong-cnc-router-palembang" class="inline-flex items-center gap-1 text-xs font-semibold text-amber-400 hover:text-amber-300">
+              <a href="/blog/mesin-potong-cnc-router-palembang/" class="inline-flex items-center gap-1 text-xs font-semibold text-amber-400 hover:text-amber-300">
                 <span>Baca artikel mesin CNC router</span>
-                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                <Icon name="arrow_forward" size={14} />
               </a>
             </div>
           </div>
 
           <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 overflow-hidden group flex flex-col justify-between">
             <div class="space-y-4">
-              <a href="/blog/mesin-potong-laser-co2-palembang" class="block relative aspect-[16/10] rounded-xl overflow-hidden bg-slate-950 border border-slate-800 group/img">
+              <a href="/blog/mesin-potong-laser-co2-palembang/" class="block relative aspect-[16/10] rounded-xl overflow-hidden bg-slate-950 border border-slate-800 group/img">
                 <img
                   src="/mesin/mesin-potong-laser-CO2_poco.webp"
                   alt="Mesin Potong Laser CO2 Sriwijaya Grafika Palembang"
+                  width="600"
+                  height="375"
                   class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
                 <span class="absolute bottom-2.5 left-2.5 text-xs px-2.5 py-0.5 rounded-md font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 backdrop-blur-md">
@@ -171,9 +181,9 @@ import { SITE } from '../config/site';
                 </span>
               </a>
               <h3 class="text-lg font-bold text-white">
-                <a href="/blog/mesin-potong-laser-co2-palembang" class="hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5">
+                <a href="/blog/mesin-potong-laser-co2-palembang/" class="hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5">
                   <span>Mesin Potong Laser CO2</span>
-                  <span class="material-symbols-outlined text-[16px] text-slate-500">arrow_forward</span>
+                  <Icon name="arrow_forward" size={16} class="text-slate-500" />
                 </a>
               </h3>
               <p class="text-xs text-slate-300 leading-relaxed">
@@ -185,9 +195,9 @@ import { SITE } from '../config/site';
                 <strong class="text-white block mb-1">Material yang Ditangani:</strong>
                 Akrilik / Acrylic Lembaran (2 - 10 mm) untuk logo plat, nomor rumah LED, & partisi.
               </div>
-              <a href="/blog/mesin-potong-laser-co2-palembang" class="inline-flex items-center gap-1 text-xs font-semibold text-cyan-400 hover:text-cyan-300">
+              <a href="/blog/mesin-potong-laser-co2-palembang/" class="inline-flex items-center gap-1 text-xs font-semibold text-cyan-400 hover:text-cyan-300">
                 <span>Baca artikel mesin laser CO2</span>
-                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                <Icon name="arrow_forward" size={14} />
               </a>
             </div>
           </div>

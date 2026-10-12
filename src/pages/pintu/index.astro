@@ -65,7 +65,7 @@ const faqsPintu = [
 ---
 
 <BaseLayout
-  title="Pintu Laser Cutting Palembang | Pintu Gerbang & Pintu Plat Besi Mewah"
+  title="Pintu Laser Cutting & Gerbang Plat Besi Mewah Palembang"
   description="Pembuatan pintu gerbang laser cutting dorong dan lipat di Palembang. Plat tebal kokoh anti anjlok, roda bearing Jepang, presisi fiber laser Sriwijaya Grafika."
   ogImage="/produk/pintu-laser-cutting_poco.webp"
   schemaType="Product"
@@ -75,14 +75,15 @@ const faqsPintu = [
     image: '/produk/pintu-laser-cutting_poco.webp',
     lowPrice: '1450000',
     highPrice: '3600000',
+    offerCount: '8',
   }}
   breadcrumbs={[
-    { name: 'Pintu Laser Cutting', url: '/pintu' }
+    { name: 'Pintu Laser Cutting', url: '/pintu/' }
   ]}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
     <Breadcrumb items={[
-      { name: 'Pintu Laser Cutting', url: '/pintu' }
+      { name: 'Pintu Laser Cutting', url: '/pintu/' }
     ]} />
 
     <!-- HERO SECTION -->
@@ -110,7 +111,7 @@ const faqsPintu = [
             Konsultasi Ukuran & Mockup Gerbang
           </a>
           <a
-            href="/motif-laser-cutting"
+            href="/motif-laser-cutting/"
             class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
           >
             Pilih Motif Gerbang →
@@ -123,8 +124,12 @@ const faqsPintu = [
           <img
             src="/produk/pintu-laser-cutting_poco.webp"
             alt="Pintu gerbang laser cutting Palembang Sriwijaya Grafika"
+            width="800"
+            height="600"
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="eager"
+            fetchpriority="high"
+            decoding="async"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
           <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs">
@@ -171,7 +176,7 @@ const faqsPintu = [
           </div>
           <div class="flex items-center gap-3 shrink-0">
             <a
-              href="/motif-laser-cutting"
+              href="/motif-laser-cutting/"
               class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-700 transition-colors"
             >
               Lihat Galeri Motif →
@@ -500,10 +505,10 @@ const faqsPintu = [
         Mencari padanan produk arsitektural lainnya?
       </div>
       <div class="flex flex-wrap items-center gap-4 text-emerald-400 font-semibold">
-        <a href="/pagar" class="hover:underline">Pagar Plat Laser Cutting →</a>
-        <a href="/balkon" class="hover:underline">Pagar Balkon Lantai 2 →</a>
-        <a href="/motif-laser-cutting" class="hover:underline">Katalog Motif Ornamen →</a>
-        <a href="/pagar/harga-pagar-laser-cutting-per-meter-palembang" class="hover:underline text-amber-400">Panduan Harga 2026 →</a>
+        <a href="/pagar/" class="hover:underline">Pagar Plat Laser Cutting →</a>
+        <a href="/balkon/" class="hover:underline">Pagar Balkon Lantai 2 →</a>
+        <a href="/motif-laser-cutting/" class="hover:underline">Katalog Motif Ornamen →</a>
+        <a href="/pagar/harga-pagar-laser-cutting-per-meter-palembang/" class="hover:underline text-amber-400">Panduan Harga 2026 →</a>
       </div>
     </section>
 

@@ -1,5 +1,6 @@
 ---
 import { SITE } from '../config/site';
+import Icon from './Icon.astro';
 
 interface Props {
   categoryName?: string;
@@ -11,7 +12,7 @@ const waMessage = encodeURIComponent(`Halo Sriwijaya Grafika, saya ingin konsult
 
 <div class="p-5 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 border border-emerald-500/30 shadow-xl space-y-4">
   <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[11px] font-bold uppercase tracking-wider">
-    <span class="material-symbols-outlined text-[14px] text-amber-400">verified</span>
+    <Icon name="verified" size={14} class="text-amber-400" />
     Workshop Palembang
   </div>
 
@@ -26,15 +27,15 @@ const waMessage = encodeURIComponent(`Halo Sriwijaya Grafika, saya ingin konsult
 
   <ul class="space-y-2 py-2 border-y border-slate-800 text-xs text-slate-300">
     <li class="flex items-center gap-2">
-      <span class="material-symbols-outlined text-emerald-400 text-[16px] leading-none shrink-0">check_circle</span>
+      <Icon name="check_circle" size={16} class="text-emerald-400" />
       <span>Mesin laser fiber milik sendiri</span>
     </li>
     <li class="flex items-center gap-2">
-      <span class="material-symbols-outlined text-emerald-400 text-[16px] leading-none shrink-0">check_circle</span>
+      <Icon name="check_circle" size={16} class="text-emerald-400" />
       <span>Gratis survey lokasi area Palembang</span>
     </li>
     <li class="flex items-center gap-2">
-      <span class="material-symbols-outlined text-emerald-400 text-[16px] leading-none shrink-0">check_circle</span>
+      <Icon name="check_circle" size={16} class="text-emerald-400" />
       <span>Simulasi desain CAD transparan</span>
     </li>
   </ul>
@@ -52,7 +53,7 @@ const waMessage = encodeURIComponent(`Halo Sriwijaya Grafika, saya ingin konsult
   </a>
 
   <div class="text-[11px] text-slate-400 text-center flex items-center justify-center gap-1">
-    <span class="material-symbols-outlined text-[14px] text-slate-500">location_on</span>
+    <Icon name="location_on" size={14} class="text-slate-500" />
     <span>Talang Jambe, Sukarami, Palembang</span>
   </div>
 </div>

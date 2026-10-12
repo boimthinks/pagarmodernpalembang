@@ -14,5 +14,8 @@ yarn-error.log*
 .env
 .env.production
 
+# audit files
+FIX/
+
 # macOS
 .DS_Store

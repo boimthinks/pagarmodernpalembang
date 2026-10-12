@@ -1,18 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import Icon from '../components/Icon.astro';
 import { SITE } from '../config/site';
 ---
 
 <BaseLayout
-  title="Kontak & Alamat Workshop Pagar Laser Cutting Palembang | Sriwijaya Grafika"
+  title="Kontak Workshop Pagar Laser Cutting Sriwijaya Grafika"
   description="Hubungi workshop Sriwijaya Grafika Palembang. Alamat: Jl. AMD Pertanian No.105, Talang Jambe, Sukarami. WhatsApp: 0852-1511-1125. Konsultasi dan survei gratis."
   breadcrumbs={[
-    { name: 'Kontak', url: '/kontak' }
+    { name: 'Kontak', url: '/kontak/' }
   ]}
 >
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <Breadcrumb items={[{ name: 'Kontak Workshop', url: '/kontak' }]} />
+    <Breadcrumb items={[{ name: 'Kontak Workshop', url: '/kontak/' }]} />
 
     <header class="max-w-3xl space-y-4 mb-12">
       <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
@@ -45,9 +46,9 @@ import { SITE } from '../config/site';
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 hover:text-amber-300"
               >
-                <span class="material-symbols-outlined text-sm">near_me</span>
+                <Icon name="near_me" size={14} class="text-amber-400" />
                 <span>Buka Rute di Google Maps</span>
-                <span class="material-symbols-outlined text-xs">open_in_new</span>
+                <Icon name="open_in_new" size={12} class="text-amber-400" />
               </a>
             </div>
           </div>
@@ -70,7 +71,7 @@ import { SITE } from '../config/site';
       <div class="p-8 rounded-3xl bg-gradient-to-br from-emerald-950/60 to-slate-900 border border-emerald-500/30 flex flex-col justify-between space-y-6">
         <div class="space-y-4">
           <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-            <span class="material-symbols-outlined text-2xl">chat</span>
+            <Icon name="chat" size={24} class="text-emerald-400" />
           </div>
           <h2 class="text-2xl font-bold text-white">Konsultasi Desain & Penawaran Biaya</h2>
           <p class="text-sm text-slate-300 leading-relaxed">

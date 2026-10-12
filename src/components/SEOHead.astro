@@ -19,10 +19,19 @@ const {
   noindex = false,
 } = Astro.props;
 
-const fullTitle = `${title} | ${SITE.name}`;
 const siteUrl = (Astro.site?.toString() || SITE.url).replace(/\/$/, '');
-const url = canonicalUrl || siteUrl + Astro.url.pathname;
+const pathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const url = canonicalUrl || `${siteUrl}${pathname}`;
 const fullOgImage = ogImage.startsWith('http') ? ogImage : siteUrl + ogImage;
+
+// Hindari title > 60 karakter agar lolos audit SERP & Ahrefs
+const brandSuffix = ` | ${SITE.shortName || 'Pagar Modern'}`;
+let fullTitle = title;
+if (!title.includes('Pagar Modern') && !title.includes('Sriwijaya Grafika')) {
+  if (title.length + brandSuffix.length <= 60) {
+    fullTitle = `${title}${brandSuffix}`;
+  }
+}
 
 // Deteksi MIME type gambar OG
 let ogImageType = 'image/jpeg';

@@ -9,7 +9,7 @@ interface Props {
 }
 
 const { title, excerpt, date, topik, slug, kategori = 'pagar' } = Astro.props;
-const articleUrl = `/${kategori}/${slug}`;
+const articleUrl = `/${kategori}/${slug}/`;
 ---
 
 <article class="group rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 p-6 flex flex-col justify-between transition-all hover:shadow-xl hover:shadow-emerald-950/30">

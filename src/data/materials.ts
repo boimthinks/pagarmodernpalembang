@@ -28,7 +28,7 @@ export const WORKSHOP_MACHINES: MachineType[] = [
     specialty: 'Khusus pemotongan lembaran logam presisi 0.1 mm, tepian halus tanpa gerinda (burr-free).',
     badgeColor: 'border-emerald-500/40 bg-emerald-500/10 text-emerald-400',
     image: '/mesin/mesin-potong-laser-fiber_poco.webp',
-    articleUrl: '/blog/mesin-potong-laser-fiber-palembang',
+    articleUrl: '/blog/mesin-potong-laser-fiber-palembang/',
     materials: ['Plat Besi & Galvanis (0.6-12mm)', 'Stainless Steel (0.6-3mm)', 'Aluminium Plate (1.2-3mm)']
   },
   {
@@ -38,7 +38,7 @@ export const WORKSHOP_MACHINES: MachineType[] = [
     specialty: 'Khusus material kayu lapis, komposit panel, dan plastik sintetis dengan pahat router presisi.',
     badgeColor: 'border-amber-500/40 bg-amber-500/10 text-amber-400',
     image: '/mesin/mesin-potong-CNC-router_poco.webp',
-    articleUrl: '/blog/mesin-potong-cnc-router-palembang',
+    articleUrl: '/blog/mesin-potong-cnc-router-palembang/',
     materials: ['Plywood (3-20mm)', 'MDF / MHR (3-20mm)', 'PVC Board (3-20mm)', 'ACP (3-4mm)']
   },
   {
@@ -48,7 +48,7 @@ export const WORKSHOP_MACHINES: MachineType[] = [
     specialty: 'Khusus lembaran akrilik transparan dan warna dengan tepian potongan bening mengkilap.',
     badgeColor: 'border-cyan-500/40 bg-cyan-500/10 text-cyan-400',
     image: '/mesin/mesin-potong-laser-CO2_poco.webp',
-    articleUrl: '/blog/mesin-potong-laser-co2-palembang',
+    articleUrl: '/blog/mesin-potong-laser-co2-palembang/',
     materials: ['Akrilik / Acrylic (2-10mm)']
   }
 ];

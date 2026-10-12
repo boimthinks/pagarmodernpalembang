@@ -1,9 +1,9 @@
 ---
 title: "Harga Pagar Laser Cutting per Meter Palembang 2026"
-titleSeo: "Harga Pagar Laser Cutting per Meter di Palembang 2026 dan Rincian Biaya Pembuatan"
+titleSeo: "Harga Pagar Laser Cutting per Meter Palembang 2026"
 tipe: "artikel"
 label_produk: "pagar"
-excerpt: "Rincian estimasi biaya pembuatan pagar laser cutting per meter di Palembang mulai Rp 950.000 hingga Rp 2.400.000 beserta simulasi RAB dan tips memilih spesifikasi rangka."
+excerpt: "Estimasi biaya pagar laser cutting per meter di Palembang mulai Rp 950.000 hingga Rp 2.400.000. Simak simulasi RAB dan tips memilih rangka kokoh."
 date: "06 Oktober 2026"
 topik: "harga"
 imgurl: "/blog/harga-pagar-laser-cutting-per-meter-palembang_poco.webp"
@@ -22,7 +22,7 @@ faq:
 
 ## Komponen Teknis Penentu Biaya Pagar Laser Cutting
 
-Banyak pemilik hunian di Palembang yang menanyakan patokan harga pembuatan pagar plat cutting laser per meter persegi. Di pasaran lokal, Anda mungkin menjumpai rentang harga yang cukup lebar, mulai dari delapan ratus ribu rupiah hingga di atas dua juta rupiah per meter persegi.
+Banyak pemilik hunian di Palembang yang menanyakan patokan harga pembuatan [pagar plat cutting laser](/pagar/) per meter persegi. Di pasaran lokal, Anda mungkin menjumpai rentang harga yang cukup lebar, mulai dari delapan ratus ribu rupiah hingga di atas dua juta rupiah per meter persegi.
 
 Perbedaan harga tersebut bukan sekadar margin keuntungan bengkel las, melainkan ditentukan secara ketat oleh empat faktor teknis berikut ini.
 
@@ -30,7 +30,7 @@ Perbedaan harga tersebut bukan sekadar margin keuntungan bengkel las, melainkan 
 Plat besi galvanis tebal 1.4 mm membutuhkan waktu potong mesin yang lebih singkat dan harga beli bahan mentah yang lebih terjangkau. Namun, plat ini rentan melengkung pada bidang bentang lebar. Sebaliknya, plat galvanis tebal 2.0 mm hingga 3.0 mm memiliki massa logam yang padat, tahan terhadap benturan fisik, serta memerlukan daya tembak mesin laser fiber yang lebih tinggi. Selisih ketebalan 1 milimeter saja dapat menciptakan perbedaan biaya bahan baku hingga tiga puluh persen.
 
 ### 2. Dimensi Penampang dan Ketebalan Dinding Hollow Rangka
-Lembaran plat hasil potongan laser membutuhkan bingkai pengaku yang kokoh. Pagar ekonomis umumnya menggunakan hollow galvanis ukuran 40x40 mm dengan tebal dinding 1.2 mm. Untuk pintu gerbang dorong bentang lebar atau rumah bergaya mewah, kami menggunakan hollow galvanis ukuran 40x60 mm atau 50x100 mm tebal dinding 1.6 mm hingga 1.8 mm. Dimensi hollow yang besar menjamin daun pintu gerbang tidak lendut saat digeser.
+Lembaran plat hasil potongan laser membutuhkan bingkai pengaku yang kokoh. Pagar ekonomis umumnya menggunakan hollow galvanis ukuran 40x40 mm dengan tebal dinding 1.2 mm. Untuk [pintu gerbang](/pintu/) dorong bentang lebar atau rumah bergaya mewah, kami menggunakan hollow galvanis ukuran 40x60 mm atau 50x100 mm tebal dinding 1.6 mm hingga 1.8 mm. Dimensi hollow yang besar menjamin daun pintu gerbang tidak lendut saat digeser.
 
 ### 3. Tingkat Kerapatan dan Kerumitan Garis Sayatan Laser
 Waktu kerja mesin laser fiber (laser processing time) dihitung berdasarkan panjang total lintasan potong kepala laser dalam meter lari dan jumlah titik tembus awal (piercing point). Motif minimalis garis lurus berjarak longgar selesai dipotong dalam waktu relatif singkat. Sebaliknya, motif ukiran daun tropis, batik sulur, atau motif songket Palembang yang memiliki ribuan lekukan detail menyerap waktu kerja mesin hingga tiga kali lebih lama, yang berimbas pada biaya jasa potong mesin.
@@ -40,7 +40,7 @@ Cuaca Kota Palembang yang memiliki kelembapan tinggi dan panas menyengat membutu
 
 ## Tabel Estimasi Harga Pagar Laser Cutting Palembang 2026
 
-Berikut adalah rincian estimasi tarif pembuatan pagar dan gerbang plat cutting laser di workshop Sriwijaya Grafika Talang Jambe berdasarkan spesifikasi teknis lapangan.
+Berikut adalah rincian estimasi tarif pembuatan pagar dan gerbang plat cutting laser di [workshop Sriwijaya Grafika](/) Talang Jambe berdasarkan spesifikasi teknis lapangan.
 
 | Kategori Pagar | Tebal Plat Besi | Rangka Hollow Utama | Estimasi Biaya per Meter Persegi | Rekomendasi Pemasangan |
 |---|---|---|---|---|

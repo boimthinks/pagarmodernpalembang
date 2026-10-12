@@ -19,7 +19,7 @@ export const PRODUCT_CATEGORIES = [
     slug: 'pagar',
     name: 'Pagar',
     fullName: 'Pagar Plat Cutting Laser',
-    url: '/pagar',
+    url: '/pagar/',
     image: '/produk/pagar-laser-cutting_poco.webp',
     description: 'Pagar rumah minimalis & mewah berbahan plat besi galvanis dan stainless steel pemotongan fiber laser presisi.',
     badge: 'Utama',
@@ -29,7 +29,7 @@ export const PRODUCT_CATEGORIES = [
     slug: 'pintu',
     name: 'Pintu',
     fullName: 'Pintu Plat Cutting Laser',
-    url: '/pintu',
+    url: '/pintu/',
     image: '/produk/pintu-laser-cutting_poco.webp',
     description: 'Pintu gerbang dorong (sliding) & lipat (folding) kokoh dengan panel ornamen plat cutting laser.',
     badge: 'Populer',
@@ -39,7 +39,7 @@ export const PRODUCT_CATEGORIES = [
     slug: 'balkon',
     name: 'Balkon',
     fullName: 'Pagar Balkon Plat Cutting',
-    url: '/balkon',
+    url: '/balkon/',
     image: '/produk/balkon-laser-cutting_poco.webp',
     description: 'Pengaman balkon lantai 2 dengan motif laser cutting elegan dan finishing tahan cuaca outdoor.',
     badge: 'Estetik',
@@ -49,7 +49,7 @@ export const PRODUCT_CATEGORIES = [
     slug: 'railing',
     name: 'Railing',
     fullName: 'Railing Tangga Plat Cutting',
-    url: '/railing',
+    url: '/railing/',
     image: '/produk/railing-tangga-laser-cutting_poco.webp',
     description: 'Railing tangga indoor & outdoor berpadu handrail kayu atau stainless steel motif presisi.',
     badge: 'Interior',
@@ -59,7 +59,7 @@ export const PRODUCT_CATEGORIES = [
     slug: 'kanopi',
     name: 'Kanopi',
     fullName: 'Kanopi Plat Cutting Laser',
-    url: '/kanopi',
+    url: '/kanopi/',
     image: '/produk/kanopi-laser-cutting_poco.webp',
     description: 'Plafon dan atap kanopi carport dengan panel perforated/cutting laser untuk pencahayaan artistik.',
     badge: 'Modern',
@@ -69,7 +69,7 @@ export const PRODUCT_CATEGORIES = [
     slug: 'partisi',
     name: 'Partisi',
     fullName: 'Partisi Ruangan Laser Cutting',
-    url: '/partisi',
+    url: '/partisi/',
     image: '/produk/partisi-laser-cutting_poco.webp',
     description: 'Sekat partisi ruangan interior pembatas ruang tamu, mushola, foyer, dan kantor.',
     badge: 'Dekoratif',
@@ -81,7 +81,7 @@ export const SILO_TREE: SiloNode[] = [
   {
     title: 'Pagar Plat Laser Cutting',
     slug: 'pagar',
-    url: '/pagar',
+    url: '/pagar/',
     description: 'Koleksi pagar plat besi dan stainless modern dengan presisi pemotongan laser fiber.',
     badge: 'Pilar 1',
     primaryKeyword: 'pagar laser cutting palembang',
@@ -89,7 +89,7 @@ export const SILO_TREE: SiloNode[] = [
       {
         title: 'Pagar Cutting Minimalis',
         slug: 'minimalis',
-        url: '/pagar/minimalis',
+        url: '/pagar/minimalis/',
         description: 'Desain geometris clean, elegan, dan estetik untuk perumahan modern Palembang.',
         badge: 'Favorit',
         primaryKeyword: 'pagar cutting minimalis'
@@ -99,7 +99,7 @@ export const SILO_TREE: SiloNode[] = [
   {
     title: 'Pintu Plat Laser Cutting',
     slug: 'pintu',
-    url: '/pintu',
+    url: '/pintu/',
     description: 'Pintu gerbang dorong (sliding) & lipat (folding) kokoh dengan panel motif laser artistik.',
     badge: 'Pilar 2',
     primaryKeyword: 'pintu laser cutting'
@@ -107,7 +107,7 @@ export const SILO_TREE: SiloNode[] = [
   {
     title: 'Pagar Balkon Plat Cutting',
     slug: 'balkon',
-    url: '/balkon',
+    url: '/balkon/',
     description: 'Pengaman balkon lantai 2 bermotif mewah dengan proteksi karat cuaca tropis.',
     badge: 'Pilar 3',
     primaryKeyword: 'balkon cutting laser'
@@ -115,7 +115,7 @@ export const SILO_TREE: SiloNode[] = [
   {
     title: 'Railing Tangga Laser Cutting',
     slug: 'railing',
-    url: '/railing',
+    url: '/railing/',
     description: 'Railing tangga interior dan exterior dengan motif presisi berpadu handrail kayu atau besi.',
     badge: 'Pilar 4',
     primaryKeyword: 'pagar tangga cutting laser'
@@ -123,7 +123,7 @@ export const SILO_TREE: SiloNode[] = [
   {
     title: 'Kanopi Plat Laser Cutting',
     slug: 'kanopi',
-    url: '/kanopi',
+    url: '/kanopi/',
     description: 'Atap carport dan kanopi teras modern dengan bayangan motif cutting artistik.',
     badge: 'Pilar 5',
     primaryKeyword: 'kanopi laser cutting palembang'
@@ -131,7 +131,7 @@ export const SILO_TREE: SiloNode[] = [
   {
     title: 'Partisi Ruangan Laser Cutting',
     slug: 'partisi',
-    url: '/partisi',
+    url: '/partisi/',
     description: 'Sekat ruangan dekoratif motif laser cutting presisi untuk rumah, cafe, dan kantor.',
     badge: 'Pilar 6',
     primaryKeyword: 'partisi laser cutting palembang'
@@ -139,7 +139,7 @@ export const SILO_TREE: SiloNode[] = [
   {
     title: 'Galeri Motif Ornamen',
     slug: 'motif-laser-cutting',
-    url: '/motif-laser-cutting',
+    url: '/motif-laser-cutting/',
     description: 'Katalog motif daun, floral, wayang, batik Nusantara, dan ornamen geometris modern.',
     badge: 'Katalog Desain',
     primaryKeyword: 'motif pagar laser cutting'
@@ -147,7 +147,7 @@ export const SILO_TREE: SiloNode[] = [
   {
     title: 'Blog & Edukasi',
     slug: 'blog',
-    url: '/blog',
+    url: '/blog/',
     description: 'Panduan harga per meter, tips pemilihan ketebalan plat, dan tren desain pagar.',
     primaryKeyword: 'harga pagar laser cutting per meter'
   }
@@ -159,15 +159,15 @@ export const NAV_LINKS: NavItem[] = [
     label: 'Produk',
     url: '/#produk',
     children: [
-      { label: 'Pagar', url: '/pagar', description: 'Pagar minimalis & mewah plat besi' },
-      { label: 'Pintu', url: '/pintu', description: 'Pintu & gerbang laser cutting' },
-      { label: 'Balkon', url: '/balkon', description: 'Pengaman lantai 2 estetis' },
-      { label: 'Railing', url: '/railing', description: 'Railing tangga interior & exterior' },
-      { label: 'Kanopi', url: '/kanopi', description: 'Atap carport motif artistik' },
-      { label: 'Partisi', url: '/partisi', description: 'Sekat ruangan interior dekoratif' },
+      { label: 'Pagar', url: '/pagar/', description: 'Pagar minimalis & mewah plat besi' },
+      { label: 'Pintu', url: '/pintu/', description: 'Pintu & gerbang laser cutting' },
+      { label: 'Balkon', url: '/balkon/', description: 'Pengaman lantai 2 estetis' },
+      { label: 'Railing', url: '/railing/', description: 'Railing tangga interior & exterior' },
+      { label: 'Kanopi', url: '/kanopi/', description: 'Atap carport motif artistik' },
+      { label: 'Partisi', url: '/partisi/', description: 'Sekat ruangan interior dekoratif' },
     ]
   },
-  { label: 'Motif Ornamen', url: '/motif-laser-cutting' },
-  { label: 'Blog', url: '/blog' },
-  { label: 'Kontak', url: '/kontak' },
+  { label: 'Motif Ornamen', url: '/motif-laser-cutting/' },
+  { label: 'Blog', url: '/blog/' },
+  { label: 'Kontak', url: '/kontak/' },
 ];

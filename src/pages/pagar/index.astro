@@ -63,8 +63,8 @@ const faqsPagar = [
 ---
 
 <BaseLayout
-  title="Pagar Laser Cutting Palembang | Model Minimalis & Mewah Plat Besi"
-  description="Pusat pembuatan pagar laser cutting Palembang. Model minimalis & mewah motif songket, plat galvanis tahan panas matahari, presisi fiber laser Sriwijaya Grafika."
+  title="Pagar Laser Cutting Palembang Plat Besi Minimalis Mewah"
+  description="Pusat pembuatan pagar laser cutting Palembang. Model minimalis dan mewah motif songket, plat galvanis tahan cuaca presisi fiber laser Sriwijaya Grafika."
   ogImage="/produk/pagar-laser-cutting_poco.webp"
   schemaType="Product"
   schemaData={{
@@ -73,14 +73,15 @@ const faqsPagar = [
     image: '/produk/pagar-laser-cutting_poco.webp',
     lowPrice: '950000',
     highPrice: '3200000',
+    offerCount: '12',
   }}
   breadcrumbs={[
-    { name: 'Pagar Laser Cutting', url: '/pagar' }
+    { name: 'Pagar Laser Cutting', url: '/pagar/' }
   ]}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
     <Breadcrumb items={[
-      { name: 'Pagar Laser Cutting', url: '/pagar' }
+      { name: 'Pagar Laser Cutting', url: '/pagar/' }
     ]} />
 
     <!-- HERO SECTION -->
@@ -108,7 +109,7 @@ const faqsPagar = [
             Konsultasi Ukuran & Mockup Gratis
           </a>
           <a
-            href="/pagar/minimalis"
+            href="/pagar/minimalis/"
             class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
           >
             Lihat Sub-Kategori Minimalis →
@@ -121,8 +122,12 @@ const faqsPagar = [
           <img
             src="/produk/pagar-laser-cutting_poco.webp"
             alt="Pagar laser cutting Palembang Sriwijaya Grafika"
+            width="800"
+            height="600"
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="eager"
+            fetchpriority="high"
+            decoding="async"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
           <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs">
@@ -418,7 +423,7 @@ const faqsPagar = [
             <h2 class="text-2xl font-bold text-white mt-1">Artikel dan Panduan Terkait Pagar Plat</h2>
             <p class="text-slate-400 text-sm mt-1">Baca rincian biaya per meter dan tips teknis pemilihan material dari praktisi kami.</p>
           </div>
-          <a href="/blog" class="text-xs font-semibold text-emerald-400 hover:text-amber-400 transition-colors">
+          <a href="/blog/" class="text-xs font-semibold text-emerald-400 hover:text-amber-400 transition-colors">
             Lihat Semua Artikel Blog →
           </a>
         </div>

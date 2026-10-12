@@ -1,9 +1,9 @@
 ---
 title: "Mengenal Mesin Potong CNC Router Workshop Palembang"
-titleSeo: "Fungsi Mesin Potong CNC Router untuk Ukir ACP PVC dan Kayu di Palembang"
+titleSeo: "Mesin CNC Router Ukir ACP PVC dan Kayu Palembang"
 tipe: "artikel"
 label_produk: "blog"
-excerpt: "Pelajari fungsi mesin potong CNC router di workshop Sriwijaya Grafika Palembang. Ahli mengukir panel ACP, PVC foam board, MDF, dan plywood untuk partisi ruangan interior."
+excerpt: "Fungsi mesin CNC router workshop Sriwijaya Grafika Palembang untuk mengukir panel ACP, PVC foam board, MDF, dan kayu lapis partisi ruangan presisi."
 date: "09 Oktober 2026"
 topik: "panduan"
 imgurl: "/mesin/mesin-potong-CNC-router_poco.webp"
@@ -22,7 +22,7 @@ faq:
 
 ## Solusi Presisi untuk Material Kayu Olahan dan Komposit Fasad
 
-Ketika berbicara tentang dekorasi interior dan arsitektur fasad bangunan modern di Palembang, lembaran logam bukan satu-satunya pilihan. Material seperti Aluminium Composite Panel (ACP), PVC foam board, papan serat MDF, dan kayu lapis plywood banyak dipilih untuk pembuatan sekat partisi ruangan tamu, panel backdrop televisi, plafon bermotif, hingga fasad gedung toko.
+Ketika berbicara tentang dekorasi interior dan arsitektur fasad bangunan modern di Palembang, lembaran logam bukan satu-satunya pilihan. Material seperti Aluminium Composite Panel (ACP), PVC foam board, papan serat MDF, dan kayu lapis plywood banyak dipilih untuk pembuatan [sekat partisi ruangan](/partisi/) tamu, panel backdrop televisi, plafon bermotif, hingga fasad gedung toko.
 
 Material-material non-logam dan komposit tersebut tidak dapat dipotong sembarangan menggunakan sinar laser berdaya tinggi karena risiko tepi bahan meleleh, hangus gosong, atau mengeluarkan asap beracun. Solusi terbaik dan paling aman adalah menggunakan mesin potong CNC router mekanikal otomatis yang beroperasi di workshop kami di kawasan Talang Jambe, Sukarami.
 
@@ -41,7 +41,7 @@ Selain memotong tembus (through cut), mesin CNC router kami sanggup membuat alur
 
 ## Material dan Ketebalan yang Dilayani Workshop Kami
 
-Workshop Sriwijaya Grafika menyediakan kapasitas kerja luas untuk berbagai jenis material lembaran interior dan eksterior:
+[Workshop Sriwijaya Grafika](/) menyediakan kapasitas kerja luas untuk berbagai jenis material lembaran interior dan eksterior:
 
 | Jenis Material | Ketebalan Lembaran | Rekomendasi Pemanfaatan di Palembang |
 |---|---|---|

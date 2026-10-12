@@ -1,9 +1,9 @@
 ---
 title: "Panduan Memilih Ketebalan Plat Pagar Laser Cutting"
-titleSeo: "Panduan Memilih Ketebalan Plat Pagar Laser Cutting yang Tepat dan Tahan Melengkung"
+titleSeo: "Panduan Tebal Plat Pagar Laser Cutting Tahan Lengkung"
 tipe: "artikel"
 label_produk: "pagar"
-excerpt: "Hindari plat pagar melengkung akibat panas terik Palembang. Pelajari rekomendasi teknis tebal plat besi galvanis 1.4 mm hingga 3.2 mm langsung dari praktisi workshop."
+excerpt: "Cegah plat pagar melengkung akibat cuaca terik Palembang. Rekomendasi teknis tebal plat besi galvanis 1.4 mm sampai 3.2 mm langsung dari workshop kami."
 date: "08 Oktober 2026"
 topik: "panduan"
 imgurl: "/blog/panduan-memilih-ketebalan-plat-pagar-cutting_poco.webp"
@@ -22,7 +22,7 @@ faq:
 
 ## Risiko Mengabaikan Spesifikasi Ketebalan Logam pada Area Outdoor
 
-Fasad pagar rumah berada di garis terdepan properti yang menghadapi perubahan cuaca ekstrem Kota Palembang setiap hari. Hujan lebat disertai angin kencang dapat berganti seketika menjadi terik panas menyengat dengan suhu permukaan logam mencapai lebih dari 45 derajat Celsius.
+Fasad [pagar rumah](/pagar/) berada di garis terdepan properti yang menghadapi perubahan cuaca ekstrem Kota Palembang setiap hari. Hujan lebat disertai angin kencang dapat berganti seketika menjadi terik panas menyengat dengan suhu permukaan logam mencapai lebih dari 45 derajat Celsius.
 
 Ketika selembar plat besi dipotong ornamen menggunakan mesin potong laser fiber, sebagian besar massa logam sengaja dihilangkan guna membentuk celah estetika. Berkurangnya luas penampang ini berbanding lurus dengan penurunan modulus elastisitas lembaran plat.
 
@@ -36,14 +36,14 @@ Ketiga, sambungan las antara plat tipis dan rangka hollow galvanis menjadi sanga
 
 ## Rekomendasi Ketebalan Plat Berdasarkan Aplikasi Produk
 
-Workshop Sriwijaya Grafika di Talang Jambe, Sukarami membagi standar ketebalan lembaran logam berdasarkan fungsi mekanis dan bentang struktural di lapangan.
+[Workshop Sriwijaya Grafika](/) di Talang Jambe, Sukarami membagi standar ketebalan lembaran logam berdasarkan fungsi mekanis dan bentang struktural di lapangan.
 
 | Kategori Pemasangan | Rentang Ketebalan Plat | Karakteristik Beban Kerja | Rekomendasi Rangka Frame |
 |---|---|---|---|
 | Ornamen Dinding Kisi Lampu | 0.8 mm sampai 1.2 mm | Beban statis murni indoor | Hollow 20x40 mm tebal 1.1 mm |
-| Railing Tangga dan Balkon Lantai 2 | 1.4 mm sampai 1.8 mm | Beban dorong ringan manusia | Hollow 40x40 mm tebal 1.4 mm |
+| [Railing Tangga](/railing/) dan Balkon Lantai 2 | 1.4 mm sampai 1.8 mm | Beban dorong ringan manusia | Hollow 40x40 mm tebal 1.4 mm |
 | Pagar Depan Rumah Tinggal | 1.8 mm sampai 2.0 mm | Beban angin dan panas outdoor | Hollow 40x60 mm tebal 1.4 mm |
-| Pintu Gerbang Lipat 4 Daun | 2.0 mm sampai 2.4 mm | Beban engsel dan lipatan kontinu | Hollow 40x60 mm tebal 1.6 mm |
+| [Pintu Gerbang](/pintu/) Lipat 4 Daun | 2.0 mm sampai 2.4 mm | Beban engsel dan lipatan kontinu | Hollow 40x60 mm tebal 1.6 mm |
 | Pintu Gerbang Dorong Carport | 2.4 mm sampai 3.2 mm | Hentakan roda rel dan inersia luncur | Hollow 50x100 mm tebal 1.8 mm |
 | Plat Dudukan Tiang Kolom | 4.0 mm sampai 8.0 mm | Beban tumpu struktural vertikal | UNP atau WF baja struktural |
 
@@ -57,7 +57,7 @@ Pintu gerbang dorong bentang 3 meter hingga 6 meter memerlukan kekakuan penampan
 
 ### 3. Railing Pengaman Balkon Lantai Atas
 
-Untuk area balkon lantai dua, pertimbangan utama adalah batas beban struktural lantai beton. Penggunaan plat tebal 1.4 mm sampai 1.8 mm sudah sangat mencukupi untuk menahan benturan fisik, menjaga keselamatan anggota keluarga, sekaligus meringankan beban mati struktur balok kantilever teras atas.
+Untuk area [balkon lantai dua](/balkon/), pertimbangan utama adalah batas beban struktural lantai beton. Penggunaan plat tebal 1.4 mm sampai 1.8 mm sudah sangat mencukupi untuk menahan benturan fisik, menjaga keselamatan anggota keluarga, sekaligus meringankan beban mati struktur balok kantilever teras atas.
 
 ## Hubungan Kerumitan Motif Desain dengan Ketahanan Plat
 

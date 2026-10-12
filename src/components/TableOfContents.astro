@@ -1,4 +1,6 @@
 ---
+import Icon from './Icon.astro';
+
 interface Heading {
   depth: number;
   slug: string;
@@ -16,7 +18,7 @@ const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
 {tocHeadings.length > 0 && (
   <nav class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 backdrop-blur-md shadow-lg" aria-label="Daftar isi artikel">
     <div class="flex items-center gap-2 pb-3 mb-3 border-b border-slate-800 text-white font-bold text-sm tracking-wide">
-      <span class="material-symbols-outlined text-emerald-400 text-[20px] leading-none">format_list_bulleted</span>
+      <Icon name="format_list_bulleted" size={20} class="text-emerald-400" />
       <span>Daftar Isi Artikel</span>
     </div>
     

@@ -1,9 +1,9 @@
 ---
 title: "Mengenal Mesin Potong Laser CO2 Workshop Palembang"
-titleSeo: "Keunggulan Mesin Potong Laser CO2 untuk Akrilik Bening Mengkilap di Palembang"
+titleSeo: "Mesin Potong Laser CO2 Akrilik Mengkilap Palembang"
 tipe: "artikel"
 label_produk: "blog"
-excerpt: "Kenali fungsi mesin potong laser CO2 di workshop Sriwijaya Grafika Palembang. Ahli memotong akrilik bening dan warna tebal 2 mm sampai 10 mm dengan tepian mengkilap."
+excerpt: "Fungsi mesin potong laser CO2 Sriwijaya Grafika Palembang untuk memotong akrilik tebal 2-10 mm dengan tepian halus mengkilap tanpa amplas ulang."
 date: "10 Oktober 2026"
 topik: "panduan"
 imgurl: "/mesin/mesin-potong-laser-CO2_poco.webp"
@@ -22,9 +22,9 @@ faq:
 
 ## Spesialisasi Pemotongan Bahan Polimer dan Akrilik Kristal
 
-Pagar rumah modern, pintu gerbang, dan sekat ruang kantor di Kota Palembang kini kerap dipadukan dengan aksen nomor rumah bercahaya LED, logo identitas pemilik rumah, hingga plakat nama timbul. Unsur dekoratif tersebut umumnya menggunakan bahan akrilik (polymethyl methacrylate).
+[Pagar rumah modern](/pagar/), [pintu gerbang](/pintu/), dan sekat ruang kantor di Kota Palembang kini kerap dipadukan dengan aksen nomor rumah bercahaya LED, logo identitas pemilik rumah, hingga plakat nama timbul. Unsur dekoratif tersebut umumnya menggunakan bahan akrilik (polymethyl methacrylate).
 
-Memotong lembaran akrilik dengan gergaji manual atau pisau cutter sering kali membuat bahan retak rambut, bergerigi kasar, atau tampak kusam keputihan pada sisi potongnya. Di workshop Sriwijaya Grafika Talang Jambe, pemotongan material akrilik ditangani sepenuhnya oleh mesin potong laser CO2 berbasis tabung gas bertekanan stabil.
+Memotong lembaran akrilik dengan gergaji manual atau pisau cutter sering kali membuat bahan retak rambut, bergerigi kasar, atau tampak kusam keputihan pada sisi potongnya. Di [workshop Sriwijaya Grafika](/) Talang Jambe, pemotongan material akrilik ditangani sepenuhnya oleh mesin potong laser CO2 berbasis tabung gas bertekanan stabil.
 
 ## Prinsip Kerja dan Efek Tepian Mengkilap Tanpa Ampelas
 
@@ -45,7 +45,7 @@ Kami menyediakan stok lembaran akrilik bermutu tinggi dari berbagai merek teruji
 
 | Varian Lembaran Akrilik | Pilihan Ketebalan | Aplikasi Produk Populer di Palembang |
 |---|---|---|
-| Akrilik Bening Transparan (Clear) | 2.0 mm sampai 10.0 mm | Sekat partisi meja kantor, bingkai foto melayang, kap lampu |
+| Akrilik Bening Transparan (Clear) | 2.0 mm sampai 10.0 mm | [Sekat partisi](/partisi/) meja kantor, bingkai foto melayang, kap lampu |
 | Akrilik Putih Susu (Opal) | 2.0 mm sampai 5.0 mm | Penutup lampu pendar backlit LED gerbang, plang nama |
 | Akrilik Warna Solid (Hitam, Merah, Biru) | 2.0 mm sampai 5.0 mm | Huruf timbul fasad, nomor rumah minimalis, ornamen gerbang |
 | Akrilik Cermin Pantul (Mirror Gold & Silver) | 2.0 mm dan 3.0 mm | Logo dekoratif dinding ruang tamu, aksen mewah interior |
@@ -54,7 +54,7 @@ Kami menyediakan stok lembaran akrilik bermutu tinggi dari berbagai merek teruji
 
 Salah satu tren paling digemari pemilik hunian klaster di kawasan Sukarami dan sekitarnya adalah perpaduan plat besi pagar dengan nomor rumah akrilik backlit LED. Nomor rumah dibuat dari plat akrilik hitam doff potong laser, dilapis akrilik putih susu di bagian belakang, lalu diterangi lampu LED hemat energi tahan air. Pada malam hari, nomor rumah menyala elegan dan memudahkan tamu mencari alamat Anda.
 
-Selain nomor rumah, lembaran akrilik tebal 5 mm hingga 8 mm bening juga sering dipasang sebagai lapisan pelindung transparan di belakang motif plat laser pagar atau balkon lantai dua, mencegah terpaan angin langsung tanpa menghalangi pandangan visual.
+Selain nomor rumah, lembaran akrilik tebal 5 mm hingga 8 mm bening juga sering dipasang sebagai lapisan pelindung transparan di belakang motif plat laser pagar atau [balkon lantai dua](/balkon/), mencegah terpaan angin langsung tanpa menghalangi pandangan visual.
 
 ## Kunjungi Workshop Sriwijaya Grafika Palembang
 
