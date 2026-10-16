@@ -218,7 +218,8 @@ Setiap pembuatan atau pembaruan artikel blog **WAJIB** merujuk ke skill `penulis
 6. `/pagar/harga-pagar-laser-cutting-per-meter-palembang` (06 Oktober 2026 — Harga Pagar Laser Cutting per Meter Palembang 2026)
 
 ### Katalog Desain Motif (tipe: motif)
-1. `/railing/railing-tangga-motif-floral-daun` (16 Oktober 2026 — Railing Tangga Motif Floral Daun Modern Palembang)
+1. `/kanopi/kanopi-kaca-laser-cutting-motif-ornamen` (16 Oktober 2026 — Kanopi Kaca Laser Cutting Motif Ornamen Palembang)
+2. `/railing/railing-tangga-motif-floral-daun` (16 Oktober 2026 — Railing Tangga Motif Floral Daun Modern Palembang)
 2. `/balkon/balkon-laser-cutting-modern-motif-etnik` (16 Oktober 2026 — Balkon Modern Laser Cutting Motif Etnik Palembang)
 3. `/pintu/pintu-laser-cutting-plat-besi-motif-daun` (12 Oktober 2026 — Pintu Plat Laser Cutting Motif Daun Tropis Palembang)
 4. `/pagar/minimalis` (Pagar Cutting Minimalis Palembang)
