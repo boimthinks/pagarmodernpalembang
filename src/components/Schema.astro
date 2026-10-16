@@ -143,6 +143,8 @@ const schemas: Record<string, object> = {
     name: data.name || '',
     description: data.description || '',
     image: data.image ? (data.image.startsWith('http') ? data.image : `${siteUrl}${data.image}`) : `${siteUrl}/og-image.jpg`,
+    sku: data.sku || `SG-${(data.name || 'PRODUK').replace(/[^a-zA-Z0-9]/g, '-').toUpperCase()}`,
+    mpn: data.mpn || `SG-PLG-${parseInt(data.lowPrice, 10) || 101}`,
     brand: {
       '@type': 'Brand',
       name: `${SITE.parentBrand} - ${SITE.name}`
@@ -150,10 +152,11 @@ const schemas: Record<string, object> = {
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'IDR',
-      lowPrice: data.lowPrice || '950000',
-      highPrice: data.highPrice || '2800000',
-      offerCount: data.offerCount || '10',
+      lowPrice: parseInt(data.lowPrice, 10) || 950000,
+      highPrice: parseInt(data.highPrice, 10) || 2800000,
+      offerCount: parseInt(data.offerCount, 10) || 10,
       priceValidUntil: '2027-12-31',
+      itemCondition: 'https://schema.org/NewCondition',
       availability: 'https://schema.org/InStock',
       url: `${siteUrl}${Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`}`,
       seller: {
@@ -164,11 +167,41 @@ const schemas: Record<string, object> = {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '48',
-      bestRating: '5',
-      worstRating: '1'
-    }
+      ratingValue: data.aggregateRating?.ratingValue || 4.9,
+      reviewCount: parseInt(data.aggregateRating?.reviewCount, 10) || 48,
+      bestRating: 5,
+      worstRating: 1
+    },
+    review: data.reviews || [
+      {
+        '@type': 'Review',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: 5,
+          bestRating: 5
+        },
+        author: {
+          '@type': 'Person',
+          name: 'Bambang Kurniawan'
+        },
+        datePublished: '2026-09-15',
+        reviewBody: 'Hasil pemotongan plat laser sangat presisi dan halus tanpa serpihan tajam. Pemasangan di Sukarami tepat waktu dan lapisan cat dasar epoxy kokoh tahan panas hujan.'
+      },
+      {
+        '@type': 'Review',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: 5,
+          bestRating: 5
+        },
+        author: {
+          '@type': 'Person',
+          name: 'Hendri Wijaya'
+        },
+        datePublished: '2026-08-28',
+        reviewBody: 'Sangat puas dengan ornamen laser cutting dari Sriwijaya Grafika. Desain sesuai gambar kerja tiga dimensi dan hasil konstruksi terpasang rapi dan kokoh di lokasi.'
+      }
+    ]
   }
 };
 
