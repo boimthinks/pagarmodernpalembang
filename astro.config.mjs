@@ -8,6 +8,10 @@ export default defineConfig({
   site: 'https://pagarmodernpalembang.com',
   trailingSlash: 'always',
   integrations: [sitemap(), mdx()],
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'hover'
+  },
   vite: {
     plugins: [tailwindcss()]
   }

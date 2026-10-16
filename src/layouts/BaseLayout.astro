@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
 import SEOHead from '../components/SEOHead.astro';
 import Schema from '../components/Schema.astro';
 import Header from '../components/Header.astro';
@@ -40,6 +41,7 @@ const {
     <meta name="ICBM" content="-2.8988, 104.7088" />
 
     <SEOHead title={title} description={description} ogImage={ogImage} noindex={noindex} />
+    <ClientRouter />
 
     <!-- Ahrefs Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="dSfNVo/7oTFsAMWFuqEPSA" async></script>

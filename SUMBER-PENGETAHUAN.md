@@ -210,14 +210,17 @@ Setiap pembuatan atau pembaruan artikel blog **WAJIB** merujuk ke skill `penulis
 ## 8. Daftar Konten Terbit
 
 ### Artikel Blog (tipe: artikel) — Urutan Terbaru Terbit
-1. `/blog/mesin-potong-laser-fiber-palembang` (11 Oktober 2026 — Mengenal Mesin Potong Laser Fiber Workshop Palembang)
-2. `/blog/mesin-potong-laser-co2-palembang` (10 Oktober 2026 — Mengenal Mesin Potong Laser CO2 Workshop Palembang)
-3. `/blog/mesin-potong-cnc-router-palembang` (09 Oktober 2026 — Mengenal Mesin Potong CNC Router Workshop Palembang)
-4. `/pagar/panduan-memilih-ketebalan-plat-pagar-cutting` (08 Oktober 2026 — Panduan Memilih Ketebalan Plat Pagar Laser Cutting)
-5. `/pagar/harga-pagar-laser-cutting-per-meter-palembang` (06 Oktober 2026 — Harga Pagar Laser Cutting per Meter Palembang 2026)
+1. `/blog/standar-aman-railing-tangga-dan-balkon-palembang` (16 Oktober 2026 — Standar Aman Railing Tangga dan Balkon Plat Palembang)
+2. `/blog/mesin-potong-laser-fiber-palembang` (11 Oktober 2026 — Mengenal Mesin Potong Laser Fiber Workshop Palembang)
+3. `/blog/mesin-potong-laser-co2-palembang` (10 Oktober 2026 — Mengenal Mesin Potong Laser CO2 Workshop Palembang)
+4. `/blog/mesin-potong-cnc-router-palembang` (09 Oktober 2026 — Mengenal Mesin Potong CNC Router Workshop Palembang)
+5. `/pagar/panduan-memilih-ketebalan-plat-pagar-cutting` (08 Oktober 2026 — Panduan Memilih Ketebalan Plat Pagar Laser Cutting)
+6. `/pagar/harga-pagar-laser-cutting-per-meter-palembang` (06 Oktober 2026 — Harga Pagar Laser Cutting per Meter Palembang 2026)
 
 ### Katalog Desain Motif (tipe: motif)
-1. `/pintu/pintu-laser-cutting-plat-besi-motif-daun` (12 Oktober 2026 — Pintu Plat Laser Cutting Motif Daun Tropis Palembang)
-2. `/pagar/minimalis` (Pagar Cutting Minimalis Palembang)
-3. `/pagar/pagar-cutting-motif-songket-palembang` (Pagar Cutting Motif Songket Palembang)
-4. `/pagar/kombinasi-woodplank` (Pagar Cutting Kombinasi Woodplank Serat Kayu Tropis)
+1. `/railing/railing-tangga-motif-floral-daun` (16 Oktober 2026 — Railing Tangga Motif Floral Daun Modern Palembang)
+2. `/balkon/balkon-laser-cutting-modern-motif-etnik` (16 Oktober 2026 — Balkon Modern Laser Cutting Motif Etnik Palembang)
+3. `/pintu/pintu-laser-cutting-plat-besi-motif-daun` (12 Oktober 2026 — Pintu Plat Laser Cutting Motif Daun Tropis Palembang)
+4. `/pagar/minimalis` (Pagar Cutting Minimalis Palembang)
+5. `/pagar/pagar-cutting-motif-songket-palembang` (Pagar Cutting Motif Songket Palembang)
+6. `/pagar/kombinasi-woodplank` (Pagar Cutting Kombinasi Woodplank Serat Kayu Tropis)

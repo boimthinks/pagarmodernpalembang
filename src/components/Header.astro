@@ -159,11 +159,21 @@ const currentPath = Astro.url.pathname;
 </header>
 
 <script>
-  const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  if (btn && menu) {
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
+  function setupMobileMenu() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      menu.classList.add('hidden');
+      btn.onclick = () => {
+        menu.classList.toggle('hidden');
+      };
+      menu.querySelectorAll('a').forEach((link) => {
+        link.onclick = () => {
+          menu.classList.add('hidden');
+        };
+      });
+    }
   }
+
+  document.addEventListener('astro:page-load', setupMobileMenu);
 </script>

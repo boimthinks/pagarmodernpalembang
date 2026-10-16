@@ -43,34 +43,40 @@ const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
 )}
 
 <script>
-  // Highlight TOC aktif saat artikel di-scroll
-  const observerCallback: IntersectionObserverCallback = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        if (!id) return;
-        
-        document.querySelectorAll('.toc-link').forEach((link) => {
-          if (link.getAttribute('data-target') === id) {
-            link.classList.add('text-emerald-400', 'font-bold');
-            link.classList.remove('text-slate-300', 'text-slate-400');
-          } else {
-            link.classList.remove('text-emerald-400', 'font-bold');
-          }
-        });
-      }
+  function setupTOC() {
+    const headings = document.querySelectorAll('article h2[id], article h3[id]');
+    if (!headings.length) return;
+
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          if (!id) return;
+          
+          document.querySelectorAll('.toc-link').forEach((link) => {
+            if (link.getAttribute('data-target') === id) {
+              link.classList.add('text-emerald-400', 'font-bold');
+              link.classList.remove('text-slate-300', 'text-slate-400');
+            } else {
+              link.classList.remove('text-emerald-400', 'font-bold');
+            }
+          });
+        }
+      });
+    };
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-80px 0px -60% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    headings.forEach((heading) => {
+      observer.observe(heading);
     });
-  };
+  }
 
-  const observerOptions = {
-    root: null,
-    rootMargin: '-80px 0px -60% 0px',
-    threshold: 0
-  };
-
-  const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-  document.querySelectorAll('article h2[id], article h3[id]').forEach((heading) => {
-    observer.observe(heading);
-  });
+  document.addEventListener('astro:page-load', setupTOC);
 </script>
