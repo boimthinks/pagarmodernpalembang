@@ -210,13 +210,14 @@ Setiap pembuatan atau pembaruan artikel blog **WAJIB** merujuk ke skill `penulis
 ## 8. Daftar Konten Terbit
 
 ### Artikel Blog (tipe: artikel) — Urutan Terbaru Terbit
-1. `/partisi/pembuatan-partisi-cutting-plat-besi-ornamen-islami` (21 Oktober 2026 — Pembuatan Partisi Cutting Plat Besi Islami Palembang)
-2. `/blog/standar-aman-railing-tangga-dan-balkon-palembang` (16 Oktober 2026 — Standar Aman Railing Tangga dan Balkon Plat Palembang)
-3. `/blog/mesin-potong-laser-fiber-palembang` (11 Oktober 2026 — Mengenal Mesin Potong Laser Fiber Workshop Palembang)
-4. `/blog/mesin-potong-laser-co2-palembang` (10 Oktober 2026 — Mengenal Mesin Potong Laser CO2 Workshop Palembang)
-5. `/blog/mesin-potong-cnc-router-palembang` (09 Oktober 2026 — Mengenal Mesin Potong CNC Router Workshop Palembang)
-6. `/pagar/panduan-memilih-ketebalan-plat-pagar-cutting` (08 Oktober 2026 — Panduan Memilih Ketebalan Plat Pagar Laser Cutting)
-7. `/pagar/harga-pagar-laser-cutting-per-meter-palembang` (06 Oktober 2026 — Harga Pagar Laser Cutting per Meter Palembang 2026)
+1. `/kanopi/plafon-kanopi-laser-cutting-kaca-carport` (22 Oktober 2026 — Plafon Kanopi Laser Cutting Carport Kaca Palembang)
+2. `/partisi/pembuatan-partisi-cutting-plat-besi-ornamen-islami` (21 Oktober 2026 — Pembuatan Partisi Cutting Plat Besi Islami Palembang)
+3. `/blog/standar-aman-railing-tangga-dan-balkon-palembang` (16 Oktober 2026 — Standar Aman Railing Tangga dan Balkon Plat Palembang)
+4. `/blog/mesin-potong-laser-fiber-palembang` (11 Oktober 2026 — Mengenal Mesin Potong Laser Fiber Workshop Palembang)
+5. `/blog/mesin-potong-laser-co2-palembang` (10 Oktober 2026 — Mengenal Mesin Potong Laser CO2 Workshop Palembang)
+6. `/blog/mesin-potong-cnc-router-palembang` (09 Oktober 2026 — Mengenal Mesin Potong CNC Router Workshop Palembang)
+7. `/pagar/panduan-memilih-ketebalan-plat-pagar-cutting` (08 Oktober 2026 — Panduan Memilih Ketebalan Plat Pagar Laser Cutting)
+8. `/pagar/harga-pagar-laser-cutting-per-meter-palembang` (06 Oktober 2026 — Harga Pagar Laser Cutting per Meter Palembang 2026)
 
 ### Katalog Desain Motif (tipe: motif)
 1. `/partisi/partisi-cutting-plat-besi-ornamen-islami` (21 Oktober 2026 — Partisi Plat Besi Ornamen Islami Palembang)
