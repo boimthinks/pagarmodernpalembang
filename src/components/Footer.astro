@@ -2,6 +2,7 @@
 import { SITE } from '../config/site';
 import { PRODUCT_CATEGORIES } from '../data/silo';
 import Icon from './Icon.astro';
+import GoogleSourcePreferences from './GoogleSourcePreferences.astro';
 ---
 
 <footer class="bg-slate-950 border-t border-slate-800 text-slate-400">
@@ -27,6 +28,10 @@ import Icon from './Icon.astro';
         <div class="pt-2 text-xs text-slate-500 space-y-1">
           <p>Workshop: Talang Jambe, Sukarami, Palembang</p>
           <p>Garansi Konstruksi 1 Tahun & Free Mockup 3D</p>
+        </div>
+
+        <div class="pt-1">
+          <GoogleSourcePreferences variant="footer" />
         </div>
       </div>
 

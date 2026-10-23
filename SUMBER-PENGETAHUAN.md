@@ -191,7 +191,11 @@ Setiap pembuatan atau pembaruan artikel blog **WAJIB** merujuk ke skill `penulis
    - DILARANG menggunakan tanda titik dua (`:`) pada heading manapun (H1, H2, H3, dst). Ganti dengan koma (`,`), titik (`.`), tanda pisah (`—`), atau susun kalimat secara alami.
    - DILARANG menggunakan angka Arab (1, 2, 3) maupun angka Romawi (I, II, III) di heading H1, H2, H3, dst. Gunakan urutan kata ("Tahap Pertama", "Langkah Berikutnya") atau sub-heading deskriptif tanpa angka.
 
-5. **Mekanisme Auto Internal Linking Mandatori:**
+5. **Wajib Trailing Slash pada Seluruh Internal Link (Ketat):**
+   - Seluruh tautan internal wajib menyertakan trailing slash (`/`) di akhir URL (misal: `[pagar plat cutting](/pagar/)`, `[bengkel Sriwijaya Grafika](/)`, `[motif](/pagar/slug/)`).
+   - Jangan pernah menulis internal link tanpa garis miring penutup (`/pagar` atau `/kategori/slug`).
+
+6. **Mekanisme Auto Internal Linking Mandatori:**
    - Website dilengkapi skrip auto-linking (`scripts/auto-internal-links.mjs` & `src/data/internal-link-keywords.mjs`) yang otomatis aktif saat build (`prebuild`).
    - Setiap artikel/motif otomatis dihubungkan minimal 2 link: ke Homepage (`/`) via entitas brand Sriwijaya Grafika, dan ke SILO produk terkait (`/pagar/`, `/pintu/`, `/balkon/`, `/railing/`, `/kanopi/`, `/partisi/`, `/motif-laser-cutting/`).
    - Link otomatis hanya mengambil kemunculan pertama kata kunci (*first occurrence only*) dan tidak akan pernah diinjeksi ke heading.
@@ -210,21 +214,24 @@ Setiap pembuatan atau pembaruan artikel blog **WAJIB** merujuk ke skill `penulis
 ## 8. Daftar Konten Terbit
 
 ### Artikel Blog (tipe: artikel) — Urutan Terbaru Terbit
-1. `/kanopi/plafon-kanopi-laser-cutting-kaca-carport` (22 Oktober 2026 — Plafon Kanopi Laser Cutting Carport Kaca Palembang)
-2. `/partisi/pembuatan-partisi-cutting-plat-besi-ornamen-islami` (21 Oktober 2026 — Pembuatan Partisi Cutting Plat Besi Islami Palembang)
-3. `/blog/standar-aman-railing-tangga-dan-balkon-palembang` (16 Oktober 2026 — Standar Aman Railing Tangga dan Balkon Plat Palembang)
-4. `/blog/mesin-potong-laser-fiber-palembang` (11 Oktober 2026 — Mengenal Mesin Potong Laser Fiber Workshop Palembang)
-5. `/blog/mesin-potong-laser-co2-palembang` (10 Oktober 2026 — Mengenal Mesin Potong Laser CO2 Workshop Palembang)
-6. `/blog/mesin-potong-cnc-router-palembang` (09 Oktober 2026 — Mengenal Mesin Potong CNC Router Workshop Palembang)
-7. `/pagar/panduan-memilih-ketebalan-plat-pagar-cutting` (08 Oktober 2026 — Panduan Memilih Ketebalan Plat Pagar Laser Cutting)
-8. `/pagar/harga-pagar-laser-cutting-per-meter-palembang` (06 Oktober 2026 — Harga Pagar Laser Cutting per Meter Palembang 2026)
+1. `/pintu/pintu-gerbang-laser-cutting-dorong-vs-lipat/` (23 Oktober 2026 — Pintu Gerbang Laser Cutting Dorong vs Lipat Palembang)
+2. `/kanopi/plafon-kanopi-laser-cutting-kaca-carport/` (22 Oktober 2026 — Plafon Kanopi Laser Cutting Carport Kaca Palembang)
+3. `/partisi/pembuatan-partisi-cutting-plat-besi-ornamen-islami/` (21 Oktober 2026 — Pembuatan Partisi Cutting Plat Besi Islami Palembang)
+4. `/blog/standar-aman-railing-tangga-dan-balkon-palembang/` (16 Oktober 2026 — Standar Aman Railing Tangga dan Balkon Plat Palembang)
+5. `/blog/mesin-potong-laser-fiber-palembang/` (11 Oktober 2026 — Mengenal Mesin Potong Laser Fiber Workshop Palembang)
+6. `/blog/mesin-potong-laser-co2-palembang/` (10 Oktober 2026 — Mengenal Mesin Potong Laser CO2 Workshop Palembang)
+7. `/blog/mesin-potong-cnc-router-palembang/` (09 Oktober 2026 — Mengenal Mesin Potong CNC Router Workshop Palembang)
+8. `/pagar/panduan-memilih-ketebalan-plat-pagar-cutting/` (08 Oktober 2026 — Panduan Memilih Ketebalan Plat Pagar Laser Cutting)
+9. `/pagar/harga-pagar-laser-cutting-per-meter-palembang/` (06 Oktober 2026 — Harga Pagar Laser Cutting per Meter Palembang 2026)
 
 ### Katalog Desain Motif (tipe: motif)
-1. `/partisi/partisi-cutting-plat-besi-ornamen-islami` (21 Oktober 2026 — Partisi Plat Besi Ornamen Islami Palembang)
-2. `/kanopi/kanopi-kaca-laser-cutting-motif-ornamen` (16 Oktober 2026 — Kanopi Kaca Laser Cutting Motif Ornamen Palembang)
-3. `/railing/railing-tangga-motif-floral-daun` (16 Oktober 2026 — Railing Tangga Motif Floral Daun Modern Palembang)
-4. `/balkon/balkon-laser-cutting-modern-motif-etnik` (16 Oktober 2026 — Balkon Modern Laser Cutting Motif Etnik Palembang)
-5. `/pintu/pintu-laser-cutting-plat-besi-motif-daun` (12 Oktober 2026 — Pintu Plat Laser Cutting Motif Daun Tropis Palembang)
-6. `/pagar/minimalis` (Pagar Cutting Minimalis Palembang)
-7. `/pagar/pagar-cutting-motif-songket-palembang` (Pagar Cutting Motif Songket Palembang)
-8. `/pagar/kombinasi-woodplank` (Pagar Cutting Kombinasi Woodplank Serat Kayu Tropis)
+1. `/pagar/pagar-lipat-plat-cutting-motif-ornamen/` (23 Oktober 2026 — Pagar Lipat Plat Cutting Ornamen Geometris Palembang)
+2. `/pagar/pagar-dorong-plat-cutting-motif-floral/` (23 Oktober 2026 — Pagar Dorong Plat Cutting Motif Floral Putih Mewah)
+3. `/partisi/partisi-cutting-plat-besi-ornamen-islami/` (21 Oktober 2026 — Partisi Plat Besi Ornamen Islami Palembang)
+4. `/kanopi/kanopi-kaca-laser-cutting-motif-ornamen/` (16 Oktober 2026 — Kanopi Kaca Laser Cutting Motif Ornamen Palembang)
+5. `/railing/railing-tangga-motif-floral-daun/` (16 Oktober 2026 — Railing Tangga Motif Floral Daun Modern Palembang)
+6. `/balkon/balkon-laser-cutting-modern-motif-etnik/` (16 Oktober 2026 — Balkon Modern Laser Cutting Motif Etnik Palembang)
+7. `/pintu/pintu-laser-cutting-plat-besi-motif-daun/` (12 Oktober 2026 — Pintu Plat Laser Cutting Motif Daun Tropis Palembang)
+8. `/pagar/minimalis/` (Pagar Cutting Minimalis Palembang)
+9. `/pagar/pagar-cutting-motif-songket-palembang/` (Pagar Cutting Motif Songket Palembang)
+10. `/pagar/kombinasi-woodplank/` (Pagar Cutting Kombinasi Woodplank Serat Kayu Tropis)

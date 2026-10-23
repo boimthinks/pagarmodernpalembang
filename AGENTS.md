@@ -118,11 +118,17 @@ src/
    - Minimal 2 internal link per konten artikel/motif (1 ke homepage, 1 ke produk relevan, plus produk lain yang dibahas).
    - Hanya kata kunci pertama yang ditemukan (*first occurrence only*) yang diberi link per URL target.
    - **TIDAK PERNAH** menginjeksi link ke dalam heading (`H1`–`H6`), gambar, blok kode, atau inline code.
+7. **Wajib Trailing Slash pada Seluruh Internal Link (Ketat):**
+   - Setiap tautan internal (internal link) di seluruh file Markdown (.md), komponen Astro (.astro), skrip, dan dokumentasi **WAJIB** diakhiri dengan garis miring atau trailing slash (`/`).
+   - Contoh BENAR: `/`, `/pagar/`, `/pintu/`, `/pagar/pagar-lipat-plat-cutting-motif-ornamen/`, `/blog/standar-aman-railing-tangga-dan-balkon-palembang/`.
+   - Contoh SALAH (DILARANG): `/pagar`, `/pintu/pintu-gerbang-laser-cutting-dorong-vs-lipat`, `/kategori/slug`.
+   - Hal ini wajib ditaati untuk mencegah redirect 301 otomatis dari web server, menjaga crawl budget Google, dan menjaga keselarasan URL kanonikal SSG Astro.
 
 ---
 
 ## 6. Checklist Sebelum Menyelesaikan Tugas
 
+- [ ] Pastikan seluruh internal link yang ditulis manual menggunakan trailing slash (`/`) di akhir URL.
 - [ ] Jalankan `npm run autolink` atau biarkan `prebuild` memproses internal link secara otomatis.
 - [ ] Jalankan `npm run build` untuk memverifikasi tidak ada error sintaks atau rute rusak.
 - [ ] Pastikan sitemap XML terbuat di `dist/sitemap-index.xml`.

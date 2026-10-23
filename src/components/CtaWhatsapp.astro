@@ -1,19 +1,22 @@
 ---
 import { SITE } from '../config/site';
 import Icon from './Icon.astro';
+import GoogleSourcePreferences from './GoogleSourcePreferences.astro';
 
 interface Props {
   title?: string;
   subtitle?: string;
   buttonText?: string;
   customMessage?: string;
+  showGoogleSource?: boolean;
 }
 
 const {
   title = 'Wujudkan Pagar Laser Cutting Impian Anda Bersama Sriwijaya Grafika',
   subtitle = 'Konsultasi gratis, kalkulasi estimasi volume, dan dapatkan mockup desain 3D sebelum proses potong plat di workshop Talang Jambe Palembang.',
   buttonText = 'Konsultasi via WhatsApp (0852-1511-1125)',
-  customMessage
+  customMessage,
+  showGoogleSource = false
 } = Astro.props;
 
 const waMessage = customMessage ? encodeURIComponent(customMessage) : SITE.contact.whatsappText;
@@ -57,6 +60,15 @@ const waMessage = customMessage ? encodeURIComponent(customMessage) : SITE.conta
         Lihat Lokasi & Jam Buka Workshop
       </a>
     </div>
+
+    {showGoogleSource && (
+      <div class="pt-3 border-t border-emerald-500/20 max-w-lg mx-auto flex flex-col items-center">
+        <p class="text-xs text-slate-300 mb-1">
+          Dapatkan pembaruan model & panduan arsitektur logam terbaru di Google Anda:
+        </p>
+        <GoogleSourcePreferences variant="cta" />
+      </div>
+    )}
 
     <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 pt-2">
       <span class="flex items-center gap-1.5">

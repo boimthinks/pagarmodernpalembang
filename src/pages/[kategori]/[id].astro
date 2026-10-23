@@ -115,6 +115,21 @@ const currentUrl = `/${article.data.label_produk}/${article.id}/`;
           <Content />
         </div>
 
+        <!-- Kesimpulan -->
+        {article.data.kesimpulan && (
+          <div class="mt-12 p-6 rounded-2xl bg-slate-900/80 border border-slate-800 text-slate-300 text-base leading-relaxed">
+            <h3 class="text-white font-bold mb-2">Kesimpulan Praktis</h3>
+            <p>{article.data.kesimpulan}</p>
+          </div>
+        )}
+
+        <!-- CTA WhatsApp & Google Source Preferences (Ditempatkan di Atas FAQ) -->
+        <CtaWhatsapp
+          title={`Konsultasikan Kebutuhan ${categoryName} Anda`}
+          subtitle="Diskusikan perhitungan kebutuhan bahan dan biaya bersama spesialis workshop Sriwijaya Grafika Palembang."
+          showGoogleSource={true}
+        />
+
         <!-- FAQ Accordion jika ada -->
         {hasFaq && (
           <section class="mt-14 pt-10 border-t border-slate-800 space-y-6">
@@ -129,19 +144,6 @@ const currentUrl = `/${article.data.label_produk}/${article.id}/`;
             </div>
           </section>
         )}
-
-        <!-- Kesimpulan -->
-        {article.data.kesimpulan && (
-          <div class="mt-12 p-6 rounded-2xl bg-slate-900/80 border border-slate-800 text-slate-300 text-base leading-relaxed">
-            <h3 class="text-white font-bold mb-2">Kesimpulan Praktis</h3>
-            <p>{article.data.kesimpulan}</p>
-          </div>
-        )}
-
-        <CtaWhatsapp
-          title={`Konsultasikan Kebutuhan ${categoryName} Anda`}
-          subtitle="Diskusikan perhitungan kebutuhan bahan dan biaya bersama spesialis workshop Sriwijaya Grafika Palembang."
-        />
       </article>
 
       <!-- Sidebar di Kanan (TOC & Sticky CTA) -->
