@@ -214,15 +214,16 @@ Setiap pembuatan atau pembaruan artikel blog **WAJIB** merujuk ke skill `penulis
 ## 8. Daftar Konten Terbit
 
 ### Artikel Blog (tipe: artikel) — Urutan Terbaru Terbit
-1. `/pintu/pintu-gerbang-laser-cutting-dorong-vs-lipat/` (23 Oktober 2026 — Pintu Gerbang Laser Cutting Dorong vs Lipat Palembang)
-2. `/kanopi/plafon-kanopi-laser-cutting-kaca-carport/` (22 Oktober 2026 — Plafon Kanopi Laser Cutting Carport Kaca Palembang)
-3. `/partisi/pembuatan-partisi-cutting-plat-besi-ornamen-islami/` (21 Oktober 2026 — Pembuatan Partisi Cutting Plat Besi Islami Palembang)
-4. `/blog/standar-aman-railing-tangga-dan-balkon-palembang/` (16 Oktober 2026 — Standar Aman Railing Tangga dan Balkon Plat Palembang)
-5. `/blog/mesin-potong-laser-fiber-palembang/` (11 Oktober 2026 — Mengenal Mesin Potong Laser Fiber Workshop Palembang)
-6. `/blog/mesin-potong-laser-co2-palembang/` (10 Oktober 2026 — Mengenal Mesin Potong Laser CO2 Workshop Palembang)
-7. `/blog/mesin-potong-cnc-router-palembang/` (09 Oktober 2026 — Mengenal Mesin Potong CNC Router Workshop Palembang)
-8. `/pagar/panduan-memilih-ketebalan-plat-pagar-cutting/` (08 Oktober 2026 — Panduan Memilih Ketebalan Plat Pagar Laser Cutting)
-9. `/pagar/harga-pagar-laser-cutting-per-meter-palembang/` (06 Oktober 2026 — Harga Pagar Laser Cutting per Meter Palembang 2026)
+1. `/balkon/panduan-memilih-pagar-balkon-plat-cutting/` (24 Oktober 2026 — Panduan Pagar Balkon Plat Cutting Palembang)
+2. `/pintu/pintu-gerbang-laser-cutting-dorong-vs-lipat/` (23 Oktober 2026 — Pintu Gerbang Laser Cutting Dorong vs Lipat Palembang)
+3. `/kanopi/plafon-kanopi-laser-cutting-kaca-carport/` (22 Oktober 2026 — Plafon Kanopi Laser Cutting Carport Kaca Palembang)
+4. `/partisi/pembuatan-partisi-cutting-plat-besi-ornamen-islami/` (21 Oktober 2026 — Pembuatan Partisi Cutting Plat Besi Islami Palembang)
+5. `/blog/standar-aman-railing-tangga-dan-balkon-palembang/` (16 Oktober 2026 — Standar Aman Railing Tangga dan Balkon Plat Palembang)
+6. `/blog/mesin-potong-laser-fiber-palembang/` (11 Oktober 2026 — Mengenal Mesin Potong Laser Fiber Workshop Palembang)
+7. `/blog/mesin-potong-laser-co2-palembang/` (10 Oktober 2026 — Mengenal Mesin Potong Laser CO2 Workshop Palembang)
+8. `/blog/mesin-potong-cnc-router-palembang/` (09 Oktober 2026 — Mengenal Mesin Potong CNC Router Workshop Palembang)
+9. `/pagar/panduan-memilih-ketebalan-plat-pagar-cutting/` (08 Oktober 2026 — Panduan Memilih Ketebalan Plat Pagar Laser Cutting)
+10. `/pagar/harga-pagar-laser-cutting-per-meter-palembang/` (06 Oktober 2026 — Harga Pagar Laser Cutting per Meter Palembang 2026)
 
 ### Katalog Desain Motif (tipe: motif)
 1. `/pagar/pagar-lipat-plat-cutting-motif-ornamen/` (23 Oktober 2026 — Pagar Lipat Plat Cutting Ornamen Geometris Palembang)
