@@ -133,7 +133,12 @@ import Icon from './Icon.astro';
 
     <div class="p-4 bg-slate-950/80 border-t border-slate-800 text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-2">
       <span class="flex items-center gap-1.5"><Icon name="lightbulb" size={16} class="text-amber-400" /> Butuh jasa potong mentah tanpa instalasi pagar? Kunjungi website jasa kami di <a href="https://laserindopalembang.com/" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline font-semibold">Laserindo Palembang</a>.</span>
-      <a href="https://wa.me/6285215111125" class="text-emerald-400 hover:underline font-medium">Tanya Ketersediaan Stok Material Plat →</a>
+      <a
+        href={`https://wa.me/6285215111125?text=${encodeURIComponent('Halo admin pagarmodernpalembang.com, saya tertarik dan ingin tanya ketersediaan stok material plat untuk laser cutting.')}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-emerald-400 hover:underline font-medium"
+      >Tanya Ketersediaan Stok Material Plat →</a>
     </div>
   </div>
 </div>

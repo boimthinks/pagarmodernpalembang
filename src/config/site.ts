@@ -35,7 +35,7 @@ export const SITE = {
     phone: '0852-1511-1125',
     phoneRaw: '6285215111125',
     whatsapp: '6285215111125',
-    whatsappText: 'Halo%20Sriwijaya%20Grafika%2C%20saya%20ingin%20konsultasi%20pembuatan%20Pagar%20Laser%20Cutting%20di%20Palembang',
+    whatsappText: encodeURIComponent('Halo admin pagarmodernpalembang.com, saya tertarik dan ingin konsultasi pembuatan Pagar Laser Cutting di Palembang'),
     email: 'sriwijayagrafika@gmail.com',
   },
 
