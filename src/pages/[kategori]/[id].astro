@@ -4,6 +4,8 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 import CtaWhatsapp from '../../components/CtaWhatsapp.astro';
 import TableOfContents from '../../components/TableOfContents.astro';
 import BlogSidebarCta from '../../components/BlogSidebarCta.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import MotifCard from '../../components/MotifCard.astro';
 import { getCollection, render } from 'astro:content';
 import { PRODUCT_CATEGORIES } from '../../data/silo';
 
@@ -28,6 +30,26 @@ const categoryUrl = isBlogGeneral ? '/blog/' : `/${article.data.label_produk}/`;
 
 const hasFaq = article.data.faq && article.data.faq.length > 0;
 const currentUrl = `/${article.data.label_produk}/${article.id}/`;
+
+// Logika Artikel / Motif Terkait
+const allEntries = await getCollection('blog', ({ data }) => data.published);
+
+// 1. Ambil yang sama tipe dan sama kategori (prioritas tertinggi)
+const sameTypeCategory = allEntries.filter(
+  (e) => e.id !== article.id && e.data.tipe === article.data.tipe && e.data.label_produk === article.data.label_produk
+);
+
+// 2. Ambil yang sama tipe beda kategori
+const sameTypeOther = allEntries.filter(
+  (e) => e.id !== article.id && e.data.tipe === article.data.tipe && e.data.label_produk !== article.data.label_produk
+);
+
+// 3. Fallback jika masih kurang
+const otherEntries = allEntries.filter(
+  (e) => e.id !== article.id && !sameTypeCategory.includes(e) && !sameTypeOther.includes(e)
+);
+
+const relatedEntries = [...sameTypeCategory, ...sameTypeOther, ...otherEntries].slice(0, 3);
 ---
 
 <BaseLayout
@@ -154,5 +176,54 @@ const currentUrl = `/${article.data.label_produk}/${article.id}/`;
         </div>
       </aside>
     </div>
+
+    <!-- Section Artikel Terkait / Desain Terkait -->
+    {relatedEntries.length > 0 && (
+      <section class="mt-16 md:mt-24 pt-12 border-t border-slate-800">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">
+              Rekomendasi Terkait
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">
+              {article.data.tipe === 'motif' ? 'Pilihan Motif Ornamen Lainnya' : 'Artikel & Panduan Terkait'}
+            </h2>
+          </div>
+          <a
+            href={article.data.tipe === 'motif' ? '/motif-laser-cutting/' : categoryUrl}
+            class="text-xs sm:text-sm font-semibold text-emerald-400 hover:text-amber-400 transition-colors flex items-center gap-1"
+          >
+            {article.data.tipe === 'motif' ? 'Lihat Semua Motif' : `Koleksi ${categoryName}`} <span>→</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {relatedEntries.map((rel) => (
+            rel.data.tipe === 'motif' ? (
+              <MotifCard
+                title={rel.data.title}
+                excerpt={rel.data.excerpt}
+                slug={rel.id}
+                kategori={rel.data.label_produk}
+                topik={rel.data.topik}
+                imgurl={rel.data.imgurl}
+                imgalt={rel.data.imgalt}
+              />
+            ) : (
+              <ArticleCard
+                title={rel.data.title}
+                excerpt={rel.data.excerpt}
+                date={rel.data.date}
+                topik={rel.data.topik}
+                slug={rel.id}
+                kategori={rel.data.label_produk}
+                imgurl={rel.data.imgurl}
+                imgalt={rel.data.imgalt}
+              />
+            )
+          ))}
+        </div>
+      </section>
+    )}
   </div>
 </BaseLayout>
