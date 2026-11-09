@@ -214,7 +214,8 @@ Setiap pembuatan atau pembaruan artikel blog **WAJIB** merujuk ke skill `penulis
 ## 8. Daftar Konten Terbit
 
 ### Artikel Blog (tipe: artikel) — Urutan Terbaru Terbit
-1. `/pagar/inspirasi-pagar-laser-cutting-motif-wayang-palembang/` (07 November 2026 — Pagar Laser Cutting Motif Wayang Mewah Palembang)
+1. `/pagar/inspirasi-pagar-laser-cutting-motif-bunga-palembang/` (09 November 2026 — Inspirasi Pagar Laser Cutting Motif Bunga Floral Palembang)
+2. `/pagar/inspirasi-pagar-laser-cutting-motif-wayang-palembang/` (07 November 2026 — Pagar Laser Cutting Motif Wayang Mewah Palembang)
 2. `/pintu/panduan-pintu-pagar-plat-cutting-minimalis/` (05 November 2026 — Panduan Pintu Pagar Plat Cutting Minimalis Palembang)
 3. `/pagar/inspirasi-pagar-laser-cutting-motif-daun-palembang/` (02 November 2026 — Inspirasi Pagar Laser Cutting Motif Daun Palembang)
 4. `/pagar/panduan-pagar-cutting-kombinasi-woodplank-palembang/` (01 November 2026 — Panduan Pagar Cutting Kombinasi Woodplank Palembang)
