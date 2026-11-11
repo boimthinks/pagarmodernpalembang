@@ -214,7 +214,8 @@ Setiap pembuatan atau pembaruan artikel blog **WAJIB** merujuk ke skill `penulis
 ## 8. Daftar Konten Terbit
 
 ### Artikel Blog (tipe: artikel) — Urutan Terbaru Terbit
-1. `/pagar/inspirasi-pagar-laser-cutting-motif-bunga-palembang/` (09 November 2026 — Inspirasi Pagar Laser Cutting Motif Bunga Floral Palembang)
+1. `/pagar/inspirasi-pagar-laser-cutting-motif-burung-palembang/` (11 November 2026 — Inspirasi Pagar Laser Cutting Motif Burung Modern Palembang)
+2. `/pagar/inspirasi-pagar-laser-cutting-motif-bunga-palembang/` (09 November 2026 — Inspirasi Pagar Laser Cutting Motif Bunga Floral Palembang)
 2. `/pagar/inspirasi-pagar-laser-cutting-motif-wayang-palembang/` (07 November 2026 — Pagar Laser Cutting Motif Wayang Mewah Palembang)
 2. `/pintu/panduan-pintu-pagar-plat-cutting-minimalis/` (05 November 2026 — Panduan Pintu Pagar Plat Cutting Minimalis Palembang)
 3. `/pagar/inspirasi-pagar-laser-cutting-motif-daun-palembang/` (02 November 2026 — Inspirasi Pagar Laser Cutting Motif Daun Palembang)
@@ -235,7 +236,9 @@ Setiap pembuatan atau pembaruan artikel blog **WAJIB** merujuk ke skill `penulis
 18. `/pagar/harga-pagar-laser-cutting-per-meter-palembang/` (06 Oktober 2026 — Harga Pagar Laser Cutting per Meter Palembang 2026)
 
 ### Katalog Desain Motif (tipe: motif)
-1. `/pagar/pagar-laser-cutting-motif-wayang-gunungan/` (07 November 2026 — Pagar Laser Cutting Motif Wayang Gunungan Palembang)
+1. `/pagar/pagar-laser-cutting-motif-burung-enggang/` (11 November 2026 — Pagar Laser Cutting Motif Burung Enggang Modern Palembang)
+2. `/pagar/pagar-laser-cutting-motif-burung-merak/` (11 November 2026 — Pagar Laser Cutting Motif Burung Merak Mewah Palembang)
+3. `/pagar/pagar-laser-cutting-motif-wayang-gunungan/` (07 November 2026 — Pagar Laser Cutting Motif Wayang Gunungan Palembang)
 2. `/pagar/pagar-laser-cutting-motif-wayang-pandawa/` (07 November 2026 — Pagar Laser Cutting Motif Wayang Pandawa Palembang)
 3. `/pagar/pagar-laser-cutting-motif-wayang-gunungan-sulur/` (07 November 2026 — Pagar Laser Cutting Motif Wayang Sulur Mewah Palembang)
 4. `/pintu/pintu-plat-cutting-minimalis-modern/` (05 November 2026 — Pintu Plat Cutting Minimalis Modern Palembang)
